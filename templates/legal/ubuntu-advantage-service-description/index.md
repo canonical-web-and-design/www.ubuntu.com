@@ -34,7 +34,7 @@ When Ubuntu Advantage subscriptions are attached to all physical hosts in an Env
   4. Specific kernel versions are not guaranteed to receive livepatches indefinitely.  
   5. Only the default LTS kernel is available for livepatching. This includes  its backport as the last HWE kernel to the previous LTS release.
 4. Extended Security Maintenance
-  1. Extended Security Maintenance provides available High and Critical CVE fixes for a number of server packages. A complete list of packages included in Extended Security Maintenance for a given release can be found at: [https://wiki.ubuntu.com/SecurityTeam/ESM/](https://wiki.ubuntu.com/SecurityTeam/ESM/)
+  1. Extended Security Maintenance provides available High and Critical CVE fixes for a number of server packages. A complete list of packages included in Extended Security Maintenance for a given release can be found at: [wiki.ubuntu.com/SecurityTeam/ESM/](https://wiki.ubuntu.com/SecurityTeam/ESM/)
   2. Extended Security Maintenance is only included for 64-bit x86 AMD/Intel installations.
   3. Extended Security Maintenance does not provide:
     1. Bug fixes, unless a bug was created by an Extended Security Maintenance security update
@@ -58,8 +58,8 @@ When Ubuntu Advantage subscriptions are attached to all physical hosts in an Env
 As an Ubuntu Advantage for Infrastructure Standard or Ubuntu Advantage for Infrastructure Advanced customer, you are entitled to all of the benefits and services described under the Subscriptions section above, and in addition are entitled to the following benefits and services:
 
 1. 24x5 (Standard) or 24x7 (Advanced) phone and ticket support.
-  1. Releases. Canonical will provide support for installation, configuration, maintenance, troubleshooting and usage of any standard release of Ubuntu when installed using official sources and within its product life cycle, including any applicable Extended Security Maintenance term. The life cycle for each version of Ubuntu is specified here: [https://www.ubuntu.com/about/release-cycle](https://www.ubuntu.com/about/release-cycle).
-  2. Hardware. Ubuntu Certified hardware has passed Canonical's extensive testing and review process. More information about the Ubuntu certification process and a list of certified hardware can be found on the Ubuntu Certification page: [http://www.ubuntu.com/certification/](http://www.ubuntu.com/certification/) The services apply only with respect to customer's hardware which has been certified. In the event a customer requests the services with respect to hardware which is not certified, Canonical will use reasonable efforts to provide support services, but may not adhere to the obligations described in this service description.
+  1. Releases. Canonical will provide support for installation, configuration, maintenance, troubleshooting and usage of any standard release of Ubuntu when installed using official sources and within its product life cycle, including any applicable Extended Security Maintenance term. The life cycle for each version of Ubuntu is specified here: [ubuntu.com/about/release-cycle](https://ubuntu.com/about/release-cycle).
+  2. Hardware. Ubuntu Certified hardware has passed Canonical's extensive testing and review process. More information about the Ubuntu certification process and a list of certified hardware can be found on the Ubuntu Certification page: [ubuntu.com/certified](https://ubuntu.com/certified) The services apply only with respect to customer's hardware which has been certified. In the event a customer requests the services with respect to hardware which is not certified, Canonical will use reasonable efforts to provide support services, but may not adhere to the obligations described in this service description.
   3. Packages. The service applies to:
     1. Packages found in the Ubuntu Main Repository, including the "proposed" and "backports" repository pockets
     2. Packages in the Ubuntu Cloud Archive
@@ -69,7 +69,7 @@ As an Ubuntu Advantage for Infrastructure Standard or Ubuntu Advantage for Infra
   4. Kernels.
     1. The kernel provided initially in the release of a Long Term Support (LTS) version of Ubuntu is supported for the entire lifecycle of the LTS.
     2. Canonical releases Hardware enablement (HWE) kernels during the standard support period of an LTS version which provides support for newer hardware in an LTS releases. HWE kernels are supported until the next LTS point release.
-    3. More information and details about kernel support can be found at [https://www.ubuntu.com/about/release-cycle](https://www.ubuntu.com/about/release-cycle)
+    3. More information and details about kernel support can be found at [ubuntu.com/about/release-cycle](https://ubuntu.com/about/release-cycle)
     4. Access to Canonical Livepatch Service is included with all support offerings, unless otherwise noted.
   5. Landscape. All Landscape products, including Landscape on-premises (when purchased) are fully supported.
 2. [OpenStack](#term-openstack) & [Kubernetes](#term-kubernetes) Support. Canonical will provide the support set out in the section below:
@@ -107,13 +107,13 @@ As an Ubuntu Advantage for Infrastructure Standard or Ubuntu Advantage for Infra
         1. [Deployment](#term-deployment) of [Charmed Kubernetes](#term-cdk) in at least the minimum deployment configuration, or a kubeadm-deployed cluster of unmodified upstream Kubernetes binaries as published by the CNCF deployed on Ubuntu as base OS validated by Canonical.
         2. Highly-Available control plane either deployed using Charms in the Charmed Kubernetes reference architecture or in a similar fashion using kubeadm.
         3. Support must be purchased for all nodes in the supported Kubernetes cluster.
-        4. Supported versions of Kubernetes include the current stable minor release and the two most recent minor releases in the stable release channel. Additional information can be found at: [https://ubuntu.com/kubernetes/docs/supported-versions](https://ubuntu.com/kubernetes/docs/supported-versions)
+        4. Supported versions of Kubernetes include the current stable minor release and the two most recent minor releases in the stable release channel. Additional information can be found at: [ubuntu.com/kubernetes/docs/supported-versions](https://ubuntu.com/kubernetes/docs/supported-versions)
         5. For any deployment of Charmed Kubernetes carried out by Canonical while under contract for a deployment, which result in the customisation of any Charms, the customisation will be supported for 90 days after completion of the deployment.
     2. Unless Full-Stack Support requirements are met, support is limited to:
         1. The software packages and Charms necessary for running Charmed Kubernetes.
         2. Kubernetes clusters deployed using kubeadm utilising the software packages available from apt.kubernetes.io.
         3. Bug-fix support in the supplied software artefacts by Canonical during the Ubuntu LTS.
-3. Ubuntu Legal Assurance programme. The customer is entitled to participate in the Ubuntu Assurance Programme, subject to its terms and conditions. Canonical may update the Assurance Programme and its terms periodically. The current Ubuntu Assurance Programme and its IP indemnification terms are available at Canonical's Ubuntu Assurance page:[ http://www.ubuntu.com/legal/ubuntu-advantage/assurance](http://www.ubuntu.com/legal/ubuntu-advantage/assurance)
+3. Ubuntu Legal Assurance programme. The customer is entitled to participate in the Ubuntu Assurance Programme, subject to its terms and conditions. Canonical may update the Assurance Programme and its terms periodically. The current Ubuntu Assurance Programme and its IP indemnification terms are available at Canonical's Ubuntu Assurance page: [ubuntu.com/legal/ubuntu-advantage/assurance](https://ubuntu.com/legal/ubuntu-advantage/assurance)
 
 <div class="p-top"><a href="#" class="p-top__link">Back to top</a></div>
 
@@ -174,7 +174,7 @@ As an Ubuntu Advantage for Infrastructure Standard or Ubuntu Advantage for Infra
 1. The Ubuntu Advantage for Infrastructure, Virtual services match those of the applicable Ubuntu Advantage for Infrastructure offering, subject to the exceptions listed below.
 2. The Ubuntu Advantage Infrastructure, Virtual services are provided for Ubuntu Server when installed and running as a guest in a virtualised environment either (1) in an Ubuntu Certified Public Cloud partner's environment, or (2) on a physical host, provided the guest is running on a [Covered Hypervisor](#term-hypervisor).<br /><br />
 Note: Only underlying technology is listed. These can be provided via a cloud like OpenStack. If hypervisor vendor provides a specific list of supported Ubuntu versions only those will be eligible for Ubuntu Advantage for Infrastructure, Virtual service.<br /><br />
-4. Certified Public Cloud partners can be found in the Ubuntu partner listing: [https://www.ubuntu.com/public-cloud](https://www.ubuntu.com/public-cloud)
+4. Certified Public Cloud partners can be found in the Ubuntu partner listing: [ubuntu.com/public-cloud](https://ubuntu.com/public-cloud)
 5. Kubernetes support is included as per definitions in the application section of Ubuntu Advantage for Infrastructure above.
 6. The Ubuntu Advantage for Infrastructure, Virtual service does not provide:
   1. Hypervisor support.
@@ -377,7 +377,7 @@ Add-Ons constitute additional support services available separately on a per-Nod
 - <strong id="term-node">Node</strong> means a Physical Node or Virtual Machine provided to Canonical (or paid for) by the Customer for the purposes of running the Environment.  Any further machines (whether virtual or container) created on top of a Node are not themselves considered to be Nodes.
 - <strong id="term-openstack">OpenStack</strong> means the cloud computing software known as "OpenStack" as distributed by Canonical with Ubuntu.
 - <strong id="term-openstack-packages">OpenStack Packages</strong> means packages relevant to OpenStack present in the Ubuntu Main repository of the Ubuntu Archive, including updates to those packages delivered in the Ubuntu Cloud Archive.
-This includes Charms listed at [https://wiki.ubuntu.com/OpenStack/OpenStackCharms](https://wiki.ubuntu.com/OpenStack/OpenStackCharms).
+This includes Charms listed at [wiki.ubuntu.com/OpenStack/OpenStackCharms](https://wiki.ubuntu.com/OpenStack/OpenStackCharms).
 - <strong>Physical Node</strong> means a single named/managed unit of physical compute infrastructure, essentially the shelf or rack unit. May contain multiple CPU sockets, cores, NICs, Storage controllers/devices.
 - <strong>Public Cloud</strong> means an Environment in which third parties (i.e. beyond just Canonical and the customer) are able to create and manage Guest or Container Instances.  
 - <strong>Region</strong> means a discrete OpenStack environment with dedicated API endpoints that typically shares only the Identity (Keystone) service with other Regions. An OpenStack Region must be contained within a single datacentre.
