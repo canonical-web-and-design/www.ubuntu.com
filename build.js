@@ -11,6 +11,7 @@ let entries = {
   tabotronic: "./static/js/src/tabotronic.js",
   appliance: "./static/js/src/appliance.js",
   "tco-calculator": "./static/js/src/tco-calculator.js",
+  costCalculator: "./static/js/src/openstack/react/app.jsx",
   "ua-payment-modal": "./static/js/src/ua-payment-modal.js",
   "ua-payment-methods": "./static/js/src/ua-payment-methods.js",
   "sticky-nav": "./static/js/src/sticky-nav.js",
