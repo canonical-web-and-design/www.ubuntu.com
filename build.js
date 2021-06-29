@@ -10,7 +10,6 @@ let entries = {
   "release-chart": "./static/js/src/release-chart.js",
   tabotronic: "./static/js/src/tabotronic.js",
   appliance: "./static/js/src/appliance.js",
-  "tco-calculator": "./static/js/src/tco-calculator.js",
   costCalculator: "./static/js/src/openstack/react/app.jsx",
   "ua-payment-modal": "./static/js/src/ua-payment-modal.js",
   "ua-payment-methods": "./static/js/src/ua-payment-methods.js",

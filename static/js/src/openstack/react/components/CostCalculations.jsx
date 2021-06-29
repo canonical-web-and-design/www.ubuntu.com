@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Button } from "@canonical/react-components";
+import { Row, Col } from "@canonical/react-components";
 
 import TCO_VARIABLES from "../utils/variables";
 
@@ -269,15 +269,21 @@ const CostCalculations = (formState) => {
         <hr className="p-separator" />
       </div>
       <Row>
-        <Col size="12" className="u-align--right">
+        <Col size="10" className="u-align--right u-no-padding--right">
+          <p className="p-heading--4">Hourly cost per instance:</p>
+        </Col>
+        <Col size="2" className="u-align--right">
+          <p className="p-heading--4">${hourlyCostPerInstance.toFixed(4)}</p>
+        </Col>
+      </Row>
+      <Row>
+        <Col size="10" className="u-align--right u-no-padding--right">
           <p className="p-heading--4">
-            Hourly cost per instance: ${hourlyCostPerInstance.toFixed(4)}
+            Total savings compared to public clouds:
           </p>
-          <p className="p-heading--4">
-            Total savings compared to public clouds:{" "}
-            {formatter.format(totalSavings)}
-          </p>
-          <Button appearance="positive">Email me those estimates</Button>
+        </Col>
+        <Col size="2" className="u-align--right">
+          <p className="p-heading--4">{formatter.format(totalSavings)}</p>
         </Col>
       </Row>
     </>
