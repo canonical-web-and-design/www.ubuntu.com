@@ -160,8 +160,8 @@ openstack:
       path: /openstack/consulting
     - title: Compare
       path: /openstack/compare
-    - title: TCO calculator
-      path: /openstack/tco-calculator
+    - title: Cost calculator
+      path: /openstack/pricing-calculator
     - title: Install
       path: /openstack/install
     - title: Docs
