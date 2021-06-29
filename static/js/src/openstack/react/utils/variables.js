@@ -1,4 +1,4 @@
-const COST_VARIABLES = {
+const TCO_VARIABLES = {
   ratios: {
     desiredCloudUtilisationRatio: 75,
     cpuOvercommitmentRatio: 2,
@@ -11,7 +11,7 @@ const COST_VARIABLES = {
     numberOfCpusPerNode: 2,
     minimumNumberOfCloudNodes: 9,
     maximumNumberOfCloudNodesInRack: 7,
-    MinimumNumberOfRacks: 3,
+    minimumNumberOfRacks: 3,
     numberOfRackControllerNodesInRack: 0,
     numberOfInfraNodes: 3,
     numberOfRacksPerSpineSwitch: 2,
@@ -27,7 +27,7 @@ const COST_VARIABLES = {
     awsEc2InstanceVcpus: 2,
     awsEc2InstanceRam: 8,
     awsEc2InstanceEmepheralStorage: 8,
-    awsEc2InstancePersistentStorage: 8,
+    awsEc2InstancePersistentStorage: 0,
   },
   price: {
     pricePerCloudNode: 36500,
@@ -42,7 +42,7 @@ const COST_VARIABLES = {
     operationsTeamAvarageAnnualStaffSalary: 125000,
     deliveryCost: 75000,
     annualLicenseCost: 0,
-    awsEc2T3aLargeHourlyInstanceCost: 0.0752,
+    AWSEC2T3aLargeHourlyInstanceCost: 0.0752,
   },
   operations: {
     externalNetworkBandwidth: 1,
@@ -53,4 +53,4 @@ const COST_VARIABLES = {
   },
 };
 
-export default COST_VARIABLES;
+export default TCO_VARIABLES;

@@ -8,7 +8,7 @@ const CostCalculatorForm = () => {
     instances: 1000,
     vcpus: 2,
     emepheralStorage: 8,
-    ram: 2,
+    ram: 8,
     persistentStorage: 80,
     supportLevel: "fully-managed",
   });
