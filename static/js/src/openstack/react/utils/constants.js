@@ -1,4 +1,4 @@
-const TCO_VARIABLES = {
+const TCO_CONSTANTS = {
   ratios: {
     desiredCloudUtilisationRatio: 75,
     cpuOvercommitmentRatio: 2,
@@ -53,4 +53,4 @@ const TCO_VARIABLES = {
   },
 };
 
-export default TCO_VARIABLES;
+export default TCO_CONSTANTS;
