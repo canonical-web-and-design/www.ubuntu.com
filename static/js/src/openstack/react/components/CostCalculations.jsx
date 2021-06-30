@@ -205,7 +205,7 @@ const CostCalculations = (formState) => {
     totalOperationsCost +
     TCO_VARIABLES.price.annualLicenseCost;
 
-  const charmedOpenstackTCO =
+  const charmedOpenstackTco =
     capExCost + TCO_VARIABLES.operations.hardWareRenewalPeriod * opexCost;
 
   //Number of AWS EC2 VMs
@@ -214,49 +214,49 @@ const CostCalculations = (formState) => {
     return storage === 0 ? 0 : Math.floor(numberInCloud / storage);
   };
 
-  const numberOfAWSEC2VMsBasedOnCPU = calculateNumberOfAWSVMs(
+  const numberOfAwsEc2VmsBasedOnCpu = calculateNumberOfAWSVMs(
     numberOfVcpusInCloud,
     TCO_VARIABLES.storage.awsEc2InstanceVcpus
   );
 
-  const numberOfAWSEC2VMsBasedOnRAM = calculateNumberOfAWSVMs(
+  const numberOfAwsEc2VmsBasedOnRam = calculateNumberOfAWSVMs(
     amountOfRamInCloud,
     TCO_VARIABLES.storage.awsEc2InstanceRam
   );
 
-  const numberOfAWSEC2VMsBasedOnES = calculateNumberOfAWSVMs(
+  const numberOfAwsEc2VmsBasedOnES = calculateNumberOfAWSVMs(
     amountOfESInCloud,
     TCO_VARIABLES.storage.awsEc2InstanceEmepheralStorage
   );
 
-  const numberOfAWSEC2VMsBasedOnPS = calculateNumberOfAWSVMs(
+  const numberOfAwsEc2VmsBasedOnPS = calculateNumberOfAWSVMs(
     amountOfPSInCloud,
     TCO_VARIABLES.storage.awsEc2InstancePersistentStorage
   );
 
-  const numberOfAWSEC2VMs = Math.max(
-    numberOfAWSEC2VMsBasedOnCPU,
-    numberOfAWSEC2VMsBasedOnRAM,
-    numberOfAWSEC2VMsBasedOnES,
-    numberOfAWSEC2VMsBasedOnPS
+  const numberOfAwsEc2Vms = Math.max(
+    numberOfAwsEc2VmsBasedOnCpu,
+    numberOfAwsEc2VmsBasedOnRam,
+    numberOfAwsEc2VmsBasedOnES,
+    numberOfAwsEc2VmsBasedOnPS
   );
 
-  const AWSTCO = Math.floor(
+  const awsTco = Math.floor(
     Math.floor(
-      numberOfAWSEC2VMs *
+      numberOfAwsEc2Vms *
         8760 *
-        TCO_VARIABLES.price.AWSEC2T3aLargeHourlyInstanceCost
+        TCO_VARIABLES.price.awsEc2T3aLargeHourlyInstanceCost
     ) * TCO_VARIABLES.operations.hardWareRenewalPeriod
   );
 
   //final calculations to display
   const hourlyCostPerInstance =
-    charmedOpenstackTCO /
+    charmedOpenstackTco /
     formState.instances /
     (8760 * TCO_VARIABLES.operations.hardWareRenewalPeriod);
 
   const totalSavings =
-    AWSTCO - charmedOpenstackTCO > 0 ? AWSTCO - charmedOpenstackTCO : 0;
+    awsTco - charmedOpenstackTco > 0 ? awsTco - charmedOpenstackTco : 0;
 
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",

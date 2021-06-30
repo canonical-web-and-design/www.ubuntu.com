@@ -42,7 +42,7 @@ const TCO_VARIABLES = {
     operationsTeamAvarageAnnualStaffSalary: 125000,
     deliveryCost: 75000,
     annualLicenseCost: 0,
-    AWSEC2T3aLargeHourlyInstanceCost: 0.0752,
+    awsEc2T3aLargeHourlyInstanceCost: 0.0752,
   },
   operations: {
     externalNetworkBandwidth: 1,
