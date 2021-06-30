@@ -4,36 +4,40 @@
       <h2 class="p-modal__title" id="modal-title">Get Ubuntu Server pro tips</h2>
       <button class="p-modal__close" aria-label="Close active modal" aria-controls="modal">Close</button>
     </header>
-    <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_3485" class="marketo-form">
+    <form action="/marketo/submit" method="post" id="mktoForm_3485" class="marketo-form">
       <div class="row u-no-padding">
         <div class="col-6">
           <label for="firstName" class="mktoLabel">First name:</label>
-          <input required  id="firstName" name="FirstName" maxlength="255" type="text" class="mktoField mktoRequired" >
+          <input required  id="firstName" name="firstName" maxlength="255" type="text" class="mktoField mktoRequired" >
           <label for="lastName" class="mktoLabel">Last name:</label>
-          <input required  id="lastName" name="LastName" maxlength="255" type="text" class="mktoField mktoRequired">
+          <input required  id="lastName" name="lastName" maxlength="255" type="text" class="mktoField mktoRequired">
           <label for="company" class="mktoLabel">Company name:</label>
-          <input required  id="company" name="Company" maxlength="255" type="text" class="mktoField mktoRequired">
+          <input required  id="company" name="company" maxlength="255" type="text" class="mktoField mktoRequired">
         </div>
         <div class="col-6">
           <label for="title" class="mktoLabel">Job title:</label>
-          <input required  id="title" name="Title" maxlength="255" type="text" class="mktoField mktoRequired">
+          <input required  id="title" name="title" maxlength="255" type="text" class="mktoField mktoRequired">
           <label for="email" class="mktoLabel ">Work email:</label>
-          <input required  id="email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
-          <label for="Phone" class="mktoLabel ">Mobile/cell phone number:</label>
-          <input required id="Phone" name="Phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired" required="required" />
+          <input required  id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
+          <label for="phone" class="mktoLabel ">Mobile/cell phone number:</label>
+          <input required id="phone" name="phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired" required="required" />
         </div>
       </div>
-      <input class="mktoField" value="yes" id="CanonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox">
-      <label class="mktoLabel mktoHasWidth" for="CanonicalUpdatesOptIn"><small>I would like to receive occasional news from Canonical by email.</small></label>
+      <input class="mktoField" value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox">
+      <label class="mktoLabel mktoHasWidth" for="canonicalUpdatesOptIn"><small>I would like to receive occasional news from Canonical by email.</small></label>
       <p><small>All information provided will be handled in accordance with the Canonical <a href="/legal">privacy policy</a>.</small></p>
       <div class="g-recaptcha" data-sitekey="{{ CAPTCHA_TESTING_API_KEY }}" style="margin: 2rem 0;"></div>
       <button type="submit" class="mktoButton p-button--positive">Download the pro tips</button>
       <input type="hidden" name="formid" class="mktoField" value="3485">
-      <input type="hidden" name="formVid" class="mktoField" value="3485">
-      <input type="hidden" name="munchkinId" class="mktoField" value="066-EOV-335">
       <input type="hidden" name="Consent_to_Processing__c" value="yes" />
-      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
-      <input type="hidden" name="return_url" value="https://assets.ubuntu.com/v1/f401c3f4-Ubuntu_Server_CLI_pro_tips_2020-04.pdf" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
+      <input type="hidden" name="returnURL" value="https://assets.ubuntu.com/v1/f401c3f4-Ubuntu_Server_CLI_pro_tips_2020-04.pdf" />
     </form>
   </div>
 </div>

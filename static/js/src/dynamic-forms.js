@@ -44,12 +44,12 @@ import { assignMarketoBackgroundSubmit } from "./bg-form-submit";
           formContainer.classList.remove("u-hide");
           formContainer.innerHTML = text
             .replace(/%% formid %%/g, formData.formId)
-            .replace(/%% lpId %%/g, formData.lpId)
-            .replace(/%% returnURL %%/g, formData.returnUrl)
-            .replace(/%% lpurl %%/g, formData.lpUrl);
+            .replace(/%% returnURL %%/g, formData.returnUrl);
+
           setProductContext(contactButton);
           setUTMs();
           setGclid();
+          setFBclid();
           loadCaptchaScript();
           initialiseForm();
         })
@@ -132,15 +132,36 @@ import { assignMarketoBackgroundSubmit } from "./bg-form-submit";
       if (utm_medium) {
         utm_medium.value = params.get("utm_medium");
       }
+
+      var utm_content = document.getElementById("utm_content");
+      if (utm_content) {
+        utm_content.value = params.get("utm_content");
+      }
+
+      var utm_term = document.getElementById("utm_term");
+      if (utm_term) {
+        utm_term.value = params.get("utm_term");
+      }
     }
 
     function setGclid() {
       if (localStorage.getItem("gclid")) {
-        var gclidField = document.getElementById("gclid");
+        var gclidField = document.getElementById("GCLID__c");
         var gclid = JSON.parse(localStorage.getItem("gclid"));
         var isGclidValid = new Date().getTime() < gclid.expiryDate;
         if (gclid && isGclidValid && gclidField) {
           gclidField.value = gclid.value;
+        }
+      }
+    }
+
+    function setFBclid() {
+      if (localStorage.getItem("fbclid")) {
+        var fbclidField = document.getElementById("FBCLID__c");
+        var fbclid = JSON.parse(localStorage.getItem("fbclid"));
+        var fbclidIsValid = new Date().getTime() < fbclid.expiryDate;
+        if (fbclid && fbclidIsValid && fbclidField) {
+          fbclidField.value = fbclid.value;
         }
       }
     }

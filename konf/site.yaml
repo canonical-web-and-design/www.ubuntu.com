@@ -70,6 +70,16 @@ env:
       name: ubuntu-com
       optional: true
 
+  - name: MARKETO_API_CLIENT
+    secretKeyRef:
+      key: api_client
+      name: marketo
+
+  - name: MARKETO_API_SECRET
+    secretKeyRef:
+      key: api_secret
+      name: marketo
+
   - name: SENTRY_DSN
     value: https://0293bb7fc3104e56bafd2422e155790c@sentry.is.canonical.com//13
 

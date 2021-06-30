@@ -7,25 +7,25 @@
   </div>
   <div class="row">
     <div class="col-8">
-      <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_{{formid}}">
+      <form action="/marketo/submit" method="post" id="mktoForm_{{formid}}">
         <fieldset class="u-no-margin--bottom">
           <h3>About you</h3>
           <ul class="p-list">
             <li class="mktFormReq mktField p-list__item">
-              <label for="FirstName" class="mktoLabel">First name:</label>
-              <input required id="FirstName" name="FirstName" maxlength="255" type="text" class="mktoField mktoRequired" />
+              <label for="firstName" class="mktoLabel">First name:</label>
+              <input required id="firstName" name="firstName" maxlength="255" type="text" class="mktoField mktoRequired" />
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="LastName" class="mktoLabel">Last name:</label>
-              <input required id="LastName" name="LastName" maxlength="255" type="text" class="mktoField mktoRequired" />
+              <label for="lastName" class="mktoLabel">Last name:</label>
+              <input required id="lastName" name="lastName" maxlength="255" type="text" class="mktoField mktoRequired" />
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="Email" class="mktoLabel">Email address:</label>
-              <input required id="Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" />
+              <label for="email" class="mktoLabel">Email address:</label>
+              <input required id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" />
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="Phone" class="mktoLabel">Mobile/cell phone number:</label>
-              <input required id="Phone" name="Phone" maxlength="255" type="tel" class="mktoField mktoTelField mktoRequired" />
+              <label for="phone" class="mktoLabel">Mobile/cell phone number:</label>
+              <input required id="phone" name="phone" maxlength="255" type="tel" class="mktoField mktoTelField mktoRequired" />
             </li>
             {% include "shared/forms/_country.html" %} {% include "shared/forms/_state.html" %}
           </ul>
@@ -35,12 +35,12 @@
           <h3>About your company</h3>
           <ul class="p-list">
             <li class="mktFormReq mktField p-list__item">
-              <label for="Company" class="mktoLabel">Company:</label>
-              <input required id="Company" name="Company" maxlength="255" type="text" class="mktoField mktoRequired" />
+              <label for="company" class="mktoLabel">Company:</label>
+              <input required id="company" name="company" maxlength="255" type="text" class="mktoField mktoRequired" />
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="Title" class="mktoLabel">Job title:</label>
-              <input required id="Title" name="Title" maxlength="255" type="text" class="mktoField mktoRequired" />
+              <label for="title" class="mktoLabel">Job title:</label>
+              <input required id="title" name="title" maxlength="255" type="text" class="mktoField mktoRequired" />
             </li>
 
           </ul>
@@ -65,21 +65,16 @@
               <button type="submit" class="mktoButton p-button--positive" onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'Form', 'eventAction' : 'iot contact-us', 'eventLabel' : '{{product}}', 'eventValue' : undefined });">Submit</button>
             </li>
           </ul>
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formValidation" value="" />
           <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formid" class="mktoField" value="{{formid}}" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formVid" class="mktoField" value="{{formid}}" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="lpId" class="mktoField" value="{{lpId}}" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="subId" class="mktoField" value="30" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="munchkinId" class="mktoField" value="066-EOV-335" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="lpurl" class="mktoField" value="https://pages.ubuntu.com/things-contact-us.html?cr={creative}&amp;kw={keyword}" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="cr" class="mktoField" value="" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="kw" class="mktoField" value="" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="q" class="mktoField" value="" />
           <input type="hidden" aria-hidden="true" aria-label="hidden field" name="returnURL" value="{{returnURL}}" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="retURL" value="{{returnURL}}" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="return_url" value="{{returnURL}}" />
           <input type="hidden" aria-hidden="true" aria-label="hidden field" name="Consent_to_Processing__c" value="yes" />
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
         </fieldset>
       </form>
     </div>

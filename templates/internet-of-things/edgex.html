@@ -113,14 +113,14 @@
           }
         </style>
         <p class="p-heading--four" id="subscribe">Subscribe to our monthly newsletter</p>
-        <form action="https://pages.canonical.com/index.php/leadCapture/save" method="post" id="mktoForm_3415" class="p-form--stacked">
+        <form action="/marketo/submit" method="post" id="mktoForm_3415" class="p-form--stacked">
           <div class="p-form__group">
-            <label for="Email">Email:*</label>
-            <input class="u-no-margin--bottom" id="Email" placeholder="Email" name="Email" maxlength="255" type="email" required="">
+            <label for="email">Email:*</label>
+            <input class="u-no-margin--bottom" id="email" placeholder="Email" name="email" maxlength="255" type="email" required="">
           </div>
           <div class="p-form__group">
-            <label for="Company">Company:</label>
-            <input class="u-no-margin--bottom" id="Company" placeholder="Company (optional)" name="Company" maxlength="255" type="text">
+            <label for="company">Company:</label>
+            <input class="u-no-margin--bottom" id="company" placeholder="Company (optional)" name="company" maxlength="255" type="text">
           </div>
 
           <p>
@@ -137,15 +137,14 @@
 
           <input type="hidden" name="formid" value="3690">
           <input type="hidden" name="edgeXblogsubscription" value="yes">
-          <input type="hidden" name="lpId" value="">
-          <input type="hidden" name="munchkinId" value="066-EOV-335">
-          <input type="hidden" name="lpurl" value="">
-          <input type="hidden" name="ret" value="https://ubuntu.com/internet-of-things/edgex#subscribed">
-          <input type="hidden" name="return_url" value="https://ubuntu.com/internet-of-things/edgex#subscribed">
-          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
-          <input type="hidden" name="cr" value="">
-          <input type="hidden" name="kw" value="">
-          <input type="hidden" name="q" value="">
+          <input type="hidden" name="returnURL" value="/internet-of-things/edgex#subscribed">
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+          <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
         </form>
       </div>
 

@@ -1,34 +1,34 @@
 <!-- MARKETO FORM -->
-<form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" class="marketo-form" id="mktoForm_{{ id }}" onSubmit="fbq('trackCustom', 'Download');">
+<form action="/marketo/submit" method="post" class="marketo-form" id="mktoForm_{{ id }}" onSubmit="fbq('trackCustom', 'Download');">
   <fieldset class="u-no-padding--top" style="border-bottom-width: 1px;">
     <ul class="p-list">
       <li class="mktFormReq mktField p-list__item">
-        <label for="FirstName" class="mktoLabel">First Name:</label>
-        <input required id="FirstName" name="FirstName" maxlength="255" class="mktoField   mktoRequired" type="text"
+        <label for="firstName" class="mktoLabel">First Name:</label>
+        <input required id="firstName" name="firstName" maxlength="255" class="mktoField   mktoRequired" type="text"
           aria-label="First Name">
       </li>
       <li class="mktFormReq mktField">
-        <label for="LastName" class="mktoLabel ">Last Name:</label>
-        <input required id="LastName" name="LastName" maxlength="255" class="mktoField   mktoRequired" type="text"
+        <label for="lastName" class="mktoLabel ">Last Name:</label>
+        <input required id="lastName" name="lastName" maxlength="255" class="mktoField   mktoRequired" type="text"
           aria-label="Last Name">
       </li>
       <li class="mktFormReq mktField">
-        <label for="Email" class="mktoLabel ">Work email:</label>
-        <input required id="Email" name="Email" maxlength="255" class="mktoField mktoEmailField  mktoRequired" type="email"
+        <label for="email" class="mktoLabel ">Work email:</label>
+        <input required id="email" name="email" maxlength="255" class="mktoField mktoEmailField  mktoRequired" type="email"
           aria-label="Email">
       </li>
       <li class="mktFormReq mktField">
-        <label for="Company" class="mktoLabel ">Company Name:</label>
-        <input required id="Company" name="Company" maxlength="255" class="mktoField   mktoRequired" type="text"
+        <label for="company" class="mktoLabel ">Company Name:</label>
+        <input required id="company" name="company" maxlength="255" class="mktoField   mktoRequired" type="text"
           aria-label="Company Name">
       </li>
       <li class="mktFormReq mktField">
-        <label for="Title" class="mktoLabel ">Job Title:</label>
-        <input required id="Title" name="Title" maxlength="255" class="mktoField   mktoRequired" type="text" aria-label="Job Title">
+        <label for="title" class="mktoLabel ">Job Title:</label>
+        <input required id="title" name="title" maxlength="255" class="mktoField   mktoRequired" type="text" aria-label="Job Title">
       </li>
       <li class="mktFormReq mktField">
-        <label for="Phone" class="mktoLabel ">Mobile/cell phone number:</label>
-        <input required id="Phone" name="Phone" maxlength="255" class="mktoField mktoTelField  mktoRequired" type="tel"
+        <label for="phone" class="mktoLabel ">Mobile/cell phone number:</label>
+        <input required id="phone" name="phone" maxlength="255" class="mktoField mktoTelField  mktoRequired" type="tel"
           aria-label="Phone Number">
       </li>
       <li class="mktField">
@@ -59,13 +59,15 @@
       </li>
       <li class="mktField">
         <button type="submit" class="mktoButton u-no-margin--bottom" >{% if cta %}{{ cta }}{% else %}Download the whitepaper{% endif %}</button>
-        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="munchkinId" class="mktoField" value="066-EOV-335" />
         <input name="formid" aria-label="formid" class="mktoField" value="{{ id }}" type="hidden">
-        <input name="formVid" aria-label="formid" class="mktoField" value="{{ id }}" type="hidden">
         <input type="hidden" name="returnURL" aria-label="returnURL" value="{{ returnURL }}" />
-        <input type="hidden" name="retURL" aria-label="retURL" value="{{ returnURL }}" />
-        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="return_url" value="{{returnURL}}" />
-        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
       </li>
     </ul>
   </fieldset>

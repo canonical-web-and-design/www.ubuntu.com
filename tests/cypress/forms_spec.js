@@ -15,10 +15,7 @@ const getIframeBody = () => {
 context("Marketo form", () => {
   beforeEach(() => {
     cy.server();
-    cy.route(
-      "POST",
-      "https://app-sjg.marketo.com/index.php/leadCapture/save2"
-    ).as("captureLead");
+    cy.route("POST", "/marketo/submit").as("captureLead");
   });
 
   // afterEach(() => {
@@ -31,11 +28,11 @@ context("Marketo form", () => {
   it("/download/server/thank-you", () => {
     cy.visit("/download/server/thank-you");
 
-    cy.get('input[name="FirstName"]').type("Test");
-    cy.get('input[name="LastName"]').type("Test");
-    cy.get('input[name="Company"]').type("Test");
-    cy.get('input[name="Title"]').type("Test");
-    cy.get('input[name="Email"]').type("test@test.com");
+    cy.get('input[name="firstName"]').type("Test");
+    cy.get('input[name="lastName"]').type("Test");
+    cy.get('input[name="company"]').type("Test");
+    cy.get('input[name="title"]').type("Test");
+    cy.get('input[name="email"]').type("test@test.com");
 
     getIframeBody().find(".rc-anchor-content").click();
 
@@ -46,13 +43,13 @@ context("Marketo form", () => {
   it("/core/contact-us", () => {
     cy.visit("/core/contact-us");
 
-    cy.get('input[name="FirstName"]').type("Test");
-    cy.get('input[name="LastName"]').type("Test");
-    cy.get('input[name="Email"]').type("test@test.com");
-    cy.get('input[name="Phone"]').type("000000000");
+    cy.get('input[name="firstName"]').type("Test");
+    cy.get('input[name="lastName"]').type("Test");
+    cy.get('input[name="email"]').type("test@test.com");
+    cy.get('input[name="phone"]').type("000000000");
     cy.get('select[name="Country"]').select("Colombia");
-    cy.get('input[name="Company"]').type("Test");
-    cy.get('input[name="Title"]').type("Test");
+    cy.get('input[name="company"]').type("Test");
+    cy.get('input[name="title"]').type("Test");
     cy.get('textarea[name="Comments_from_lead__c"]').type(
       "Test test test test"
     );
@@ -67,12 +64,12 @@ context("Marketo form", () => {
   it("/engage/anbox-cloud-gaming-whitepaper", () => {
     cy.visit("/engage/anbox-cloud-gaming-whitepaper");
 
-    cy.get('input[name="FirstName"]').type("Test");
-    cy.get('input[name="LastName"]').type("Test");
-    cy.get('input[name="Company"]').type("Test");
-    cy.get('input[name="Title"]').type("Test");
-    cy.get('input[name="Email"]').type("test@test.com");
-    cy.get('input[name="Phone"]').type("000000000");
+    cy.get('input[name="firstName"]').type("Test");
+    cy.get('input[name="lastName"]').type("Test");
+    cy.get('input[name="company"]').type("Test");
+    cy.get('input[name="title"]').type("Test");
+    cy.get('input[name="email"]').type("test@test.com");
+    cy.get('input[name="phone"]').type("000000000");
 
     getIframeBody().find(".rc-anchor-content").click();
 
@@ -94,9 +91,9 @@ context("Marketo dynamic form", () => {
       ".p-modal__dialog .js-pagination--2 .pagination__link--next"
     ).click();
 
-    cy.get('input[name="FirstName"]').type("Test");
-    cy.get('input[name="LastName"]').type("Test");
-    cy.get('input[name="Email"]').type("test@test.com");
+    cy.get('input[name="firstName"]').type("Test");
+    cy.get('input[name="lastName"]').type("Test");
+    cy.get('input[name="email"]').type("test@test.com");
     cy.get('label[for="canonicalUpdatesOptIn"]').click();
 
     getIframeBody().find(".rc-anchor-content").click();
@@ -105,9 +102,7 @@ context("Marketo dynamic form", () => {
     cy.get("#mktoForm_1251")
       .submit()
       .should((page) => {
-        expect(page[0].action).to.equal(
-          "https://pages.ubuntu.com/index.php/leadCapture/save"
-        );
+        expect(page[0].action).to.equal("/marketo/submit");
       });
   });
 });

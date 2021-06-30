@@ -4,32 +4,32 @@
   </header>
 
   <div class="blog-p-card__content">
-    <form action="https://pages.canonical.com/index.php/leadCapture/save" method="post" id="mktoForm_1212" novalidate="novalidate" onsubmit="ga('send', 'Newsletter', 'Signup', 'New homepage newsletter signup');">
+    <form action="/marketo/submit" method="post" id="mktoForm_1212" novalidate="novalidate" onsubmit="ga('send', 'Newsletter', 'Signup', 'New homepage newsletter signup');">
       <h3 class="p-card--title p-heading--four">Select topics you're <br />interested in</h3>
 
       <ul class="p-list">
         <li class="p-list__item u-clearfix">
-          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" type="checkbox" id="insightscloudserver" name="insightscloudserver" value="Cloud and server" />
+          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" type="checkbox" id="insightscloudserver" name="insightscloudserver" value="true" />
           <label for="insightscloudserver">Cloud and Server</label>
         </li>
 
         <li class="p-list__item u-clearfix">
-          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" type="checkbox" id="insightsdesktop" name="insightsdesktop" value="Desktop" />
+          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" type="checkbox" id="insightsdesktop" name="insightsdesktop" value="true" />
           <label for="insightsdesktop">Desktop</label>
         </li>
 
         <li class="p-list__item u-clearfix">
-          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" type="checkbox" id="insightsiot" name="insightsiot" value="Internet of Things" />
+          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" type="checkbox" id="insightsiot" name="insightsiot" value="true" />
           <label for="insightsiot">Internet of Things</label>
         </li>
 
         <li class="p-list__item u-clearfix">
-          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" id="insightsrobotics" name="insightsrobotics" value="Robotics" type="checkbox">
+          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" id="insightsrobotics" name="insightsrobotics" value="true" type="checkbox">
           <label for="insightsrobotics">Robotics</label>
         </li>
 
         <li class="p-list__item u-clearfix">
-          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" id="insightstutorials" name="insightstutorials" value="Tutorials" type="checkbox">
+          <input class="mktoLogicalField mktoCheckboxList mktoHasWidth" id="insightstutorials" name="insightstutorials" value="true" type="checkbox">
           <label for="insightstutorials">Tutorials</label>
         </li>
       </ul>
@@ -37,13 +37,13 @@
       <div class="mktFormReq mktField">
         <label>
           <span class="u-no-margin--top">Work email: <span>*</span></span>
-          <input required  id="Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" />
+          <input required  id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" />
         </label>
       </div>
 
       <div class="mktField mktLblRight">
         <span class="mktInput mktLblRight">
-          <input class="u-no-margin--top mktFormCheckbox" name="canonicalUpdatesOptIn" id="CanonicalUpdatesOptIn" value="Receive updates" type="checkbox" />
+          <input class="u-no-margin--top mktFormCheckbox" name="canonicalUpdatesOptIn" id="CanonicalUpdatesOptIn" value="yes" type="checkbox" />
           <label for="CanonicalUpdatesOptIn" class="p-form__label u-no-margin--top">
             <small>I agree to receive information about Canonical's products and services.</small>
           </label>
@@ -62,22 +62,15 @@
           <button type="submit" class="u-no-margin--bottom">Subscribe now</button>
         </span>
 
-        <input type="hidden" name="Consent_to_Processing__c" value="yes" />
-
-        <input value="1959" class="mktoField mktoFieldDescriptor" name="lpId" type="hidden">
-
-        <input value="30" class="mktoField mktoFieldDescriptor" name="subId" type="hidden">
-
-        <input name="lpurl" value="https://pages.canonical.com/Insights-Subscription_Insights-Subscription-test.html?cr={creative}&amp;kw={keyword}" type="hidden">
         <input value="1212" class="mktoField mktoFieldDescriptor" name="formid" type="hidden">
-        <input type="hidden" name="ret" value="{{request.build_absolute_uri}}?newsletter=true" />
-        <input value="066-EOV-335" class="mktoField mktoFieldDescriptor" name="munchkinId" type="hidden">
-        <input name="kw" value="" type="hidden">
-        <input name="cr" value="" type="hidden">
-        <input name="searchstr" value="" type="hidden">
-        <input name="_mkt_disp" value="return" type="hidden">
-        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
-        <input name="_mkt_trk" value="id:066-EOV-335&amp;token:_mch-ubuntu.com-1473266321199-95160" type="hidden">
+        <input type="hidden" name="Consent_to_Processing__c" value="yes" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
         <input type="hidden" name="thankyoumessage" value="Thank you for subscribing!<br />You will begin receiving emails as new content is posted. You may unsubscribe any time by clicking the link in the email.">
       </div>
     </form>

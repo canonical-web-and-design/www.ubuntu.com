@@ -1,0 +1,177 @@
+<div class="p-modal" id="contact-modal">
+  <div class="p-modal__dialog" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <header class="p-modal__header" style="display: block; border-bottom: 0;">
+      <button class="p-modal__close" aria-label="Close active modal" style="margin-left: -1rem">Close</button>
+      <h2 class="p-modal__title  u-sv1" id="modal-title">Register your interest for the Ubuntu Pro on-prem beta</h2>
+    </header>
+    <div class="js-pagination js-pagination--1">
+      <p>In 2020, Canonical launched Ubuntu Pro for comprehensive security and compliance for Azure and AWS production environments, and <strong>now is extending Ubuntu Pro to be available on-prem through a beta programme</strong>. This programme will give Ubuntu users a free, one-month subscription to Ubuntu Pro &mdash; please register your interest below to learn more.</p>
+      <div class="js-formfield">
+        <h3 class="p-heading--five">Which Ubuntu LTS are you using?</h3>
+        <div class="row u-no-padding u-equal-height">
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="which-ubuntu-Xenial">
+            <label for="which-ubuntu-Xenial">16.04 (Xenial)</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="which-ubuntu-Bionic">
+            <label for="which-ubuntu-Bionic">18.04 (Bionic)</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="which-ubuntu-Focal">
+            <label for="which-ubuntu-Focal">20.04 (Focal)</label>
+          </div>
+        </div>
+      </div>
+      <div class="js-formfield">
+        <h3 class="p-heading--five">Do you use any of the below packages?</h3>
+        <div class="row u-no-padding">
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="packages-redis">
+            <label for="packages-redis">redis</label>
+            <input type="checkbox" id="packages-zookeeper">
+            <label for="packages-zookeeper">zookeeper</label>
+            <input type="checkbox" id="packages-python-rsa">
+            <label for="packages-python-rsa">python-rsa</label>
+            <input type="checkbox" id="packages-pigz">
+            <label for="packages-pigz">pigz</label>
+            <input type="checkbox" id="packages-opencv">
+            <label for="packages-opencv">opencv</label>
+            <input type="checkbox" id="packages-openjpeg2">
+            <label for="packages-openjpeg2">openjpeg2</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="packages-xerces-c">
+            <label for="packages-xerces-c">xerces-c</label>
+            <input type="checkbox" id="packages-monit">
+            <label for="packages-monit">monit</label>
+            <input type="checkbox" id="packages-ntp">
+            <label for="packages-ntp">ntp</label>
+            <input type="checkbox" id="packages-wireshark">
+            <label for="packages-wireshark">wireshark</label>
+            <input type="checkbox" id="packages-runc">
+            <label for="packages-runc">runc</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="packages-jq">
+            <label for="packages-jq">jq</label>
+            <input type="checkbox" id="packages-nodejs">
+            <label for="packages-nodejs">nodejs</label>
+            <input type="checkbox" id="packages-tomcat">
+            <label for="packages-tomcat">tomcat 6 or 7</label>
+            <input type="checkbox" id="packages-libonig">
+            <label for="packages-libonig">libonig</label>
+            <input type="checkbox" id="packages-zeromq3">
+            <label for="packages-zeromq3">zeromq3</label>
+            <div class="col-4 u-sv3">
+              <div class="js-other-container">
+                <input type="checkbox" class="js-other-container__checkbox" id="packages-other">
+                <label for="packages-other">Other</label>
+                <input type="text" id="packages-other-specified" class="js-other-container__input" placeholder="Please specify" style="opacity: 0; margin-top: .25rem;" aria-label="Other Board">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="js-formfield">
+        <h3 class="p-heading--five">Where do you get your open source software from?</h3>
+        <div class="row u-no-padding u-equal-height">
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="open-source-from-Ubuntu-repositories">
+            <label for="open-source-from-Ubuntu-repositories">Ubuntu repositories</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="open-source-from-Upstream-packages">
+            <label for="open-source-from-Upstream-packages">Upstream packages</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="open-source-from-Github">
+            <label for="open-source-from-Github">Github</label>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <a class="p-button--positive pagination__link--next" href="">Next</a>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--2 u-hide">
+      <h3 class="p-heading--five">How should we get in touch?</h3>
+      <div class="row u-no-padding">
+        <div class="col-6">
+          <form action="/marketo/submit" method="post" id="mktoForm_%% formid %%" class="modal-form marketo-form">
+            <ul class="p-list">
+              <li class="mktFormReq mktField p-list__item">
+                <label for="firstName" class="mktoLabel">First name:</label>
+                <input required id="firstName" name="firstName" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="lastName" class="mktoLabel">Last name:</label>
+                <input required id="lastName" name="lastName" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="email" class="mktoLabel">Work email:</label>
+                <input required id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" required="required" />
+              </li>
+              <li class="mktField p-list__item">
+                <input class="mktoField" value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox" />
+                <label class="mktoLabel mktoHasWidth" for="canonicalUpdatesOptIn">I agree to receive information about Canonical's products and services.</label>
+              </li>
+              <li class="p-list__item">In submitting this form, I confirm that I have read and agree to <a href="/legal/data-privacy/contact">Canonical's Privacy Notice</a> and <a href="/legal/data-privacy">Privacy Policy</a>.</li>
+              <li class="p-list__item">
+                <div class="g-recaptcha" data-sitekey="{{ CAPTCHA_TESTING_API_KEY }}" style="margin: 2rem 0;"></div>
+              </li>
+            </ul>
+
+            <div class="u-hide">
+              <h3>Your comments</h3>
+              <ul class="p-list">
+                <li class="mktFormReq mktField p-list__item">
+                  <label for="Comments_from_lead__c" class="mktoLabel">What would you like to talk to us about?</label>
+                  <textarea id="Comments_from_lead__c" name="Comments_from_lead__c" rows="5" class="mktoField" maxlength="2000"></textarea>
+                </li>
+              </ul>
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formid" class="mktoField" value="%% formid %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="Consent_to_Processing__c" value="yes" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="productContext" id="product-context" value="{{ product }}" />
+            </div>
+
+            <div class="pagination">
+              <a class="pagination__link--previous p-button--neutral" href="">Previous</a>
+              <button type="submit" class="pagination__link--next p-button--positive mktoButton" aria-label="Submit">Let's discuss</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--3 u-hide">
+      <div class="row u-no-padding u-equal-height">
+        <div class="col-7">
+          <h3 class="p-heading--two">Thank you</h3>
+          <p>Thank you for registering your interest in the Ubuntu Pro on-prem beta programme. If selected as a participant, you will receive an email from Canonical with more details on getting started.</p>
+        </div>
+        <div class="col-5 u-vertically-center u-align--center u-hide--small">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/cbae9a60-thank_you_orange_cmyk.svg",
+            alt="smile",
+            width="200",
+            height="200",
+            hi_def=True,
+            loading="auto",
+            ) | safe
+          }}
+        </div>
+      </div>
+      <a class="js-close p-button--neutral" href="">Close</a>
+    </div>
+  </div>
+</div>

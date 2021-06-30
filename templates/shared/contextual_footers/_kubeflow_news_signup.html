@@ -1,12 +1,12 @@
 <div class="col-4 p-divider__block">
   <h3 class="p-heading--four">Kubeflow news</h3>
   <!-- MARKETO FORM -->
-  <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_3415" class="marketo-form">
+  <form action="/marketo/submit" method="post" id="mktoForm_3415" class="marketo-form">
     <p>Subscribe to our newsletter and get a weekly update of <a class="p-link--external" href="https://kubeflow-news.com/">Kubeflow news</a> from across the web.</p>
     <ul class="p-list">
       <li class="mktFormReq mktField p-list__item">
-        <label for="Email" class="mktoLabel contextual-footer__text--label">Work email:</label>
-        <input required id="Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
+        <label for="email" class="mktoLabel contextual-footer__text--label">Work email:</label>
+        <input required id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
       </li>
       <li class="p-list__item u-no-margin--top">
         <p>
@@ -23,10 +23,13 @@
     <div>
       <input type="hidden" name="Consent_to_Processing__c" value="Yes">
       <input type="hidden" name="formid" value="3415">
-      <input type="hidden" name="formVid" value="3415">
-      <input type="hidden" name="lpId" value="">
-      <input type="hidden" name="munchkinId" value="066-EOV-335">
-      <input type="hidden" name="lpurl" value="">
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+      <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
       <input type="hidden" name="thankyoumessage" value="Thank you for subscribing!<br />You will begin receiving emails as new content is posted. You may unsubscribe any time by clicking the link in the email.">
     </div>
   </form>

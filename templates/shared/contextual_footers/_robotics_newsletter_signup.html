@@ -1,7 +1,7 @@
 <div class="col-4 p-divider__block">
   <h3 class="p-heading--four">Robotics newsletter</h3>
   <!-- MARKETO FORM -->
-  <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_1212" class="marketo-form">
+  <form action="/marketo/submit" method="post" id="mktoForm_1212" class="marketo-form">
     <p>Receive regular updates from our Robotics newsletter.</p>
     <ul class="p-list">
       <li class="mktFormReq mktField p-list__item">
@@ -25,18 +25,16 @@
       <li class="mktField p-list__item">
         <button type="submit" class="mktoButton p-button--neutral">Submit</button>
         <input type="hidden" name="formid" value="1212">
-        <input type="hidden" name="formVid" value="1212">
-        <input type="hidden" name="lpId" value="1959">
-        <input type="hidden" name="subId" value="30">
-        <input type="hidden" name="munchkinId" value="066-EOV-335">
-        <input type="hidden" name="lpurl" value="//pages.canonical.com/Insights-Subscription_Insights-Subscription-test.html?cr={creative}&kw={keyword}">
-        <input type="hidden" name="source" value="ubuntu.com">
-        <input type="hidden" name="insightsrobotics" value="Robotics">
-        <input type="hidden" name="returnURL" value="https://ubuntu.com/robotics/thank-you?product=newsletter" />
-        <input type="hidden" name="retURL" value="https://ubuntu.com/robotics/thank-you?product=newsletter" />
-        <input type="hidden" name="return_url" value="https://ubuntu.com/robotics/thank-you?product=newsletter" />
+        <input type="hidden" name="insightsrobotics" value="true">
+        <input type="hidden" name="returnURL" value="/robotics/thank-you?product=newsletter" />
         <input type="hidden" name="Consent_to_Processing__c" value="yes" />
-        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
       </li>
     </ul>
   </form>

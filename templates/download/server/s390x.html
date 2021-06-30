@@ -24,28 +24,28 @@
     <div class="col-5 col-start-large-8">
 
       <!-- MARKETO FORM -->
-      <form class="p-form u-no-margin--top" action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_1400">
+      <form class="p-form u-no-margin--top" action="/marketo/submit" method="post" id="mktoForm_1400">
         <fieldset style="border: 1px solid #c0c0c0;">
           <ul class="p-list u-no-margin--bottom">
             <li class="mktFormReq mktField p-list__item">
-              <label for="FirstName" aria-label="FirstName" class="mktoLabel">First name: <span>*</span></label>
-              <input required id="FirstName" name="FirstName" maxlength="255" type="text" class="mktoField   mktoRequired">
+              <label for="firstName" aria-label="FirstName" class="mktoLabel">First name: <span>*</span></label>
+              <input required id="firstName" name="firstName" maxlength="255" type="text" class="mktoField   mktoRequired">
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="LastName" aria-label="LastName" class="mktoLabel">Last name: <span>*</span></label>
-              <input required id="LastName" name="LastName" maxlength="255" type="text" class="mktoField   mktoRequired">
+              <label for="lastName" aria-label="LastName" class="mktoLabel">Last name: <span>*</span></label>
+              <input required id="lastName" name="lastName" maxlength="255" type="text" class="mktoField   mktoRequired">
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="Company" aria-label="Company" class="mktoLabel">Company name: <span>*</span></label>
-              <input required id="Company" name="Company" maxlength="255" type="text" class="mktoField   mktoRequired">
+              <label for="company" aria-label="Company" class="mktoLabel">Company name: <span>*</span></label>
+              <input required id="company" name="company" maxlength="255" type="text" class="mktoField   mktoRequired">
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="Email" aria-label="Email" class="mktoLabel">Email address: <span>*</span></label>
-              <input required id="Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField  mktoRequired">
+              <label for="email" aria-label="Email" class="mktoLabel">Email address: <span>*</span></label>
+              <input required id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField  mktoRequired">
             </li>
             <li class="mktFormReq mktField p-list__item">
-              <label for="Phone" aria-label="Phone" class="mktoLabel">Mobile/cell phone number: <span>*</span></label>
-              <input required id="Phone" name="Phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired">
+              <label for="phone" aria-label="phone" class="mktoLabel">Mobile/cell phone number: <span>*</span></label>
+              <input required id="phone" name="phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired">
             </li>
             <li class="mktField p-list__item">
               <label for="NumUbuntuServers__c" aria-label="NumUbuntuServers__c" class="mktoLabel">Number of drawers you are purchasing support for:</label>
@@ -106,20 +106,17 @@
             <li class="mktField p-list__item">
               <button onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'Download', 'eventAction' : 'LinuxONE server', 'eventLabel' : '{{ releases.lts.short_version }}', 'eventValue' : undefined });" type="submit" class="mktoButton p-button--positive is-wide u-no-margin--bottom">Accept terms and download</button>
               <input type="hidden" aria-hidden="true" name="formid" class="mktoField " value="1400">
-              <input type="hidden" aria-hidden="true" name="lpId" class="mktoField " value="2469">
-              <input type="hidden" aria-hidden="true"
-              name="subId" class="mktoField " value="30">
-              <input type="hidden" aria-hidden="true" name="munchkinId" class="mktoField " value="066-EOV-335">
-              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
-              <input type="hidden" aria-hidden="true" name="lpurl" class="mktoField " value="https://pages.ubuntu.com/download-LinuxONE.html?cr={creative}&amp;kw={keyword}">
-              <input
-              type="hidden" aria-hidden="true" name="cr" class="mktoField " value=""><input type="hidden" aria-hidden="true" name="kw" class="mktoField " value=""><input type="hidden" aria-hidden="true" name="q" class="mktoField " value="">
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
             </li>
           </ul>
         </fieldset>
-        <input type="hidden" aria-hidden="true" name="return_url" value="https://www.ubuntu.com/download/server/thank-you-s390x" />
         <input type="hidden" aria-hidden="true" name="returnURL" value="https://www.ubuntu.com/download/server/thank-you-s390x" />
-        <input type="hidden" aria-hidden="true" name="retURL" value="https://www.ubuntu.com/download/server/thank-you-s390x" />
       </form>
       <!-- /MARKETO FORM -->
     </div>
@@ -127,5 +124,7 @@
 </div>
 
 {% with first_item="_download_server_installation", second_item="_download_server_guide", third_item="_download_helping_hands" %}{% include "shared/contextual_footers/_contextual_footer.html" %}{% endwith %}
+
+<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" defer />
 
 {% endblock content %}

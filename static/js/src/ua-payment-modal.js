@@ -1105,20 +1105,15 @@ function submitMarketoForm() {
   let request = new XMLHttpRequest();
   let formData = new FormData();
 
-  formData.append("munchkinId", "066-EOV-335");
   formData.append("formid", 3756);
-  formData.append("formVid", 3756);
-  formData.append("Email", customerInfo.email);
+  formData.append("email", customerInfo.email);
   formData.append("Consent_to_Processing__c", "yes");
   formData.append("GCLID__c", getSessionData("gclid"));
   formData.append("utm_campaign", getSessionData("utm_campaign"));
   formData.append("utm_source", getSessionData("utm_source"));
   formData.append("utm_medium", getSessionData("utm_medium"));
 
-  request.open(
-    "POST",
-    "https://app-sjg.marketo.com/index.php/leadCapture/save2"
-  );
+  request.open("POST", "/marketo/submit");
   request.send(formData);
 
   request.onreadystatechange = () => {

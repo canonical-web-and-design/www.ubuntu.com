@@ -1,10 +1,10 @@
 <div class="col-4 p-divider__block">
-  <form class="mktoForm mktoNoJS" action="https://pages.canonical.com/index.php/leadCapture/save" method="post">
+  <form class="mktoForm mktoNoJS" action="/marketo/submit" method="post">
     <h3 class="p-heading--four">Sign up for our monthly Cloud&nbsp;Newsletter</h3>
     <ul class="p-list mktoFormRow u-clearfix">
       <li class="mktoFormCol p-list__item">
-        <label class="u-off-screen mktoLabel" for="Email">Your email</label>
-        <input type="email" placeholder="Your email" class="mktoField mktoTextField" name="Email" id="Email" required />
+        <label class="u-off-screen mktoLabel" for="email">Your email</label>
+        <input type="email" placeholder="Your email" class="mktoField mktoTextField" name="email" id="email" required />
       </li>
       <li class="mktField mktLblRight p-list__item">
         <span class="mktInput mktLblRight">
@@ -16,21 +16,17 @@
         <p>In submitting this form, I confirm that I have read and agree to <a href="/legal/data-privacy/newsletter">Canonical's Privacy Notice</a> and <a href="/legal/data-privacy">Privacy Policy</a>.</p>
       </li>
       <li class="p-list__item">
-        <span class="u-off-screen"><input type="text" name="_marketo_comments" value=""></span>
         <span class="mktoButtonWrap"><button type="submit" class="mktoButton p-button--neutral"  onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'Contextual footer link', 'eventAction' : 'Cloud newsletter', 'eventLabel' : 'Sign-up for news updates', 'eventValue' : undefined });">Subscribe now</button></span>
-        <input type="hidden" name="Consent_to_Processing__c" value="yes" />
-        <input value="1959" class="mktoField mktoFieldDescriptor" name="lpId" type="hidden" />
-        <input value="30" class="mktoField mktoFieldDescriptor" name="subId" type="hidden" />
-        <input type="hidden" name="lpurl" value="https://pages.canonical.com/Insights-Subscription_Insights-Subscription-test.html?cr={creative}&amp;kw={keyword}" />
         <input value="1212" class="mktoField mktoFieldDescriptor" name="formid" type="hidden" />
-        <input type="hidden" name="ret" value="https://ubuntu.com/openstack/newsletter-thank-you" />
-        <input value="066-EOV-335" class="mktoField mktoFieldDescriptor" name="munchkinId" type="hidden" />
-        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
-        <input type="hidden" name="kw" value="" />
-        <input type="hidden" name="cr" value="" />
-        <input type="hidden" name="searchstr" value="" />
-        <input type="hidden" name="_mkt_disp" value="return" />
-        <input type="hidden" name="_mkt_trk" value="" />
+        <input type="hidden" name="Consent_to_Processing__c" value="yes" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
+        <input type="hidden" name="returnURL" value="/openstack/newsletter-thank-you" />
       </li>
     </ul>
   </form>

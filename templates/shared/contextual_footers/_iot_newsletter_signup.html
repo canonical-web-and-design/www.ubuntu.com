@@ -1,12 +1,12 @@
 <div class="col-4 p-divider__block">
   <h3 class="p-heading--four">IoT newsletter</h3>
   <!-- MARKETO FORM -->
-  <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_1670" class="marketo-form">
+  <form action="/marketo/submit" method="post" id="mktoForm_1670" class="marketo-form">
     <p>Receive regular updates from our IoT newsletter.</p>
     <ul class="p-list">
       <li class="mktFormReq mktField p-list__item">
-        <label for="Email" class="mktoLabel contextual-footer__text--label">Your email address:</label>
-        <input required id="Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
+        <label for="email" class="mktoLabel contextual-footer__text--label">Your email address:</label>
+        <input required id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired">
       </li>
       <li class="mktField mktLblRight p-list__item">
         <span class="mktInput mktLblRight">
@@ -22,16 +22,16 @@
       <li class="mktField p-list__item">
         <button type="submit" class="mktoButton p-button--neutral">Submit</button>
         <input type="hidden" name="formid" class="mktoField" value="1670">
-        <input type="hidden" name="formVid" class="mktoField" value="1670">
-        <input type="hidden" name="munchkinId" class="mktoField " value="066-EOV-335">
-        <input type="hidden" name="lpurl" class="mktoField " value="//pages.ubuntu.com/Opt-In_IoTNewsletters.html?cr={creative}&amp;kw={keyword}">
-        <input type="hidden" name="source" class="mktoField  mktoFormCol" value="ubuntu.com">
-        <input type="hidden" name="IoT_Newsletters__c" class="mktoField  mktoFormCol" value="True">
-        <input type="hidden" name="returnURL" value="https://www.ubuntu.com/internet-of-things/thank-you?product=newsletter" />
-        <input type="hidden" name="retURL" value="https://www.ubuntu.com/internet-of-things/thank-you?product=newsletter" />
-        <input type="hidden" name="return_url" value="https://www.ubuntu.com/internet-of-things/thank-you?product=newsletter" />
+        <input type="hidden" name="IoT_Newsletters__c" class="mktoField  mktoFormCol" value="true">
+        <input type="hidden" name="returnURL" value="/internet-of-things/thank-you?product=newsletter" />
         <input type="hidden" name="Consent_to_Processing__c" value="yes" />
-        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+        <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
       </li>
     </ul>
   </form>

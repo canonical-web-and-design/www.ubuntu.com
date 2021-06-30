@@ -34,38 +34,38 @@
 
     <div class="col-4 col-start-large-9">
       <!-- MARKETO FORM -->
-      <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_1862" class="marketo-form">
+      <form action="/marketo/submit" method="post" id="mktoForm_1862" class="marketo-form">
         <fieldset style="border: 0;">
           <ul class="p-list">
             <li class="mktFormReq mktField p-list__item">
               <label for="1-FirstName" class="mktoLabel">First name:</label>
-              <input required id="1-FirstName" name="FirstName" maxlength="255" type="text" class="mktoField   mktoRequired">
+              <input required id="1-FirstName" name="firstName" maxlength="255" type="text" class="mktoField   mktoRequired">
             </li>
             <li class="mktFormReq mktField p-list__item">
               <label for="1-LastName" class="mktoLabel">Last name:</label>
-              <input required id="1-LastName" name="LastName" maxlength="255" type="text" class="mktoField   mktoRequired">
+              <input required id="1-LastName" name="lastName" maxlength="255" type="text" class="mktoField   mktoRequired">
             </li>
 
             <li class="mktFormReq mktField p-list__item">
               <label for="1-Company" class="mktoLabel">Company name:</label>
-              <input required id="1-Company" name="Company" maxlength="255" type="text" class="mktoField   mktoRequired">
+              <input required id="1-Company" name="company" maxlength="255" type="text" class="mktoField   mktoRequired">
             </li>
 
             <li class="mktFormReq mktField p-list__item">
-              <label for="Title" class="mktoLabel">Job title:</label>
-              <input required id="Title" name="Title" maxlength="255" type="text" class="mktoField mktoRequired" />
+              <label for="title" class="mktoLabel">Job title:</label>
+              <input required id="title" name="title" maxlength="255" type="text" class="mktoField mktoRequired" />
             </li>
 
             <li class="mktFormReq mktField p-list__item">
               <label for="1-Email" class="mktoLabel">Email:</label>
-              <input required id="1-Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField  mktoRequired">
+              <input required id="1-Email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField  mktoRequired">
             </li>
 
             {% include "shared/forms/_country.html" %}
 
             <li class="mktFormReq mktField p-list__item">
               <label for="1-Phone" class="mktoLabel">Mobile/cell phone number:</label>
-              <input required id="1-Phone" name="Phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired">
+              <input required id="1-Phone" name="phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired">
             </li>
 
             <li class="mktField p-list__item">
@@ -80,19 +80,21 @@
             <li class="mktField p-list__item">
               <button type="submit" class="p-button--positive mktoButton" aria-label="Submit">Download the eBook</button>
               <input type="hidden" name="formid" class="mktoField " value="1862" aria-label="">
-              <input type="hidden" name="formVid" class="mktoField " value="1862" aria-label="">
-              <input type="hidden" name="munchkinId" class="mktoField " value="066-EOV-335" aria-label="">
-              <input type="hidden" name="lpurl" class="mktoField " value="https://pages.ubuntu.com/LP-MAAS_eBook.html" aria-label="">
               <input type="hidden" name="download_asset_url" value="https://assets.ubuntu.com/v1/05f610df-eBook_MAAS.pdf.zip" aria-label="">
               <input type="hidden" name="thankyoumessage" value="Thank you<br />Enjoy the ebook!" aria-lable="">
-              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_content" class="mktoField" id="utm_content" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_term" class="mktoField" id="utm_term" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="GCLID__c" class="mktoField" id="GCLID__c" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="FBCLID__c" class="mktoField" id="FBLID__c" value="" />
             </li>
             <li>All information provided will be handled in accordance with the Canonical <a href="/legal">privacy policy</a>.</li>
           </ul>
         </fieldset>
 
         <input type="hidden" name="returnURL" value="{{ return_url }}" aria-label="" />
-        <input type="hidden" name="retURL" value="{{ return_url }}" aria-label="" />
         <input type="hidden" name="Consent_to_Processing__c" value="yes" aria-label="" />
       </form>
       <!-- /MARKETO FORM -->
