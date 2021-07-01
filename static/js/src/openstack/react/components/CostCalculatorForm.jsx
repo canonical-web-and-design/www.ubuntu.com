@@ -13,21 +13,31 @@ import CostCalculations from "./CostCalculations";
 
 const CostCalculatorForm = () => {
   const [formState, setFormState] = useState({
-    instances: 1000,
-    vcpus: 2,
-    emepheralStorage: 8,
-    ram: 8,
-    persistentStorage: 80,
+    instances: { value: 1000, error: "" },
+    vcpus: { value: 2, error: "" },
+    emepheralStorage: { value: 8, error: "" },
+    ram: { value: 8, error: "" },
+    persistentStorage: { value: 80, error: "" },
     supportLevel: "fully-managed",
   });
 
   const onChangeHandler = (e) => {
     const value =
       e.target.type === "checkbox" ? e.target.checked : e.target.value;
-    setFormState({
-      ...formState,
-      [e.target.name]: value,
-    });
+
+    const error =
+      parseInt(e.target.value) < parseInt(e.target.min) ||
+      parseInt(e.target.value) > parseInt(e.target.max) ||
+      e.target.value === ""
+        ? `Please enter a value between ${e.target.min} and ${e.target.max}`
+        : false;
+
+    e.target.name !== "supportLevel"
+      ? setFormState({
+          ...formState,
+          [e.target.name]: { value: parseInt(value), error: error },
+        })
+      : setFormState({ ...formState, supportLevel: parseInt(value) });
   };
 
   return (
@@ -47,11 +57,14 @@ const CostCalculatorForm = () => {
             <Slider
               max={10000}
               mdxType="Slider"
-              min={0}
+              min={1}
               name="instances"
               onChange={onChangeHandler}
               showInput
-              value={formState.instances}
+              value={formState.instances.value}
+              error={formState.instances.error}
+              ariaLabel="Number of instances"
+              required
             />
             <h3>
               Instance type
@@ -68,7 +81,7 @@ const CostCalculatorForm = () => {
                   <Col size="3">
                     <p>vCPUs</p>
                   </Col>
-                  <Col size="1">
+                  <Col size="2">
                     <Input
                       id="vcpus"
                       ariaLabel="vCPUs"
@@ -78,7 +91,9 @@ const CostCalculatorForm = () => {
                       min="1"
                       max="116"
                       name="vcpus"
-                      value={formState.vcpus}
+                      value={formState.vcpus.value}
+                      error={formState.vcpus.error}
+                      required
                     ></Input>
                   </Col>
                 </Row>
@@ -88,7 +103,7 @@ const CostCalculatorForm = () => {
                   <Col size="3">
                     <p>Emepheral storage [GB]</p>
                   </Col>
-                  <Col size="1">
+                  <Col size="2">
                     <Input
                       id="ephemeral-storage"
                       ariaLabel="Emepheral storage"
@@ -98,7 +113,9 @@ const CostCalculatorForm = () => {
                       min="4"
                       max="114"
                       name="emepheralStorage"
-                      value={formState.emepheralStorage}
+                      value={formState.emepheralStorage.value}
+                      error={formState.emepheralStorage.error}
+                      required
                     ></Input>
                   </Col>
                 </Row>
@@ -110,7 +127,7 @@ const CostCalculatorForm = () => {
                   <Col size="3">
                     <p>RAM [GB]</p>
                   </Col>
-                  <Col size="1">
+                  <Col size="2">
                     <Input
                       id="ram"
                       ariaLabel="RAM [GB]"
@@ -120,7 +137,9 @@ const CostCalculatorForm = () => {
                       min="1"
                       max="1824"
                       name="ram"
-                      value={formState.ram}
+                      value={formState.ram.value}
+                      error={formState.ram.error}
+                      required
                     ></Input>
                   </Col>
                 </Row>
@@ -130,7 +149,7 @@ const CostCalculatorForm = () => {
                   <Col size="3">
                     <p>Persistent storage [GB]</p>
                   </Col>
-                  <Col size="1">
+                  <Col size="2">
                     <Input
                       id="persistent-storage"
                       ariaLabel="Persistent storage [GB]"
@@ -140,7 +159,9 @@ const CostCalculatorForm = () => {
                       min="0"
                       max="221"
                       name="persistentStorage"
-                      value={formState.persistentStorage}
+                      value={formState.persistentStorage.value}
+                      error={formState.persistentStorage.error}
+                      required
                     ></Input>
                   </Col>
                 </Row>

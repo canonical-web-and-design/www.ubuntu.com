@@ -5,7 +5,7 @@ import TCO_CONSTANTS from "../utils/constants";
 
 const CostCalculations = (formState) => {
   //RAM
-  const amountOfRamInCloud = formState.instances * formState.ram;
+  const amountOfRamInCloud = formState.instances.value * formState.ram.value;
 
   const amountOfRamInFullyUtilizedCloud =
     (amountOfRamInCloud * 100) /
@@ -22,7 +22,8 @@ const CostCalculations = (formState) => {
   );
 
   //vCPUs
-  const numberOfVcpusInCloud = formState.instances * formState.vcpus;
+  const numberOfVcpusInCloud =
+    formState.instances.value * formState.vcpus.value;
 
   const numberOfVcpusInFullyUtilizedCloud =
     (numberOfVcpusInCloud * 100) /
@@ -42,7 +43,8 @@ const CostCalculations = (formState) => {
   );
 
   //Emepheral Storage
-  const amountOfESInCloud = formState.instances * formState.emepheralStorage;
+  const amountOfESInCloud =
+    formState.instances.value * formState.emepheralStorage.value;
 
   const amountOfESInFullyUtilizedCloud =
     (amountOfESInCloud * 100) /
@@ -57,7 +59,8 @@ const CostCalculations = (formState) => {
   );
 
   //Persistent storage
-  const amountOfPSInCloud = formState.instances * formState.persistentStorage;
+  const amountOfPSInCloud =
+    formState.instances.value * formState.persistentStorage.value;
 
   const amountOfPSInFullyUtilizedCloud =
     (amountOfPSInCloud * 100) /
@@ -246,7 +249,7 @@ const CostCalculations = (formState) => {
   //final calculations to display
   const hourlyCostPerInstance =
     charmedOpenstackTco /
-    formState.instances /
+    formState.instances.value /
     (8760 * TCO_CONSTANTS.operations.hardWareRenewalPeriod);
 
   const totalSavings =
@@ -257,6 +260,19 @@ const CostCalculations = (formState) => {
     currency: "USD",
     maximumFractionDigits: 0,
   });
+
+  //error check
+  let error = false;
+  if (
+    formState.instances.error ||
+    formState.vcpus.error ||
+    formState.emepheralStorage.error ||
+    formState.ram.error ||
+    formState.persistentStorage.error
+  ) {
+    error = true;
+  }
+
   return (
     <>
       <div className="u-fixed-width">
@@ -267,7 +283,9 @@ const CostCalculations = (formState) => {
           <p className="p-heading--4">Hourly cost per instance:</p>
         </Col>
         <Col size="2" className="u-align--right">
-          <p className="p-heading--4">${hourlyCostPerInstance.toFixed(4)}</p>
+          <p className="p-heading--4">
+            {!error ? `$${hourlyCostPerInstance.toFixed(4)}` : "-"}
+          </p>
         </Col>
       </Row>
       <Row>
@@ -277,7 +295,9 @@ const CostCalculations = (formState) => {
           </p>
         </Col>
         <Col size="2" className="u-align--right">
-          <p className="p-heading--4">{formatter.format(totalSavings)}</p>
+          <p className="p-heading--4">
+            {!error ? formatter.format(totalSavings) : "-"}
+          </p>
         </Col>
       </Row>
     </>
