@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Row, Col, Button } from "@canonical/react-components";
+import { Row, Col } from "@canonical/react-components";
 
 import TCO_CONSTANTS from "../utils/constants";
 
@@ -310,7 +310,9 @@ const CostCalculations = ({
       </Row>
       <Row>
         <Col size="12" className="u-align--right">
-          <Button appearance="positive">Email me those estimates</Button>
+          <a className="js-invoke-modal p-button--positive">
+            Email me those estimates
+          </a>
         </Col>
       </Row>
     </>
