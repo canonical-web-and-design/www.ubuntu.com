@@ -1,11 +1,19 @@
+import PropTypes from "prop-types";
 import React from "react";
-import { Row, Col } from "@canonical/react-components";
+import { Row, Col, Button } from "@canonical/react-components";
 
 import TCO_CONSTANTS from "../utils/constants";
 
-const CostCalculations = (formState) => {
+const CostCalculations = ({
+  instances,
+  vcpus,
+  emepheralStorage,
+  ram,
+  persistentStorage,
+  supportLevel,
+}) => {
   //RAM
-  const amountOfRamInCloud = formState.instances.value * formState.ram.value;
+  const amountOfRamInCloud = instances.value * ram.value;
 
   const amountOfRamInFullyUtilizedCloud =
     (amountOfRamInCloud * 100) /
@@ -22,8 +30,7 @@ const CostCalculations = (formState) => {
   );
 
   //vCPUs
-  const numberOfVcpusInCloud =
-    formState.instances.value * formState.vcpus.value;
+  const numberOfVcpusInCloud = instances.value * vcpus.value;
 
   const numberOfVcpusInFullyUtilizedCloud =
     (numberOfVcpusInCloud * 100) /
@@ -43,8 +50,7 @@ const CostCalculations = (formState) => {
   );
 
   //Emepheral Storage
-  const amountOfESInCloud =
-    formState.instances.value * formState.emepheralStorage.value;
+  const amountOfESInCloud = instances.value * emepheralStorage.value;
 
   const amountOfESInFullyUtilizedCloud =
     (amountOfESInCloud * 100) /
@@ -59,8 +65,7 @@ const CostCalculations = (formState) => {
   );
 
   //Persistent storage
-  const amountOfPSInCloud =
-    formState.instances.value * formState.persistentStorage.value;
+  const amountOfPSInCloud = instances.value * persistentStorage.value;
 
   const amountOfPSInFullyUtilizedCloud =
     (amountOfPSInCloud * 100) /
@@ -180,7 +185,7 @@ const CostCalculations = (formState) => {
     TCO_CONSTANTS.operations.externalNetworkBandwidth;
 
   let totalSubscriptionCost;
-  formState.supportLevel === "fully-managed"
+  supportLevel === "fully-managed"
     ? (totalSubscriptionCost =
         numberOfNodes * TCO_CONSTANTS.operations.fullyManaged)
     : (totalSubscriptionCost =
@@ -191,7 +196,7 @@ const CostCalculations = (formState) => {
     TCO_CONSTANTS.price.operationsTeamAvarageAnnualStaffSalary;
 
   let totalOperationsCost;
-  formState.supportLevel === "fully-managed"
+  supportLevel === "fully-managed"
     ? (totalOperationsCost = totalSubscriptionCost)
     : (totalOperationsCost = totalSubscriptionCost + totalStaffSalaryCost);
 
@@ -249,7 +254,7 @@ const CostCalculations = (formState) => {
   //final calculations to display
   const hourlyCostPerInstance =
     charmedOpenstackTco /
-    formState.instances.value /
+    instances.value /
     (8760 * TCO_CONSTANTS.operations.hardWareRenewalPeriod);
 
   const totalSavings =
@@ -264,11 +269,11 @@ const CostCalculations = (formState) => {
   //error check
   let error = false;
   if (
-    formState.instances.error ||
-    formState.vcpus.error ||
-    formState.emepheralStorage.error ||
-    formState.ram.error ||
-    formState.persistentStorage.error
+    instances.error ||
+    vcpus.error ||
+    emepheralStorage.error ||
+    ram.error ||
+    persistentStorage.error
   ) {
     error = true;
   }
@@ -276,7 +281,10 @@ const CostCalculations = (formState) => {
   return (
     <>
       <div className="u-fixed-width">
-        <hr className="p-separator" />
+        <hr
+          className="p-separator"
+          style={{ marginBottom: "2rem", marginTop: "2rem" }}
+        />
       </div>
       <Row>
         <Col size="10" className="u-align--right u-no-padding--right">
@@ -300,8 +308,37 @@ const CostCalculations = (formState) => {
           </p>
         </Col>
       </Row>
+      <Row>
+        <Col size="12" className="u-align--right">
+          <Button appearance="positive">Email me those estimates</Button>
+        </Col>
+      </Row>
     </>
   );
+};
+
+CostCalculations.propTypes = {
+  instances: PropTypes.shape({
+    value: PropTypes.number.isRequired,
+    error: PropTypes.string,
+  }),
+  vcpus: PropTypes.shape({
+    value: PropTypes.number.isRequired,
+    error: PropTypes.string,
+  }),
+  emepheralStorage: PropTypes.shape({
+    value: PropTypes.number.isRequired,
+    error: PropTypes.string,
+  }),
+  ram: PropTypes.shape({
+    value: PropTypes.number.isRequired,
+    error: PropTypes.string,
+  }),
+  persistentStorage: PropTypes.shape({
+    value: PropTypes.number.isRequired,
+    error: PropTypes.string,
+  }),
+  supportLevel: PropTypes.string,
 };
 
 export default CostCalculations;

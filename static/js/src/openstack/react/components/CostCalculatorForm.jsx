@@ -37,7 +37,7 @@ const CostCalculatorForm = () => {
           ...formState,
           [e.target.name]: { value: parseInt(value), error: error },
         })
-      : setFormState({ ...formState, supportLevel: parseInt(value) });
+      : setFormState({ ...formState, supportLevel: value });
   };
 
   return (
