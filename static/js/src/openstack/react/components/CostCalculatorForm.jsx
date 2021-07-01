@@ -148,44 +148,48 @@ const CostCalculatorForm = () => {
             </Row>
           </Col>
           <Col size="6">
-            <h3>
-              Support level
-              <Tooltip
-                position="top-right"
-                message=" Average virtual machine resources configuration."
-              >
-                <Icon name="help" className="tco-tooltip" />
-              </Tooltip>
-            </h3>
-            <Input
-              label="Fully-managed"
-              type="radio"
-              id="fully-managed"
-              value="fully-managed"
-              name="supportLevel"
-              onChange={onChangeHandler}
-              checked={formState.supportLevel === "fully-managed"}
-              default
-            />
-            <p>
-              Canonical deploys the cloud and provides 24/7 maintenance and
-              operations of the cloud. The more economical option for
-              small-scale deployments.
-            </p>
-            <Input
-              label="Supported"
-              type="radio"
-              id="supported"
-              value="supported"
-              name="supportLevel"
-              onChange={onChangeHandler}
-              checked={formState.supportLevel === "supported"}
-            />
-            <p>
-              Canonical deploys the cloud and provides 24/7 phone and ticket
-              support for your operations team. The more economical option for
-              large-scale deployments.
-            </p>
+            <Row>
+              <Col size="5" emptyLarge="2">
+                <h3>
+                  Support level
+                  <Tooltip
+                    position="top-right"
+                    message=" Average virtual machine resources configuration."
+                  >
+                    <Icon name="help" className="tco-tooltip" />
+                  </Tooltip>
+                </h3>
+                <Input
+                  label="Fully-managed"
+                  type="radio"
+                  id="fully-managed"
+                  value="fully-managed"
+                  name="supportLevel"
+                  onChange={onChangeHandler}
+                  checked={formState.supportLevel === "fully-managed"}
+                  default
+                />
+                <p>
+                  Canonical deploys the cloud and provides 24/7 maintenance and
+                  operations of the cloud. The more economical option for
+                  small-scale deployments.
+                </p>
+                <Input
+                  label="Supported"
+                  type="radio"
+                  id="supported"
+                  value="supported"
+                  name="supportLevel"
+                  onChange={onChangeHandler}
+                  checked={formState.supportLevel === "supported"}
+                />
+                <p>
+                  Canonical deploys the cloud and provides 24/7 phone and ticket
+                  support for your operations team. The more economical option
+                  for large-scale deployments.
+                </p>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Form>
