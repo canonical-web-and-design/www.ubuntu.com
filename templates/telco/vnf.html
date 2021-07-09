@@ -1,0 +1,459 @@
+{% extends "templates/one-column.html" %}
+
+{% block title %}VNF | Openstack{% endblock %}
+
+{% block meta_description %}Virtual Network Functions infrastructure with Charmed OpenStack{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1xq3tFh1vWhNm1gFzddB6LQ65DggVMHsRUSXvqFPqYc0/edit{% endblock meta_copydoc %}
+
+{% block content %}
+
+<section class="p-strip is-bordered u-no-padding--top u-no-padding--bottom">
+  <div class="p-strip--suru-topped">
+    <div class="row u-equal-height u-vertically-center">
+      <div class="col-7">
+        <h1>
+          OpenStack for NFV
+        </h1>
+        <p class="p-heading--3">
+          Carrier-grade infrastructure for your VNFs
+        </p>
+        <p>
+          Through Charmed OpenStack, you can have an OpenStack distribution that’s deployable, maintainable and upgradable economically. This is achieved by putting full automation around OpenStack deployments and exposed deployment operations.
+        </p>
+        <p>
+          <a href="/telco/contact-us" class="p-button--positive js-invoke-modal">Contact us about NFV</a>
+        </p>
+      </div>
+      <div class="col-5 u-align--center u-hide--small">
+        {{ image (
+          url="https://assets.ubuntu.com/v1/669390e0-openstack-cloud.svg",
+          alt="",
+          width="263",
+          height="150",
+          hi_def=True,
+          loading="auto"
+          ) | safe
+        }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered no-padding--bottom">
+  <div class="row">
+    <div class="col-6">
+      <h2>Total bottom-up automation</h2>
+      <h4>Fully automated OpenStack deployment and operations</h4>
+      <p>From bare metal to cloud control plane, Charmed OpenStack uses automation everywhere.</p>
+      <p>Save time and money by moving to the only OpenStack platform on the market that uses model-driven operations.</p>
+      <p>
+        <a href="/engage/openstack-deployment-guide">Read how to deploy and operate OpenStack effectively&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/c4596e41-openstack-charm-diagram.png",
+        alt="",
+        width="422",
+        height="333",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/8468f4b4-Openstack-price-performance.svg",
+        alt="",
+        width="496",
+        height="300",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>Engineered for best price-performance</h2>
+      <h4>Designed to be economical in every way</h4>
+      <p>Smart operations, optimal architecture, better pricing.</p>
+      <p>All of this to ensure TCO reduction of your cloud, while expanding your budget for innovation.</p>
+      <p>
+        <a href="/openstack/compare">Compare OpenStack distros&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Product interoperability</h2>
+      <h4>Servers, SDN controllers, storage platforms and more</h4>
+      <p>We partner with leading semiconductor companies, hardware vendors, network equipment providers and open source communities to ensure the best breadth of technology choices.</p>
+      <p>All of that to design the optimal architecture and ensure the best price-performance all of the time.</p>
+      <p>
+        <a href="/openstack/features">Read about supported options&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/0678b279-Openstack-puzzle.svg",
+        alt="",
+        width="262",
+        height="300",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/58e11dd2-delta+updates.svg",
+        alt="",
+        width="320",
+        height="183",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>100 Gbps OpenStack</h2>
+      <h4>For telcos, for HPC, for AI/ML</h4>
+      <p>All necessary performance extensions for running <a href="/telco">NFVI/VIM</a> and other advanced cloud architectures:</p>
+      <ul class="p-list is-split">
+        <li class="p-list__item is-ticked">OVS hardware offloading</li>
+        <li class="p-list__item is-ticked">SR-IOV</li>
+        <li class="p-list__item is-ticked">DPDK</li>
+        <li class="p-list__item is-ticked">CPU pinning</li>
+        <li class="p-list__item is-ticked">NUMA topology</li>
+        <li class="p-list__item is-ticked">Hugepages</li>
+        <li class="p-list__item is-ticked">PCI passthrough</li>
+        <li class="p-list__item is-ticked">GPU passthrough</li>
+      </ul>
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Extendable containers layer</h2>
+      <h4>Run both containers and VMs on the same platform</h4>
+      <p>Extend your cloud with a <a href="/kubernetes">Kubernetes</a> layer running on top of it and benefit from a unified approach to both containers and legacy workloads management.</p>
+      <p>The entire stack is supported under the same <a href="/advantage">subscription</a>.</p>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/a21ceaf9-Openstack-extendable-containers-layers.svg",
+        alt="",
+        width="352",
+        height="300",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/f880a3bd-Enterprise+support.svg",
+        alt="",
+        width="300",
+        height="300",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>Secure, compliant, hardened</h2>
+      <h4>10 years of support</h4>
+      <p>Canonical provides up to ten years of security updates for Charmed OpenStack under the <a href="/advantage">UA-I subscription</a> for customers who value stability above all else. Moreover, the support package includes various EU and US regulatory compliance options. Additional hardening tools and benchmarks ensure the highest level of security.</p>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered is-deep">
+  <div class="u-fixed-width">
+    <h2>Interesting Openstack Resources</h2>
+    <div class="row p-divider">
+      <div class="col-4 p-divider__block">
+        <div class="p-heading-icon--muted">
+          <div class="p-heading-icon__header">
+            {{
+              image(
+                url="https://assets.ubuntu.com/v1/6e184942-Webinar.svg",
+                alt="",
+                height="28",
+                width="32",
+                hi_def=True,
+                attrs={"class": "p-heading-icon__img p-heading-icon__img--small"},
+                loading="lazy",
+              ) | safe
+            }}
+            <div class="p-heading-icon__title">WEBINAR</div>
+          </div>
+          <h3 class="p-heading--four">
+            <a href="/engage/openstack-security-webinar">Private cloud security</a>
+          </h3>
+        </div>
+      </div>
+      <div class="col-4 p-divider__block">
+        <div class="p-heading-icon--muted">
+          <div class="p-heading-icon__header">
+            {{
+              image(
+                url="https://assets.ubuntu.com/v1/75902002-news-feed-strip-stock_ebook.svg",
+                alt="",
+                height="28",
+                width="32",
+                hi_def=True,
+                attrs={"class": "p-heading-icon__img p-heading-icon__img--small"},
+                loading="lazy",
+              ) | safe
+            }}
+            <div class="p-heading-icon__title">WHITEPAPER</div>
+          </div>
+          <h3 class="p-heading--four">
+            <a href="/engage/openstack-deployment-guide">OpenStack deployment guide</a>
+          </h3>
+        </div>
+      </div>
+      <div class="col-4 p-divider__block">
+        <div class="p-heading-icon--muted">
+          <div class="p-heading-icon__header">
+            {{
+              image(
+                url="https://assets.ubuntu.com/v1/75902002-news-feed-strip-stock_ebook.svg",
+                alt="",
+                height="28",
+                width="32",
+                hi_def=True,
+                attrs={"class": "p-heading-icon__img p-heading-icon__img--small"},
+                loading="lazy",
+              ) | safe
+            }}
+            <div class="p-heading-icon__title">WHITEPAPER</div>
+          </div>
+          <h3 class="p-heading--four">
+            <a href="/engage/redhat-openstack-comparison-whitepaper">Read the whitepaper - “Comparing Red Hat OpenStack Platform and Canonical’s Charmed OpenStack”&nbsp;&rsaquo;</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered u-hide--small">
+  <div class="u-fixed-width">
+    <div class="p-logo-section">
+      <h3 class="p-logo-section__title p-muted-heading u-align--center">
+        Trusted by leading service providers, globally
+      </h3>
+      <div class="p-logo-section__items">
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/d8f890fb-logo-at%26t.svg",
+            alt="AT&T",
+            height="120",
+            width="120",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/eaf98009-Bell_Blue_large_transparent.png",
+            alt="Bell Canada",
+            height="55",
+            width="83",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/ac2000c4-Charter+Communications.svg",
+            alt="Charter Communications",
+            height="33",
+            width="97",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/5a9dfd45-Liberty-Global-Logo.png",
+            alt="Liberty Global",
+            height="160",
+            width="160",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/03a06060-logo-deutschetelekom.svg",
+            alt="Deutshe Telekom",
+            height="29",
+            width="130",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/7c97efb0-BT_logo.svg",
+            alt="BT",
+            height="64",
+            width="64",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/88730cec-Telefonica.png",
+            alt="Telefonica",
+            height="75",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/25de1877-Tele2.svg",
+            alt="Tele2",
+            height="30",
+            width="80",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/73135672-ntt-logo.svg",
+            alt="NTT",
+            height="40",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/481063cd-pccw.svg",
+            alt="PCCW",
+            height="50",
+            width="144",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/57eb4484-NTT_DoCoMo_logo.svg",
+            alt="Docomo",
+            height="28",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/3218bf54-Verizon_2015_logo_-vector.svg",
+            alt="Verizon",
+            height="27",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image (
+            url="https://assets.ubuntu.com/v1/d2bfbb2b-MTS_logo_%282016%29.svg",
+            alt="MTS",
+            width="114",
+            height="42",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image (
+            url="https://assets.ubuntu.com/v1/1459d379-tmn_logo.png",
+            alt="tmn",
+            width="159",
+            height="70",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip">
+  <div class="row u-vertically-aligned">
+    <div class="col-7">
+    <h3>Innovate in telecommunications with Canonical</h3>
+    <p>The experts in open source operations, from cloud to devices are waiting to help you on your journey.</p>
+    <p>
+      <a href="/telco/contact-us" class="p-button--positive js-invoke-modal">Contact us about NFV</a>
+    </p>
+    </div>
+    <div class="col-5 u-hide--small u-align--center">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/c4b290c8-Contact+us.svg",
+        alt="",
+        width="211",
+        height="150",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+  </div>
+</section>
+
+<!-- Set default Marketo information for contact form below-->
+
+<div class="u-hide" id="contact-form-container" data-form-location="/shared/_telco-contact-us-form" data-form-id="4048" data-lp-id="" data-return-url="/telco/thank-you" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
+</div>
+
+{% endblock content %}
