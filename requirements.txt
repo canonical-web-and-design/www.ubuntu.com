@@ -1,7 +1,8 @@
 canonicalwebteam.flask-base==0.9.0
 alembic==1.5.4
 canonicalwebteam.http==1.0.3
-canonicalwebteam.blog==6.3.1
+#canonicalwebteam.blog==6.3.1
+git+git://github.com/anthonydillon/canonicalwebteam.blog.git@improve-related-posts#egg=canonicalwebteam.blog
 canonicalwebteam.search==1.0.0
 canonicalwebteam.templatefinder==1.0.0
 canonicalwebteam.image-template==1.3.1
