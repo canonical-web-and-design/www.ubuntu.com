@@ -102,8 +102,14 @@
     > label {
       font-weight: 400;
 
+      > .p-label {
+        position: absolute;
+        right: 1rem;
+      }
+
       > small {
         font-weight: normal;
+        margin-top: 0.5rem;
       }
     }
 
@@ -134,21 +140,9 @@
     }
 
     .p-card__title {
-      &--is-new {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-
-        &::after {
-          background-color: #0e8420;
-          border-radius: 2px;
-          color: white;
-          content: "New";
-          display: inline-block;
-          font-size: 1rem;
-          padding: 0 0.5rem;
-        }
-      }
+      align-items: baseline;
+      display: flex;
+      justify-content: space-between;
     }
 
     img {
