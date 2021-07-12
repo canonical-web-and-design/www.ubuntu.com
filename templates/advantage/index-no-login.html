@@ -65,6 +65,28 @@
     </div>
   </section>
 
+ <section class="p-strip u-no-padding--bottom">
+    <div class="row">
+      <h2>Introducing a free trial of ESM Apps</h2>
+      <p>Security coverage for high and critical CVEs with extended security maintenance for over 30,000 packages including: NodeJS, Django, NGINX, Redis, Kafka, ROS.</p>
+      <p>Try Ubuntu Pro Essential for 1 month, free of charge with no commitment and no payment card.</p>
+      <p>
+      <a 
+        href="/advantage/subscribe?free_trial=uaa-essential&quantity=1{% if is_test_backend %}&test_backend=true{% endif %}" 
+        class="p-button--positive"   
+        onclick="dataLayer.push({
+          'event' : 'GAEvent',
+          'eventCategory' : 'Advantage',
+          'eventAction' : 'free-trial',
+          'eventLabel' : 'Try ESM Apps Free',
+          'eventValue' : 5
+        });">
+          Try ESM Apps Free
+      </a>
+      </p>
+    </div>
+  </section>
+
   <section class="p-strip is-shallow is-bordered">
     <div class="row">
       <h2>Plans for enterprise use</h2>
