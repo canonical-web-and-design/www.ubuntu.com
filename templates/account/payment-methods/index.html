@@ -56,7 +56,7 @@
         <div id="default-payment-method-section" class="row {% if not default_payment_method["id"] %}u-hide{% endif %}" style="margin-top: 2rem;">
           <div class="col-4 current-payment-method">
             {% with brand=default_payment_method["brand"] %}
-              {% include "advantage/payment-methods/_card-logo.html" %}
+              {% include "account/payment-methods/_card-logo.html" %}
             {% endwith %}
             <p><span style="text-transform: capitalize;">{{default_payment_method["brand"]}}</span> ending in {{default_payment_method["last4"]}}</p>
             </div>

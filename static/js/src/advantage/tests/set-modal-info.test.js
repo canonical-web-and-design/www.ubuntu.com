@@ -44,7 +44,7 @@ describe("getRenewalInformation", () => {
           {
             end: {
               label: "Ends:",
-              value: "20 May 2021",
+              value: "18 August 2020",
               extraClasses: "js-end-date",
             },
             plan: {
@@ -57,7 +57,7 @@ describe("getRenewalInformation", () => {
             },
             start: {
               label: "Continues from:",
-              value: "21 May 2020",
+              value: "18 April 2020",
             },
           },
         ],

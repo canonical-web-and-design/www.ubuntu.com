@@ -1,21 +1,28 @@
-{% extends "openstack/_base_openstack.html" %}
-
-
-{% block title %}What is OpenStack{% endblock %}
-{% block meta_description %}OpenStack is an open source private cloud platform designed to manage distributed compute, network and storage resources in the data centre and enable on-demand virtual machines provisioning through a self-service portal.{% endblock meta_description %}
-{% block meta_copydoc %}https://docs.google.com/document/d/15xrgIq_KUwHaCyFoI7-yS_JmBbsoyXJ4GpRMFAa7_is/edit{% endblock meta_copydoc %}
-
-{% block content %}
+{% extends "openstack/_base_openstack.html" %} {% block title %}What is
+OpenStack{% endblock %} {% block meta_description %}OpenStack is an open source
+private cloud platform designed to manage distributed compute, network and
+storage resources in the data centre and enable on-demand virtual machines
+provisioning through a self-service portal.{% endblock meta_description %} {%
+block meta_copydoc
+%}https://docs.google.com/document/d/15xrgIq_KUwHaCyFoI7-yS_JmBbsoyXJ4GpRMFAa7_is/edit{%
+endblock meta_copydoc %} {% block content %}
 <section class="p-strip--suru-image is-bordered">
   <div class="row">
     <div class="col-7">
       <h1>What is OpenStack?</h1>
-      <p>Imagine a data centre. Hundreds of physical machines, racked, powered and connected to each other. One tool turns this data centre into a cloud and enables on-demand resource provisioning through a self-service portal. That’s OpenStack!</p>
+      <p>
+        Imagine a data centre. Hundreds of physical machines, racked, powered
+        and connected to each other. One tool turns this data centre into a
+        cloud and enables on-demand resource provisioning through a self-service
+        portal. That’s OpenStack!
+      </p>
       <p>
         <a class="p-button--positive" href="/openstack">Learn more</a>
       </p>
       <p>
-        <a href="/engage/openstack-deployment-guide">Read the whitepaper - “OpenStack deployment guide”&nbsp;&rsaquo;</a>
+        <a href="/engage/openstack-deployment-guide"
+          >Read the whitepaper - “OpenStack deployment guide”&nbsp;&rsaquo;</a
+        >
       </p>
     </div>
   </div>
@@ -25,21 +32,29 @@
   <div class="row u-equal-height">
     <div class="col-8">
       <h2>OpenStack ensures maximum multi-cloud cost optimisation</h2>
-      <p>A private cloud is a cost-efficient extension of the public cloud infrastructure. Since more and more organisations are deciding to use <a href="/cloud">multi-cloud architecture</a>, implementing a private cloud is a natural step once the number of workloads grows. Although CapEx costs associated with an initial deployment of the private cloud are high, its OpEx costs are significantly lower compared to public clouds. As a result, the aggregated total cost of ownership (TCO) per virtual machine (VM) is lower when running workloads in the long term and at scale. This allows businesses to optimise their infrastructure costs and always run their applications where it makes most of the sense from the economical point of view.</p>
       <p>
-        <a href="/tco-calculator">Learn how much you can save with OpenStack&nbsp;&rsaquo;</a>
+        A private cloud is a cost-efficient extension of the public cloud
+        infrastructure. Since more and more organisations are deciding to use
+        <a href="/cloud">multi-cloud architecture</a>, implementing a private
+        cloud is a natural step once the number of workloads grows. Although
+        CapEx costs associated with an initial deployment of the private cloud
+        are high, its OpEx costs are significantly lower compared to public
+        clouds. As a result, the aggregated total cost of ownership (TCO) per
+        virtual machine (VM) is lower when running workloads in the long term
+        and at scale. This allows businesses to optimise their infrastructure
+        costs and always run their applications where it makes most of the sense
+        from the economical point of view.
+      </p>
+      <p>
+        <a href="/tco-calculator"
+          >Learn how much you can save with OpenStack&nbsp;&rsaquo;</a
+        >
       </p>
     </div>
     <div class="col-4 u-align--center u-vertically-center u-hide--small">
       {{ image (
-        url="https://assets.ubuntu.com/v1/dcb2963c-openstack+cloud+outlines.svg",
-        alt="",
-        width="263",
-        height="150",
-        hi_def=True,
-        loading="lazy"
-        ) | safe
-      }}
+      url="https://assets.ubuntu.com/v1/dcb2963c-openstack+cloud+outlines.svg",
+      alt="", width="263", height="150", hi_def=True, loading="lazy" ) | safe }}
     </div>
   </div>
 </section>
@@ -48,8 +63,28 @@
   <div class="row">
     <div class="col-9">
       <h2>Is OpenStack just a virtualisation management platform?</h2>
-      <p>Unlike traditional virtualisation management platforms, such as VMware vSphere or Red Hat Virtualization Manager, OpenStack is a fully functional cloud platform as defined by the <a class="p-link--external" href="https://www.nist.gov/programs-projects/nist-cloud-computing-program-nccp">National Institute of Standards and Technology</a>. This means that OpenStack basically resembles the behaviour of public clouds. Users can request compute, network and storage resources on-demand through a self-service portal. Although they are provided in the form of virtual machines, virtual network and virtual disks, exactly as in the traditional virtualisation management platforms, they are defined through the APIs. For businesses, the ability to define virtualised resources programmatically enables fast-paced infrastructure automation and cloud-style operations.</p>
-      <p>But there are more differences between OpenStack and traditional virtualisation management platforms. Refer to the following table for more information:</p>
+      <p>
+        Unlike traditional virtualisation management platforms, such as VMware
+        vSphere or Red Hat Virtualization Manager, OpenStack is a fully
+        functional cloud platform as defined by the
+        <a
+          class="p-link--external"
+          href="https://www.nist.gov/programs-projects/nist-cloud-computing-program-nccp"
+          >National Institute of Standards and Technology</a
+        >. This means that OpenStack basically resembles the behaviour of public
+        clouds. Users can request compute, network and storage resources
+        on-demand through a self-service portal. Although they are provided in
+        the form of virtual machines, virtual network and virtual disks, exactly
+        as in the traditional virtualisation management platforms, they are
+        defined through the APIs. For businesses, the ability to define
+        virtualised resources programmatically enables fast-paced infrastructure
+        automation and cloud-style operations.
+      </p>
+      <p>
+        But there are more differences between OpenStack and traditional
+        virtualisation management platforms. Refer to the following table for
+        more information:
+      </p>
     </div>
   </div>
   <div class="row">
@@ -101,9 +136,11 @@
         </tbody>
       </table>
     </div>
-  <p>
-    <a href="https://ubuntu.com/engage/vmware-to-charmed-openstack">Move from VMware to OpenStack&nbsp;&rsaquo;</a>
-  </p>
+    <p>
+      <a href="https://ubuntu.com/engage/vmware-to-charmed-openstack"
+        >Move from VMware to OpenStack&nbsp;&rsaquo;</a
+      >
+    </p>
   </div>
 </section>
 
@@ -111,61 +148,107 @@
   <div class="row">
     <div class="col-8">
       <h2>How does OpenStack work?</h2>
-      <p>OpenStack is an open source private cloud platform designed to manage distributed compute, network and storage resources in the data centre. In principle, OpenStack aggregates physical resources into one big pool and allocates virtual resources out of this pool to users who can request them on-demand through a self-service portal or application programming interfaces (APIs). But OpenStack itself does not handle virtualisation. Instead, it leverages the existing virtualisation technologies. Therefore, OpenStack is more like a wrapper around traditional virtualisation tools, enabling cloud-native capabilities.</p>
+      <p>
+        OpenStack is an open source private cloud platform designed to manage
+        distributed compute, network and storage resources in the data centre.
+        In principle, OpenStack aggregates physical resources into one big pool
+        and allocates virtual resources out of this pool to users who can
+        request them on-demand through a self-service portal or application
+        programming interfaces (APIs). But OpenStack itself does not handle
+        virtualisation. Instead, it leverages the existing virtualisation
+        technologies. Therefore, OpenStack is more like a wrapper around
+        traditional virtualisation tools, enabling cloud-native capabilities.
+      </p>
     </div>
   </div>
   <div class="u-fixed-width u-align--center u-hide--small">
-      {{ image (
-        url="https://assets.ubuntu.com/v1/089ab42e-Interface-Overview-01.png",
-        alt="",
-        width="2134",
-        height="1449",
-        hi_def=True,
-        loading="lazy"
-        ) | safe
-      }}
+    {{ image (
+    url="https://assets.ubuntu.com/v1/089ab42e-Interface-Overview-01.png",
+    alt="", width="2134", height="1449", hi_def=True, loading="lazy" ) | safe }}
   </div>
 </section>
 
-<section class ="p-strip--light is-bordered">
+<section class="p-strip--light is-bordered">
   <div class="row">
     <div class="col-8">
       <h2>OpenStack components</h2>
-      <p>OpenStack is based on a modular architecture. There are six primary OpenStack components which handle compute, network and storage functions for on-demand VM provisioning. A bunch of other components enable additional features, such as dashboarding, bare metal provisioning, containers, secrets management and telemetry. In order to handle this complexity, organisations often use <a class="p-link--external" href="https://charmhub.io/?q=openstack">OpenStack Charms</a> for fully automated OpenStack installation and post-deployment operations.</p>
+      <p>
+        OpenStack is based on a modular architecture. There are six primary
+        OpenStack components which handle compute, network and storage functions
+        for on-demand VM provisioning. A bunch of other components enable
+        additional features, such as dashboarding, bare metal provisioning,
+        containers, secrets management and telemetry. In order to handle this
+        complexity, organisations often use
+        <a class="p-link--external" href="https://charmhub.io/?q=openstack"
+          >OpenStack Charms</a
+        >
+        for fully automated OpenStack installation and post-deployment
+        operations.
+      </p>
     </div>
   </div>
   <div class="row u-equal-height">
     <article class="col-4 p-card">
       <h3 class="p-card__title p-heading--three">Nova</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">Nova is the primary compute engine of OpenStack, responsible for instance scheduling, creation and termination. In order to ensure widespread interoperability, Nova supports a wide range of hypervisors, including QEMU/KVM, Hyper-V, VMware ESXi and Xen.</p>
+      <p class="p-card__content">
+        Nova is the primary compute engine of OpenStack, responsible for
+        instance scheduling, creation and termination. In order to ensure
+        widespread interoperability, Nova supports a wide range of hypervisors,
+        including QEMU/KVM, Hyper-V, VMware ESXi and Xen.
+      </p>
     </article>
     <article class="col-4 p-card">
       <h3 class="p-card__title p-heading--three">Glance</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">Glance is an image service, responsible for uploading, managing and retrieving cloud images for instances running on OpenStack. Glance works across a variety of stores to provide the most convenient location of images for organisations. </p>
+      <p class="p-card__content">
+        Glance is an image service, responsible for uploading, managing and
+        retrieving cloud images for instances running on OpenStack. Glance works
+        across a variety of stores to provide the most convenient location of
+        images for organisations.
+      </p>
     </article>
     <article class="col-4 p-card">
       <h3 class="p-card__title p-heading--three">Neutron</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">Neutron provides network connectivity between OpenStack instances, enabling multi-VM deployments. For this purpose, Neutron uses various software defined networking (SDN) technologies, including Open Virtual Network (OVN), Open vSwitch (OVS), Juniper Contrail, Cisco ACI, etc. </p>
+      <p class="p-card__content">
+        Neutron provides network connectivity between OpenStack instances,
+        enabling multi-VM deployments. For this purpose, Neutron uses various
+        software defined networking (SDN) technologies, including Open Virtual
+        Network (OVN), Open vSwitch (OVS), Juniper Contrail, Cisco ACI, etc.
+      </p>
     </article>
   </div>
   <div class="row u-equal-height">
     <article class="col-4 p-card">
       <h3 class="p-card__title p-heading--three">Cinder</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">Cinder is a storage component that is responsible for provisioning, management and termination of persistent block devices. Those can be later attached to the instances running on OpenStack to enable persistent block storage.</p>
+      <p class="p-card__content">
+        Cinder is a storage component that is responsible for provisioning,
+        management and termination of persistent block devices. Those can be
+        later attached to the instances running on OpenStack to enable
+        persistent block storage.
+      </p>
     </article>
     <article class="col-4 p-card">
       <h3 class="p-card__title p-heading--three">Swift</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">Swift is another storage component that provides a highly available and scalable object storage service similar to Amazon S3. It enables storing and retrieving unstructured data objects using a RESTful API for both OpenStack services and instances running on the cloud.</p>
+      <p class="p-card__content">
+        Swift is another storage component that provides a highly available and
+        scalable object storage service similar to Amazon S3. It enables storing
+        and retrieving unstructured data objects using a RESTful API for both
+        OpenStack services and instances running on the cloud.
+      </p>
     </article>
     <article class="col-4 p-card">
       <h3 class="p-card__title p-heading--three">Keystone</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">Keystone serves as an identity service, providing authentication and authorization functions for the users in order to enable multi-tenancy. Keystone can be easily integrated with external identity systems, such as lightweight directory access protocol (LDAP) or Active Directory.</p>
+      <p class="p-card__content">
+        Keystone serves as an identity service, providing authentication and
+        authorization functions for the users in order to enable multi-tenancy.
+        Keystone can be easily integrated with external identity systems, such
+        as lightweight directory access protocol (LDAP) or Active Directory.
+      </p>
     </article>
   </div>
 </section>
@@ -174,140 +257,78 @@
   <div class="row p-logo-section">
     <div class="col-8">
       <h2>Companies involved in OpenStack</h2>
-      <p>OpenStack was originally launched in July 2010 by Rackspace and NASA as an open source initiative that combined NASA’s Nebula platform and Rackspace’s Cloud Files platform.</p>
-      <p>Today, hundreds of companies contribute to OpenStack code, with many more playing a part in the broader community.</p>
+      <p>
+        OpenStack was originally launched in July 2010 by Rackspace and NASA as
+        an open source initiative that combined NASA’s Nebula platform and
+        Rackspace’s Cloud Files platform.
+      </p>
+      <p>
+        Today, hundreds of companies contribute to OpenStack code, with many
+        more playing a part in the broader community.
+      </p>
     </div>
     <div class="col-12 p-logo-section__items">
       <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/4b049910-canonical.svg",
-          alt="",
-          width="145",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
+        {{ image ( url="https://assets.ubuntu.com/v1/4b049910-canonical.svg",
+        alt="", width="145", height="145", hi_def=True, loading="lazy" ) | safe
         }}
       </div>
       <div class="p-logo-section__item">
         {{ image (
-          url="https://assets.ubuntu.com/v1/9b1fe97b-2018-logo-IBM.svg",
-          alt="",
-          width="145",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
+        url="https://assets.ubuntu.com/v1/9b1fe97b-2018-logo-IBM.svg", alt="",
+        width="145", height="145", hi_def=True, loading="lazy" ) | safe }}
+      </div>
+      <div class="p-logo-section__item">
+        {{ image (
+        url="https://assets.ubuntu.com/v1/64277a51-2018-logo-redhat.svg",
+        alt="", width="145", height="145", hi_def=True, loading="lazy" ) | safe
+        }}
+      </div>
+      <div class="p-logo-section__item">
+        {{ image ( url="https://assets.ubuntu.com/v1/ad3bf2cf-mirantis.svg",
+        alt="", width="145", height="145", hi_def=True, loading="lazy" ) | safe
         }}
       </div>
       <div class="p-logo-section__item">
         {{ image (
-          url="https://assets.ubuntu.com/v1/64277a51-2018-logo-redhat.svg",
-          alt="",
-          width="145",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
+        url="https://assets.ubuntu.com/v1/50aef2d0-rackspace-logo.svg", alt="",
+        width="145", height="144", hi_def=True, loading="lazy" ) | safe }}
+      </div>
+      <div class="p-logo-section__item">
+        {{ image (
+        url="https://assets.ubuntu.com/v1/15263218-hewlett_packard.svg", alt="",
+        width="146", height="145", hi_def=True, loading="lazy" ) | safe }}
+      </div>
+      <div class="p-logo-section__item">
+        {{ image (
+        url="https://assets.ubuntu.com/v1/94ea495b-2018-logo-Intel.svg", alt="",
+        width="146", height="145", hi_def=True, loading="lazy" ) | safe }}
+      </div>
+      <div class="p-logo-section__item">
+        {{ image (
+        url="https://assets.ubuntu.com/v1/7dd7bfaf-2018-logo-huawei.svg",
+        alt="", width="145", height="145", hi_def=True, loading="lazy" ) | safe
+        }}
+      </div>
+      <div class="p-logo-section__item">
+        {{ image ( url="https://assets.ubuntu.com/v1/446d9353-logo-nec.svg",
+        alt="", width="144", height="144", hi_def=True, loading="lazy" ) | safe
         }}
       </div>
       <div class="p-logo-section__item">
         {{ image (
-          url="https://assets.ubuntu.com/v1/ad3bf2cf-mirantis.svg",
-          alt="",
-          width="145",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
+        url="https://assets.ubuntu.com/v1/2ec61a24-logo-deutsche-telekom.svg",
+        alt="", width="144", height="144", hi_def=True, loading="lazy" ) | safe
         }}
       </div>
       <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/50aef2d0-rackspace-logo.svg",
-          alt="",
-          width="145",
-          height="144",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
+        {{ image ( url="https://assets.ubuntu.com/v1/bc0dcda4-vmware-logo.svg",
+        alt="", width="145", height="144", hi_def=True, loading="lazy" ) | safe
         }}
       </div>
       <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/15263218-hewlett_packard.svg",
-          alt="",
-          width="146",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
-        }}
-      </div>
-      <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/94ea495b-2018-logo-Intel.svg",
-          alt="",
-          width="146",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
-        }}
-      </div>
-      <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/7dd7bfaf-2018-logo-huawei.svg",
-          alt="",
-          width="145",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
-        }}
-      </div>
-      <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/446d9353-logo-nec.svg",
-          alt="",
-          width="144",
-          height="144",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
-        }}
-      </div>
-      <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/2ec61a24-logo-deutsche-telekom.svg",
-          alt="",
-          width="144",
-          height="144",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
-        }}
-      </div>
-      <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/bc0dcda4-vmware-logo.svg",
-          alt="",
-          width="145",
-          height="144",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
-        }}
-      </div>
-      <div class="p-logo-section__item">
-        {{ image (
-          url="https://assets.ubuntu.com/v1/d8f890fb-logo-at%26t.svg",
-          alt="",
-          width="145",
-          height="145",
-          hi_def=True,
-          loading="lazy"
-          ) | safe
+        {{ image ( url="https://assets.ubuntu.com/v1/d8f890fb-logo-at%26t.svg",
+        alt="", width="145", height="145", hi_def=True, loading="lazy" ) | safe
         }}
       </div>
     </div>
@@ -317,9 +338,33 @@
 <section class="p-strip--light">
   <div class="row">
     <div class="col-8">
-      <p>Canonical is the founding member of the foundation, official maintainer and publisher of OpenStack packages on Ubuntu, leader of the <a class="p-link--external" href="https://docs.openstack.org/charm-guide/latest/">OpenStack Charms project</a> and one the biggest contributor to OpenStack all the time.</p>
+      <p>
+        Canonical is the founding member of the foundation, official maintainer
+        and publisher of OpenStack packages on Ubuntu, leader of the
+        <a
+          class="p-link--external"
+          href="https://docs.openstack.org/charm-guide/latest/"
+          >OpenStack Charms project</a
+        >
+        and one of the biggest contributors to OpenStack all the time:
+      </p>
+      <div class="u-hide--small">
+        <div id="openstack-bar-chart"></div>
+      </div>
+      <div class="u-hide--medium u-hide--large">
+        <div id="openstack-table"></div>
+      </div>
+      <p>
+        <small>
+        Source:
+          <a class="p-link--external" href="https://www.stackalytics.io/?release=all&metric=commits">Stackalytics</a>
+        </small>
+      </p>
     </div>
   </div>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="{{ versioned_static('js/dist/openstackChart.js') }}"></script>
 </section>
 
 <section class="p-strip">
@@ -329,173 +374,166 @@
       <div class="p-logo-section__items">
         <div class="p-logo-section__item">
           {{ image (
-            url="https://assets.ubuntu.com/v1/d8f890fb-logo-at%26t.svg",
-            alt="",
-            width="145",
-            height="145",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
+          url="https://assets.ubuntu.com/v1/d8f890fb-logo-at%26t.svg",
+          alt="",
+          width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/d1223243-ACI.png",
+          alt="",
+          width="292",
+          height="290",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
         </div>
         <div class="p-logo-section__item">
           {{ image (
-            url="https://assets.ubuntu.com/v1/d1223243-ACI.png",
-            alt="",
-            width="292",
-            height="290",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
+          url="https://assets.ubuntu.com/v1/2ec61a24-logo-deutsche-telekom.svg",
+          alt="",
+          width="144",
+          height="144",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
         </div>
         <div class="p-logo-section__item">
           {{ image (
-            url="https://assets.ubuntu.com/v1/2ec61a24-logo-deutsche-telekom.svg",
-            alt="",
-            width="144",
-            height="144",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
+          url="https://assets.ubuntu.com/v1/ead0ceab-gendarmerie-nationale.svg",
+          alt="",
+          width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/015ae0cc-Bloomberg.svg",
+          alt="",
+          width="146",
+          height="146",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/c2220484-logo-BT.svg",
+          alt="",
+          width="144",
+          height="144",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
         </div>
         <div class="p-logo-section__item">
           {{ image (
-            url="https://assets.ubuntu.com/v1/ead0ceab-gendarmerie-nationale.svg",
-            alt="",
-            width="145",
-            height="145",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
+          url="https://assets.ubuntu.com/v1/bb4ee6fb-2018-logo-bnp-paribas.svg",
+          alt="",
+          width="146",
+          height="146",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
         </div>
         <div class="p-logo-section__item">
           {{ image (
-            url="https://assets.ubuntu.com/v1/015ae0cc-Bloomberg.svg",
-            alt="",
-            width="146",
-            height="146",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
+          url="https://assets.ubuntu.com/v1/4589dd76-logo-deutsche-telekom.svg",
+          alt="",
+          width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/216c07a7-KAUST.svg",
+          alt="",
+          width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/fa4dc838-Daimler.svg",
+          alt="",
+          width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/98fbf782-MTS.svg",
+          alt="",
+          width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
         </div>
         <div class="p-logo-section__item">
           {{ image (
-            url="https://assets.ubuntu.com/v1/c2220484-logo-BT.svg",
-            alt="",
-            width="144",
-            height="144",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
+          url="https://assets.ubuntu.com/v1/a2e4ca92-logo-rabobank.svg", alt="",
+          width="144",
+          height="144",
+          hi_def=True,
+          loading="lazy" ) | safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/446d9353-logo-nec.svg",
+          alt="",
+          width="144",
+          height="144",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image ( url="https://assets.ubuntu.com/v1/53305bd8-best+buy.svg",
+          alt="", width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
         </div>
         <div class="p-logo-section__item">
           {{ image (
-            url="https://assets.ubuntu.com/v1/bb4ee6fb-2018-logo-bnp-paribas.svg",
-            alt="",
-            width="146",
-            height="146",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        </div>
-        <div class="p-logo-section__item">
-          {{ image (
-            url="https://assets.ubuntu.com/v1/4589dd76-logo-deutsche-telekom.svg",
-            alt="",
-            width="145",
-            height="145",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        </div>
-        <div class="p-logo-section__item">
-            {{ image (
-              url="https://assets.ubuntu.com/v1/216c07a7-KAUST.svg",
-              alt="",
-              width="145",
-              height="145",
-              hi_def=True,
-              loading="lazy"
-              ) | safe
-            }}
-        </div>
-        <div class="p-logo-section__item">
-          {{ image (
-            url="https://assets.ubuntu.com/v1/fa4dc838-Daimler.svg",
-            alt="",
-            width="145",
-            height="145",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        </div>
-        <div class="p-logo-section__item">
-          {{ image (
-            url="https://assets.ubuntu.com/v1/98fbf782-MTS.svg",
-            alt="",
-            width="145",
-            height="145",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        </div>
-        <div class="p-logo-section__item">
-          {{ image (
-            url="https://assets.ubuntu.com/v1/a2e4ca92-logo-rabobank.svg",
-            alt="",
-            width="144",
-            height="144",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        </div>
-        <div class="p-logo-section__item">
-          {{ image (
-            url="https://assets.ubuntu.com/v1/446d9353-logo-nec.svg",
-            alt="",
-            width="144",
-            height="144",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        </div>
-        <div class="p-logo-section__item">
-          {{ image (
-            url="https://assets.ubuntu.com/v1/53305bd8-best+buy.svg",
-            alt="",
-            width="145",
-            height="145",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        </div>
-        <div class="p-logo-section__item">
-          {{ image (
-            url="https://assets.ubuntu.com/v1/a6fb59fd-spectrum+health.png",
-            alt="",
-            width="145",
-            height="145",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
+          url="https://assets.ubuntu.com/v1/a6fb59fd-spectrum+health.png",
+          alt="", width="145",
+          height="145",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
         </div>
       </div>
-      <p>There are <a class="p-link--external" href="https://www.openstack.org/use-cases/#:~:text=The%20largest%20mobile%20telecom's%20network,OpenStack%20including%20workloads%20like%205G.&text=China%20Mobile's%20telecom%20network%20has,50%2C000%20servers%20in%20the%20network.">thousands of OpenStack users</a> across a broad range of industries. Particularly favoured for its stability, security and interoperability. Apart from <a class="p-link--external" href="https://www.zdnet.com/article/canonical-picks-up-major-openstack-cloud-telecom-win/">telecommunications service providers</a>, financial institutions, enterprises, governments, militaries, universities and research institutions all over the world, further adoption of OpenStack has been also seen in healthcare, retail and industrial.</p>
       <p>
-        <a href="https://ubuntu.com/engage/sbi-casestudy">Read how OpenStack helped SBI Group to optimise their CapEx and OpEx costs&nbsp;&rsaquo;</a>
+        There are
+        <a
+          class="p-link--external"
+          href="https://www.openstack.org/use-cases/#:~:text=The%20largest%20mobile%20telecom's%20network,OpenStack%20including%20workloads%20like%205G.&text=China%20Mobile's%20telecom%20network%20has,50%2C000%20servers%20in%20the%20network."
+          >thousands of OpenStack users</a
+        >
+        across a broad range of industries. Particularly favoured for its
+        stability, security and interoperability. Apart from
+        <a
+          class="p-link--external"
+          href="https://www.zdnet.com/article/canonical-picks-up-major-openstack-cloud-telecom-win/"
+          >telecommunications service providers</a
+        >, financial institutions, enterprises, governments, militaries,
+        universities and research institutions all over the world, further
+        adoption of OpenStack has been also seen in healthcare, retail and
+        industrial.
+      </p>
+      <p>
+        <a href="https://ubuntu.com/engage/sbi-casestudy"
+          >Read how OpenStack helped SBI Group to optimise their CapEx and OpEx
+          costs&nbsp;&rsaquo;</a
+        >
       </p>
     </div>
   </div>
@@ -505,7 +543,24 @@
   <div class="row">
     <div class="col-8">
       <h2>How big is the OpenStack project?</h2>
-      <p>According to the <a class="p-link--external" href="https://451research.com/search?products=OpenStack">Research Market Monitor (Open Source Software, OpenStack)</a> from September 2019, OpenStack’s combined market size worldwide is $7.7B. It also continues to be one of the top three open source projects in the world in terms of active contributions, along with the Linux kernel and Chromium. In 2020 OpenStack reached its 10-year anniversary which proves its maturity as a software project. Governed by the <a class="p-link--external" href="https://openinfra.dev/">Open Infrastructure Foundation</a>, more than 34,000 individual contributors and 550 companies participate in OpenStack development. It is also the most popular open source private cloud platform and its adoption continues to grow.</p>
+      <p>
+        According to the
+        <a
+          class="p-link--external"
+          href="https://451research.com/search?products=OpenStack"
+          >451 Research Market Monitor (Open Source Software, OpenStack)</a
+        >
+        from September 2019, OpenStack’s combined market size worldwide is
+        $7.7B. It also continues to be one of the top three open source projects
+        in the world in terms of active contributions, along with the Linux
+        kernel and Chromium. In 2020 OpenStack reached its 10-year anniversary
+        which proves its maturity as a software project. Governed by the
+        <a class="p-link--external" href="https://openinfra.dev/"
+          >Open Infrastructure Foundation</a
+        >, more than 34,000 individual contributors and 550 companies
+        participate in OpenStack development. It is also the most popular open
+        source private cloud platform and its adoption continues to grow.
+      </p>
     </div>
   </div>
 </section>
@@ -518,16 +573,25 @@
     <article class="col-6 p-card">
       <h3 class="p-card__title p-heading--three">Private cloud</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">OpenStack allows organisations to bootstrap their own private cloud infrastructure, benefitting from maximum cost optimisation in multi-cloud environments.</p>
+      <p class="p-card__content">
+        OpenStack allows organisations to bootstrap their own private cloud
+        infrastructure, benefitting from maximum cost optimisation in
+        multi-cloud environments.
+      </p>
       <br />
       <p>
         <a href="/cloud">Read more about private clouds&nbsp;&rsaquo;</a>
       </p>
     </article>
     <article class="col-6 p-card">
-      <h3 class="p-card__title p-heading--three">Network function virtualisation</h3>
+      <h3 class="p-card__title p-heading--three">
+        Network function virtualisation
+      </h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">All over the world, service providers use OpenStack as a foundation for network function virtualisation infrastructure (NFVI) implementation.</p>
+      <p class="p-card__content">
+        All over the world, service providers use OpenStack as a foundation for
+        network function virtualisation infrastructure (NFVI) implementation.
+      </p>
       <br />
       <p>
         <a href="/telco">Read more about NFV&nbsp;&rsaquo;</a>
@@ -538,16 +602,26 @@
     <article class="col-6 p-card">
       <h3 class="p-card__title p-heading--three">Bare metal</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">Although designed for traditional VMs, OpenStack is fully capable of provisioning bare metal machines on-demand too, turning your data centre into a bare metal cloud.</p>
+      <p class="p-card__content">
+        Although designed for traditional VMs, OpenStack is fully capable of
+        provisioning bare metal machines on-demand too, turning your data centre
+        into a bare metal cloud.
+      </p>
       <br />
       <p>
-        <a class="p-link--external" href="https://maas.io">Read more about bare metal cloud</a>
+        <a class="p-link--external" href="https://maas.io"
+          >Read more about bare metal cloud</a
+        >
       </p>
     </article>
     <article class="col-6 p-card">
       <h3 class="p-card__title p-heading--three">Containers</h3>
       <hr class="u-sv1" />
-      <p class="p-card__content">OpenStack can be easily extended with a container layer running on top of it for better workloads granularity as required by cloud-native applications.</p>
+      <p class="p-card__content">
+        OpenStack can be easily extended with a container layer running on top
+        of it for better workloads granularity as required by cloud-native
+        applications.
+      </p>
       <br />
       <p>
         <a href="/kubernetes">Read more about containers&nbsp;&rsaquo;</a>
@@ -557,26 +631,106 @@
 </section>
 
 <section class="p-strip--light">
-  <div class="row">
-    <div class="col-9">
-      <h2>Why Canonical’s Charmed OpenStack?</h2>
-      <p>Wondering which OpenStack platform to choose? This is why Canonical’s Charmed OpenStack is the answer:</p>
-      <ul class="p-list">
-        <li class="p-list__item is-ticked"><strong>Best price-performance guaranteed </strong>- engineered for the best price-performance, Canonical’s Charmed OpenStack delivers TCO reduction, while maximising the performance of the cloud.</li>
-        <li class="p-list__item is-ticked"><strong>Predictable pricing structure </strong>- fixed-price design & delivery and per-machine <a href="/advantage">support subscription</a> ensures pricing structure transparency and enables predictable budgeting.</li>
-        <li class="p-list__item is-ticked"><strong>Full stack enterprise support </strong>- one subscription for all infrastructure components includes phone and ticket support, production-grade service level agreements (SLAs), hardening and compliance programmes.</li>
-        <li class="p-list__item is-ticked"><strong>Fully-managed service option </strong>- the most cost-effective approach up to 300 nodes where the cloud is maintained and operated by Canonical’s team of experts 24x7.</li>
-        <li class="p-list__item is-ticked"><strong>Total bottom-up automation </strong>- not just OpenStack, but the entire cloud platform, including bare metal layer, is fully automated for the initial installation as well as post-deployment operations.</li>
-        <li class="p-list__item is-ticked"><strong>Every OpenStack version supported </strong>- a new version of OpenStack comes every six months; Canonical provides support for all new versions within two weeks from the upstream release.</li>
-        <li class="p-list__item is-ticked"><strong>Clear and fully automated upgrade path </strong>- users can upgrade between consecutive OpenStack versions in a fully automated way, benefitting from new features brought by the latest release.</li>
-        <li class="p-list__item is-ticked"><strong>Interoperability across various platforms </strong>- from hardware vendors to open source communities, Canonical cooperates with various partners to ensure platform interoperability and flexibility.</li>
-        <li class="p-list__item is-ticked"><strong>Up to ten years of security updates </strong>- Canonical provides up to ten years of security updates under the <a href="/security/esm">Extended Security Maintenance (ESM)</a> programme available for enterprise customers.</li>
-        <li class="p-list__item is-ticked"><strong>100% open source </strong>- from the Ubuntu OS to the delivery mechanisms, the entire platform is 100% open source which helps to stay closer to the upstream and avoid “vendor lock-in”.</li>
-      </ul>
-      <p>
-        <a href="/openstack" class="p-button--positive">Continue reading</a>
-      </p>
-    </div>
+  <div class="u-fixed-width">
+    <h2>Why Canonical’s Charmed OpenStack?</h2>
+    <p>
+      Wondering which OpenStack platform to choose? This is why Canonical’s
+      Charmed OpenStack is the answer:
+    </p>
+    <ul class="p-matrix is-trisected">
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Best price-performance guaranteed</h5>
+          <p>
+            Engineered for the best price-performance, Canonical’s Charmed
+            OpenStack delivers TCO reduction, while maximising the performance
+            of the cloud.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Predictable pricing structure</h5>
+          <p>
+            Fixed-price design & delivery and per-machine
+            <a href="/advantage">support subscription</a> ensures pricing
+            structure transparency and enables predictable budgeting.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Full stack enterprise support</h5>
+          <p>
+            One subscription for all infrastructure components includes phone
+            and ticket support, production-grade service level agreements
+            (SLAs), hardening and compliance programmes.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Fully-managed service option</h5>
+          <p>
+            The most cost-effective approach up to 300 nodes where the cloud
+            is maintained and operated by Canonical’s team of experts 24x7.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Total bottom-up automation</h5>
+          <p>
+            Not just OpenStack, but the entire cloud platform, including bare
+            metal layer, is fully automated for the initial installation as
+            well as post-deployment operations.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Every OpenStack version supported</h5>
+          <p>
+            A new version of OpenStack comes every six months; Canonical
+            provides support for all new versions within two weeks from the
+            upstream release.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Clear and fully automated upgrade path</h5>
+          <p>
+            Users can upgrade between consecutive OpenStack versions in a
+            fully automated way, benefitting from new features brought by the
+            latest release.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Interoperability across various platforms</h5>
+          <p>
+            From hardware vendors to open source communities, Canonical
+            cooperates with various partners to ensure platform
+            interoperability and flexibility.
+          </p>
+        </div>
+      </li>
+      <li class="p-matrix__item">
+        <div class="p-matix__content">
+          <h5>Up to ten years of security updates</h5>
+          <p>
+            Canonical provides up to ten years of security updates under the
+            <a href="/security/esm">Extended Security Maintenance (ESM)</a>
+            programme available for enterprise customers.
+          </p>
+        </div>
+      </li>
+    </ul>
+    <p>
+      <a href="/openstack" class="p-button--positive">Continue reading</a>
+    </p>
   </div>
 </section>
 
@@ -584,22 +738,28 @@
   <div class="row u-equal-height">
     <div class="col-7">
       <h2>How to install OpenStack</h2>
-      <p>Looking for the most straightforward installation instructions for OpenStacK?</p>
-      <p><a class="p-link--external" href="https://microstack.run">MicroStack</a> allows you to install a fully functional OpenStack on your workstation in just two commands. The entire process takes around twenty minutes.</p>
       <p>
-        <a href="https://ubuntu.com/openstack/install">Get started with OpenStack today&nbsp;&rsaquo;</a>
+        Looking for the most straightforward installation instructions for
+        OpenStacK?
+      </p>
+      <p>
+        <a class="p-link--external" href="https://microstack.run">MicroStack</a>
+        allows you to install a fully functional OpenStack on your workstation
+        in just two commands. The entire process takes around twenty minutes.
+      </p>
+      <p>
+        <a href="https://ubuntu.com/openstack/install"
+          >Get started with OpenStack today&nbsp;&rsaquo;</a
+        >
       </p>
     </div>
     <div class="col-5 u-vertically-center u-hide--small">
       {{
         image(
-          url="https://assets.ubuntu.com/v1/2b03a6b4-Install+Openstack.svg",
-          alt="",
-          height="200",
-          width="290",
-          hi_def=True,
-        ) | safe
-      }}
+        url="https://assets.ubuntu.com/v1/2b03a6b4-Install+Openstack.svg", alt="",
+        height="200",
+        width="290",
+        hi_def=True, ) | safe }}
     </div>
   </div>
 </section>
@@ -613,19 +773,49 @@
           <div class="p-heading-icon__header">
             <div>
               {{ image (
-                url="https://assets.ubuntu.com/v1/574aaef4-whitepaper-white.svg",
-                alt="",
-                width="171",
-                height="150",
-                hi_def=True,
-                loading="lazy"
-                ) | safe
-              }}
+              url="https://assets.ubuntu.com/v1/574aaef4-whitepaper-white.svg",
+              alt="",
+              width="171",
+              height="150",
+              hi_def=True,
+              loading="lazy" ) |
+              safe }}
             </div>
-            <h4 class="p-heading-icon__title" style="color: #fff;">WHITEPAPER</h4>
+            <h4 class="p-heading-icon__title" style="color: #fff">
+              WHITEPAPER
+            </h4>
           </div>
           <h3 class="p-heading--four">
-            <a href="/engage/openstack-deployment-guide" class="p-link--inverted">OpenStack deployment guide</a>
+            <a
+              href="/engage/openstack-deployment-guide"
+              class="p-link--inverted"
+              >OpenStack deployment guide</a
+            >
+          </h3>
+        </div>
+      </div>
+
+      <div class="col-4 p-divider__block">
+        <div class="p-heading-icon--muted">
+          <div class="p-heading-icon__header">
+            <div>
+              {{ image (
+              url="https://assets.ubuntu.com/v1/005c3416-webinar-white.svg",
+              alt="",
+              width="171",
+              height="150",
+              hi_def=True,
+              loading="lazy" ) |
+              safe }}
+            </div>
+            <h4 class="p-heading-icon__title" style="color: #fff">WEBINAR</h4>
+          </div>
+          <h3 class="p-heading--four">
+            <a
+              href="https://www.brighttalk.com/webcast/6793/387966?utm_source=brighttalk-portal&utm_medium=web&utm_content=hosted%20private%20cloud%20infrastructure&utm_campaign=webcasts-search-results-feed"
+              class="p-link--external p-link--inverted"
+              >Hosted private cloud infrastructure: a cost analysis</a
+            >
           </h3>
         </div>
       </div>
@@ -634,40 +824,22 @@
           <div class="p-heading-icon__header">
             <div>
               {{ image (
-                url="https://assets.ubuntu.com/v1/005c3416-webinar-white.svg",
-                alt="",
-                width="171",
-                height="150",
-                hi_def=True,
-                loading="lazy"
-                ) | safe
-              }}
+              url="https://assets.ubuntu.com/v1/30037eac-datasheet-white.svg",
+              alt="",
+              width="171",
+              height="150",
+              hi_def=True,
+              loading="lazy" ) |
+              safe }}
             </div>
-            <h4 class="p-heading-icon__title" style="color: #fff;">WEBINAR</h4>
+            <h4 class="p-heading-icon__title" style="color: #fff">DATASHEET</h4>
           </div>
           <h3 class="p-heading--four">
-            <a href="https://www.brighttalk.com/webcast/6793/387966?utm_source=brighttalk-portal&utm_medium=web&utm_content=hosted%20private%20cloud%20infrastructure&utm_campaign=webcasts-search-results-feed" class="p-link--external p-link--inverted">Hosted private cloud infrastructure: a cost analysis</a>
-          </h3>
-        </div>
-      </div>
-      <div class="col-4 p-divider__block">
-        <div class="p-heading-icon--muted">
-          <div class="p-heading-icon__header">
-            <div>
-              {{ image (
-                url="https://assets.ubuntu.com/v1/30037eac-datasheet-white.svg",
-                alt="",
-                width="171",
-                height="150",
-                hi_def=True,
-                loading="lazy"
-                ) | safe
-              }}
-            </div>
-            <h4 class="p-heading-icon__title" style="color: #fff;">DATASHEET</h4>
-          </div>
-          <h3 class="p-heading--four">
-            <a href="https://docs.google.com/document/d/1LTpZyxrRYofxxMtrH6E4khmEoYJkgs0_RntUdpcV0AI/edit#heading=h.1b0cu17ni6v" class="p-link--external p-link--inverted">Canonical’s Charmed OpenStack</a>
+            <a
+              href="https://assets.ubuntu.com/v1/a08e868a-Charmed+OpenStack_15.03.21.pdf"
+              class="p-link--external p-link--inverted"
+              >Canonical&rsquo;s Charmed OpenStack</a
+            >
           </h3>
         </div>
       </div>
@@ -675,28 +847,32 @@
   </div>
 </section>
 
-<section class="p-strip--light is-bordered">
+<section class="p-strip is-bordered">
   <div class="u-fixed-width">
-      <h2>All the pieces you need to start using OpenStack</h2>
+    <h2>All the pieces you need to start using OpenStack</h2>
   </div>
   <div class="row u-equal-height">
     <article class="col-6 p-card">
       <div class="p-heading-icon">
         <div class="p-heading-icon__header">
           {{ image (
-            url="https://assets.ubuntu.com/v1/a7916513-picto-openstack.svg",
-            alt="",
-            width="50",
-            height="50",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-          <h3 class="col-10 p-card__title p-heading--three">Canonical’s Charmed OpenStack</h3>
+          url="https://assets.ubuntu.com/v1/a7916513-picto-openstack.svg",
+          alt="",
+          width="50",
+          height="50",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+          <h3 class="col-10 p-card__title p-heading--three">
+            Canonical’s Charmed OpenStack
+          </h3>
         </div>
       </div>
       <hr class="u-sv1" />
-      <p class="p-card__content">Canonical's Charmed OpenStack is a pure upstream OpenStack distribution engineered for the best price-performance with full enterprise support.</p>
+      <p class="p-card__content">
+        Canonical's Charmed OpenStack is a pure upstream OpenStack distribution
+        engineered for the best price-performance with full enterprise support.
+      </p>
       <br />
       <p>
         <a href="/openstack">Learn more&nbsp;&rsaquo;</a>
@@ -706,19 +882,21 @@
       <div class="p-heading-icon">
         <div class="p-heading-icon__header">
           {{ image (
-            url="https://assets.ubuntu.com/v1/85a9de76-ubuntu-icon.svg",
-            alt="",
-            width="50",
-            height="50",
-            hi_def=True,
-            loading="lazy"
-            ) | safe
-          }}
-        <h3 class="col-10 p-card__title p-heading--three">Ubuntu Server</h3>
+          url="https://assets.ubuntu.com/v1/85a9de76-ubuntu-icon.svg", alt="",
+          width="50",
+          height="50",
+          hi_def=True,
+          loading="lazy" ) |
+          safe }}
+          <h3 class="col-10 p-card__title p-heading--three">Ubuntu Server</h3>
         </div>
       </div>
       <hr class="u-sv1" />
-      <p class="p-card__content">Ubuntu is the most popular Linux distribution across public clouds, data centres and the edge with a built-in security and compliance for enterprise customers.</p>
+      <p class="p-card__content">
+        Ubuntu is the most popular Linux distribution across public clouds, data
+        centres and the edge with a built-in security and compliance for
+        enterprise customers.
+      </p>
       <br />
       <p>
         <a href="/server">Learn more&nbsp;&rsaquo;</a>
@@ -727,12 +905,19 @@
   </div>
 </section>
 
-{% with first_item="_cloud_costs_increasing", second_item="_openstack_documentation", third_item="_openstack_further_reading", no_shadow="true" %}{% include "shared/contextual_footers/_contextual_footer.html" %}{% endwith %}
+{% with first_item="_cloud_costs_increasing", second_item="_cloud_newsletter",
+third_item="_openstack_further_reading", no_shadow="true" %}{% include
+"shared/contextual_footers/_contextual_footer.html" %}{% endwith %}
 
 <!-- Set default Marketo information for contact form below-->
-<div class="u-hide" id="contact-form-container" data-form-location="/shared/forms/interactive/openstack" data-form-id="1251" data-lp-id="2086" data-return-url="https://www.ubuntu.com/openstack/thank-you" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
-</div>
-
-
+<div
+  class="u-hide"
+  id="contact-form-container"
+  data-form-location="/shared/forms/interactive/openstack"
+  data-form-id="1251"
+  data-lp-id="2086"
+  data-return-url="https://www.ubuntu.com/openstack/thank-you"
+  data-lp-url="https://pages.ubuntu.com/things-contact-us.html"
+></div>
 
 {% endblock content %}

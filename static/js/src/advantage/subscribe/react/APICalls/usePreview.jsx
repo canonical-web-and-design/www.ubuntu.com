@@ -1,9 +1,11 @@
 import { useQuery } from "react-query";
 import { postPurchasePreviewData } from "../../../contracts-api";
 import useProduct from "./useProduct";
+import useStripeCustomerInfo from "./useStripeCustomerInfo";
 
 const usePreview = () => {
   const { product, quantity } = useProduct();
+  const { isError: isUserInfoError } = useStripeCustomerInfo();
 
   const { isLoading, isError, isSuccess, data, error } = useQuery(
     ["preview", product],
@@ -28,7 +30,7 @@ const usePreview = () => {
       return res;
     },
     {
-      enabled: !!window.accountId && !!product,
+      enabled: !!window.accountId && !!product && !isUserInfoError,
     }
   );
 

@@ -207,36 +207,6 @@
     h4 {
       margin: 0;
     }
-
-    &.is-selected {
-      background-color: $color-light;
-      overflow: visible;
-      position: relative;
-
-      // Arrow
-      @media (min-width: $breakpoint-medium) {
-        &::after {
-          background: $color-light;
-          border-left: solid 1px $color-mid-light;
-          border-top: solid 1px $color-mid-light;
-          bottom: -41px;
-          content: "";
-          display: block;
-          height: 2rem;
-          left: calc(50% - 1rem);
-          pointer-events: none;
-          position: absolute;
-          transform: rotate(45deg) skew(-10deg, -10deg);
-          width: 2rem;
-          z-index: 5;
-        }
-      }
-      @media (min-width: $breakpoint-x-large) {
-        &::after {
-          bottom: -46px;
-        }
-      }
-    }
   }
 
   .p-card--radio--feature {

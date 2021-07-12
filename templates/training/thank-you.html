@@ -22,6 +22,10 @@
   {% with thanks_context="enquiring about our MAAS Deployment and Operations training course" %}{% include "shared/_thank_you.html" %} {% endwith %}
 {% elif product == 'landscape-training-onsite' %}
   {% with thanks_context="enquiring about our Landscape Deployment and Operations training course" %}{% include "shared/_thank_you.html" %} {% endwith %}
+{% elif product == 'juju-administrator-training-onsite' %}
+  {% with thanks_context="enquiring about our Juju Administrator training course" %}{% include "shared/_thank_you.html" %} {% endwith %}
+{% elif product == 'charm-developer-training-onsite' %}
+  {% with thanks_context="enquiring about our Charm Developer training course" %}{% include "shared/_thank_you.html" %} {% endwith %}
 {% else %}
   {% with thanks_context="enquiring about training" %}{% include "shared/_thank_you.html" %}{% endwith %}
 {% endif %}

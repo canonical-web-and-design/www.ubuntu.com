@@ -354,7 +354,7 @@ def advantage_shop_view(**kwargs):
 
 
 @advantage_checks(check_list=["is_maintenance", "view_need_user"])
-def advantage_payment_methods_view(**kwargs):
+def payment_methods_view(**kwargs):
     is_test_backend = kwargs.get("test_backend")
     stripe_publishable_key = kwargs["stripe_publishable_key"]
     api_url = kwargs.get("api_url")
@@ -386,7 +386,7 @@ def advantage_payment_methods_view(**kwargs):
     default_payment_method = customer_info.get("defaultPaymentMethod")
 
     return flask.render_template(
-        "advantage/payment-methods/index.html",
+        "account/payment-methods/index.html",
         stripe_publishable_key=stripe_publishable_key,
         is_test_backend=is_test_backend,
         default_payment_method=default_payment_method,

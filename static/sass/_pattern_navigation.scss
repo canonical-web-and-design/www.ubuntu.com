@@ -1,3 +1,7 @@
+// Vanilla 2.32 removes internal $grid-margin-width variable,
+// $grid-margin-widths map should be used instead
+$grid-margin-width: map-get($grid-margin-widths, large);
+
 $ubuntu-logo-svg-width: 5rem; // width in rems
 $ubuntu-logo-width--desktop: $ubuntu-logo-svg-width + 2 * $grid-margin-width;
 $ubuntu-logo-width--mobile: $ubuntu-logo-svg-width + 2 * $sph-inner;

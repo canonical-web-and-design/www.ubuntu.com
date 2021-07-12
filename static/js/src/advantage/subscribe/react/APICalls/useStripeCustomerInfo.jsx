@@ -10,8 +10,8 @@ const useStripeCustomerInfo = () => {
       }
       const res = await getCustomerInfo(window.accountId);
 
-      if (res.errors) {
-        throw new Error(res.errors);
+      if (res.data.code) {
+        throw new Error(res.data.message);
       }
       return res.data;
     },

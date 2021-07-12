@@ -11,6 +11,8 @@
         data-name="{{ contract['contractInfo']['name']}}"
         data-quantity="{{ contract['renewal']['renewalItems'][0]['allowance']['value'] }}"
         data-renewal-id="{{ contract['renewal']['id']}}"
+        data-renewal-start="{{ contract['renewal']['start']}}"
+        data-renewal-end="{{ contract['renewal']['end']}}"
         {% if expired_renewable %}
           data-contract-end="{{ contract['contractInfo']['expired_restart_date']}}"
         {% else %}

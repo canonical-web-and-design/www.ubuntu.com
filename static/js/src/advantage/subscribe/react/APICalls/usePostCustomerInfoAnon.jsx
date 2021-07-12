@@ -22,21 +22,25 @@ const usePostCustomerInfoAnon = () => {
       state: country === "US" ? usState : caProvince,
     };
 
-    const res = await postCustomerInfoForPurchasePreview(
-      window.accountId,
-      name,
-      addressObject,
-      {
-        type: "eu_vat",
-        value: VATNumber,
-      }
-    );
+    if (VATNumber) {
+      const res = await postCustomerInfoForPurchasePreview(
+        window.accountId,
+        name,
+        addressObject,
+        {
+          type: "eu_vat",
+          value: VATNumber,
+        }
+      );
 
-    if (res.errors) {
-      throw new Error(JSON.parse(res.errors).code);
+      if (res.errors) {
+        throw new Error(JSON.parse(res.errors).code);
+      }
+
+      return res;
     }
 
-    return res;
+    throw new Error("VAT is missing");
   });
 
   return mutation;

@@ -208,6 +208,7 @@ if (accountContainer && accountContainerSmall) {
             <a href="" class="p-navigation__link-anchor p-subnav__toggle" aria-controls="user-menu" aria-expanded="false" aria-haspopup="true">${data.account.fullname}</a>
             <ul class="p-subnav__items--right" id="user-menu" aria-hidden="true">
               <li><a href="/advantage" class="p-subnav__item">UA subscriptions</a></li>
+              <li><a href="/account/payment-methods" class="p-subnav__item">Payment methods</a></li>
               <li>
                 <hr class="u-no-margin--bottom">
                 <a href="https://login.ubuntu.com/" class="p-subnav__item p-link--external">Account settings</a>

@@ -8,6 +8,8 @@ export const advancedDesktop = {
   products: "['uai-advanced-desktop']",
   quantity: "5",
   renewalId: "rACmlqlrdX08yb4jK3_ldJBUVSY_Bkmubdq1ysGj65yU",
+  renewalStart: "2020-04-18T00:00:00Z",
+  renewalEnd: "2020-08-18T00:00:00Z",
   unitPrice: "2500",
   total: "12500",
 };

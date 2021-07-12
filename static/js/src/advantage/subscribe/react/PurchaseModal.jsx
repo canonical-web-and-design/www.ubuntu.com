@@ -19,6 +19,8 @@ import usePendingPurchase from "./APICalls/usePendingPurchase";
 import { useQueryClient } from "react-query";
 import { getErrorMessage } from "../../error-handler";
 import usePreview from "./APICalls/usePreview";
+import { checkoutEvent, purchaseEvent } from "../../ecom-events";
+import { getSessionData } from "../../../utils/getSessionData";
 
 const getUserInfoFromVariables = (data, variables) => {
   return {
@@ -56,8 +58,10 @@ const PurchaseModal = () => {
     isLoading: isUserInfoLoading,
   } = useStripeCustomerInfo();
   const { isLoading: isPreviewLoading } = usePreview();
-  const { isLoading: isProductLoading } = useProduct();
-  const [step, setStep] = useState(window.accountId ? 2 : 1);
+  const { isLoading: isProductLoading, product, quantity } = useProduct();
+  const [step, setStep] = useState(
+    userInfo?.customerInfo?.defaultPaymentMethod ? 2 : 1
+  );
   const queryClient = useQueryClient();
 
   const {
@@ -93,6 +97,13 @@ const PurchaseModal = () => {
     }
   }, [userInfo]);
 
+  const GAFriendlyProduct = {
+    id: product?.id,
+    name: product?.name,
+    price: product?.price?.value / 100,
+    quantity: quantity,
+  };
+
   useEffect(() => {
     // the initial call was successful but it returned an error while polling the purchase status
     if (purchaseError) {
@@ -125,24 +136,56 @@ const PurchaseModal = () => {
 
   useEffect(() => {
     if (pendingPurchase?.status === "done") {
+      const purchaseInfo = {
+        id: pendingPurchase?.id,
+        origin: "UA Shop",
+        total: pendingPurchase?.invoice?.total / 100,
+        tax: pendingPurchase?.invoice?.taxAmount / 100,
+      };
+
+      purchaseEvent(purchaseInfo, GAFriendlyProduct);
+
       // The state of the product selector is stored in the local storage
       // if a purchase is successful we empty it so the customer will see
       // the default values pre-selected instead of what they just bought.
       localStorage.removeItem("ua-subscribe-state");
 
-      //redirect
-      if (window.isGuest) {
-        location.href = `/advantage/subscribe/thank-you?email=${encodeURIComponent(
-          pendingPurchase?.invoice?.customerEmail
-        )}`;
-      } else {
-        location.pathname = "/advantage";
-      }
+      let request = new XMLHttpRequest();
+      let formData = new FormData();
+      formData.append("munchkinId", "066-EOV-335");
+      formData.append("formid", 3756);
+      formData.append("formVid", 3756);
+      formData.append("Email", userInfo?.customerInfo?.email);
+      formData.append("Consent_to_Processing__c", "yes");
+      formData.append("GCLID__c", getSessionData("gclid"));
+      formData.append("utm_campaign", getSessionData("utm_campaign"));
+      formData.append("utm_source", getSessionData("utm_source"));
+      formData.append("utm_medium", getSessionData("utm_medium"));
+
+      request.open(
+        "POST",
+        "https://app-sjg.marketo.com/index.php/leadCapture/save2"
+      );
+      request.send(formData);
+
+      request.onreadystatechange = () => {
+        if (request.readyState === 4) {
+          //redirect
+          if (window.isGuest) {
+            location.href = `/advantage/subscribe/thank-you?email=${encodeURIComponent(
+              pendingPurchase?.invoice?.customerEmail
+            )}`;
+          } else {
+            location.pathname = "/advantage";
+          }
+        }
+      };
     }
   }, [pendingPurchase]);
 
   const onSubmit = (values, actions) => {
     setError(null);
+    checkoutEvent(GAFriendlyProduct, 2);
     paymentMethodMutation.mutate(values, {
       onSuccess: (data, variables) => {
         window.accountId = data.accountId;
@@ -184,6 +227,7 @@ const PurchaseModal = () => {
   };
 
   const onPayClick = () => {
+    checkoutEvent(GAFriendlyProduct, 3);
     purchaseMutation.mutate("", {
       onSuccess: (data) => {
         //start polling
@@ -194,7 +238,7 @@ const PurchaseModal = () => {
           setError(
             <>
               You already have a pending purchase. Please go to{" "}
-              <a href="/advantage/payment-methods">payment methods</a> to retry.
+              <a href="/account/payment-methods">payment methods</a> to retry.
             </>
           );
         } else {

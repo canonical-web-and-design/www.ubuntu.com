@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { useQuery, useQueryClient } from "react-query";
+import { checkoutEvent } from "../../../ecom-events";
 
 const useProduct = () => {
-  const [observerSet, setObserverSet] = useState(false);
-
   const buyButton = document.querySelector("#buy-now-button");
   const queryClient = useQueryClient();
 
@@ -12,14 +10,27 @@ const useProduct = () => {
   }
 
   //observerSet prevents us from creating a new observer on each render
-  if (!observerSet) {
+  if (!window.listenersSet) {
     const observer = new MutationObserver(handleProductChange);
     observer.observe(buyButton, {
       attributes: true,
     });
-    setObserverSet(true);
-  }
+    buyButton.addEventListener("click", () => {
+      const product = JSON.parse(buyButton.dataset.product);
+      const quantity = parseInt(buyButton.dataset.quantity);
 
+      checkoutEvent(
+        {
+          id: product?.id,
+          name: product?.name,
+          price: product?.price?.value / 100,
+          quantity: quantity,
+        },
+        1
+      );
+    });
+    window.listenersSet = true;
+  }
   const { data } = useQuery("product", async () => {
     return {
       product: JSON.parse(buyButton.dataset.product),

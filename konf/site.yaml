@@ -94,6 +94,7 @@ extraHosts:
   - domain: buy.ubuntu.com
   - domain: core.docs.ubuntu.com
   - domain: certification.ubuntu.com
+  - domain: security-certs.docs.ubuntu.com
 
 # Overrides for production
 production:
@@ -241,6 +242,9 @@ production:
     if ($host = 'core.docs.ubuntu.com' ) {
       rewrite ^(\/en)?(\/.*)$ https://ubuntu.com/core/docs$2? permanent;
     }
+    if ($host = 'security-certs.docs.ubuntu.com' ) {
+      rewrite ^(\/en)?(\/.*)$ https://ubuntu.com/security/certifications/docs$2? permanent;
+    }
     if ($host != 'ubuntu.com' ) {
       rewrite ^ https://ubuntu.com$request_uri? permanent;
     }
@@ -375,6 +379,9 @@ staging:
     }
     if ($host = 'core.docs.staging.ubuntu.com' ) {
       rewrite ^(\/en)?(\/.*)$ https://staging.ubuntu.com/core/docs$2? permanent;
+    }
+    if ($host = 'security-certs.docs.staging.ubuntu.com' ) {
+      rewrite ^(\/en)?(\/.*)$ https://staging.ubuntu.com/security/certifications/docs$2? permanent;
     }
     if ($host != 'staging.ubuntu.com' ) {
       rewrite ^ https://staging.ubuntu.com$request_uri? permanent;
