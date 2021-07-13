@@ -22,6 +22,15 @@
 </section>
 
 <section class="p-strip is-shallow" id="posts-list">
+  <!-- Engage page errors -->
+  {% if errors|length > 0 %}
+  <div class="row u-equal-height">
+    {% for error in errors %}
+      <p>{{ error }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+
   <div class="row u-equal-height">
     {% for item in metadata %}
       {% with 

@@ -490,7 +490,7 @@ engage_pages = EngagePages(
             base_url="https://discourse.ubuntu.com/",
             session=session,
         ),
-        index_topic_id=17229,
+        index_topic_id=18033,
         url_prefix=engage_path,
     ),
     document_template="/engage/base.html",
