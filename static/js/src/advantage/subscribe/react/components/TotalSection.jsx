@@ -42,13 +42,43 @@ const TotalSection = () => {
             <strong>
               {preview?.subscriptionEndOfCycle
                 ? format(new Date(preview?.subscriptionEndOfCycle), DATE_FORMAT)
-                : null}
+                : format(
+                    add(new Date(), {
+                      months: 1,
+                    }),
+                    DATE_FORMAT
+                  )}
             </strong>
             <br />
             <small>
               You can control auto-renewal in your Ubuntu Advantage account at
               any time.
             </small>
+          </Col>
+        </Row>
+      </>
+    );
+  }
+
+  if (values.freeTrial === "useFreeTrial") {
+    return (
+      <>
+        <Row className="u-no-padding u-sv1">
+          <Col size="4">
+            <div className="u-text-light">Total:</div>
+          </Col>
+          <Col size="8">
+            <div>
+              <strong>$0</strong>
+            </div>
+          </Col>
+        </Row>
+        <Row className="u-no-padding u-sv1">
+          <Col size="4">
+            <div className="u-text-light">To pay today:</div>
+          </Col>
+          <Col size="8">
+            <div>$0 today</div>
           </Col>
         </Row>
       </>
@@ -72,32 +102,6 @@ const TotalSection = () => {
           </Col>
         )}
       </Row>
-      {values.freeTrial === "useFreeTrial" && (
-        <Row className="u-no-padding u-sv1">
-          <Col size="4">
-            <div className="u-text-light">To pay today:</div>
-          </Col>
-          <Col size="8">
-            <div>
-              $0 today -{" "}
-              <strong>
-                {total} on{" "}
-                {preview?.subscriptionEndOfCycle
-                  ? format(
-                      new Date(preview?.subscriptionEndOfCycle),
-                      DATE_FORMAT
-                    )
-                  : format(
-                      add(new Date(), {
-                        months: 1,
-                      }),
-                      DATE_FORMAT
-                    )}
-              </strong>
-            </div>
-          </Col>
-        </Row>
-      )}
     </>
   );
 };

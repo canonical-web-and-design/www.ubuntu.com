@@ -4,12 +4,32 @@ import { add, format } from "date-fns";
 import { formatter } from "../../renderers/form-renderer";
 import usePreview from "../APICalls/usePreview";
 import useProduct from "../APICalls/useProduct";
+import { useFormikContext } from "formik";
 
 export const DATE_FORMAT = "dd MMMM yyyy";
 
 function Summary() {
   const { product, quantity, isMonthly } = useProduct();
   const { data: preview } = usePreview();
+  const { values } = useFormikContext();
+
+  let endDate = format(
+    add(new Date(), {
+      months: isMonthly ? 1 : 12,
+    }),
+    DATE_FORMAT
+  );
+
+  if (values.freeTrial === "useFreeTrial") {
+    endDate = format(
+      add(new Date(), {
+        months: 1,
+      }),
+      DATE_FORMAT
+    );
+  } else if (preview?.subscriptionEndOfCycle) {
+    endDate = format(new Date(preview?.subscriptionEndOfCycle), DATE_FORMAT);
+  }
 
   let totalSection = (
     <Row className="u-no-padding u-sv1">
@@ -22,7 +42,18 @@ function Summary() {
     </Row>
   );
 
-  if (preview?.taxAmount) {
+  if (values.freeTrial === "useFreeTrial") {
+    totalSection = (
+      <Row className="u-no-padding u-sv1">
+        <Col size="4">
+          <div className="u-text-light">Subtotal:</div>
+        </Col>
+        <Col size="8">
+          <div>$0</div>
+        </Col>
+      </Row>
+    );
+  } else if (preview?.taxAmount) {
     totalSection = (
       <>
         {preview?.subscriptionEndOfCycle && (
@@ -93,9 +124,13 @@ function Summary() {
           <div className="u-text-light">Machines:</div>
         </Col>
         <Col size="8">
-          <div>
-            {quantity} x {formatter.format(product?.price?.value / 100)}
-          </div>
+          {values.freeTrial === "useFreeTrial" ? (
+            <div>{quantity} x $0</div>
+          ) : (
+            <div>
+              {quantity} x {formatter.format(product?.price?.value / 100)}
+            </div>
+          )}
         </Col>
       </Row>
       <Row className="u-no-padding u-sv1">
@@ -111,24 +146,16 @@ function Summary() {
           <div className="u-text-light">Ends:</div>
         </Col>
 
-        {preview?.subscriptionEndOfCycle ? (
-          <Col size="8">
-            {format(new Date(preview?.subscriptionEndOfCycle), DATE_FORMAT)}
-            <br />
-            <small>The same date as your existing subscription.</small>
-          </Col>
-        ) : (
-          <Col size="8">
-            <div>
-              {format(
-                add(new Date(), {
-                  months: isMonthly ? 1 : 12,
-                }),
-                DATE_FORMAT
-              )}
-            </div>
-          </Col>
-        )}
+        <Col size="8">
+          {endDate}
+          {preview?.subscriptionEndOfCycle &&
+            values.freeTrial !== "useFreeTrial" && (
+              <>
+                <br />
+                <small>The same date as your existing subscription.</small>
+              </>
+            )}
+        </Col>
       </Row>
       {totalSection}
     </section>
