@@ -59,6 +59,7 @@ const CostCalculatorForm = () => {
               mdxType="Slider"
               min={1}
               name="instances"
+              id="instances"
               onChange={onChangeHandler}
               showInput
               value={formState.instances.value}
@@ -105,7 +106,7 @@ const CostCalculatorForm = () => {
                   </Col>
                   <Col size="2">
                     <Input
-                      id="ephemeral-storage"
+                      id="emepheral-storage"
                       ariaLabel="Emepheral storage"
                       mdxType="Input"
                       onChange={onChangeHandler}

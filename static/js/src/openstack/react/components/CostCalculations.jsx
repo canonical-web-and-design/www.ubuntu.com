@@ -263,7 +263,6 @@ const CostCalculations = ({
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    maximumFractionDigits: 0,
   });
 
   //error check
@@ -291,7 +290,7 @@ const CostCalculations = ({
           <p className="p-heading--4">Hourly cost per instance:</p>
         </Col>
         <Col size="2" className="u-align--right">
-          <p className="p-heading--4">
+          <p className="p-heading--4" id="hourly-cost">
             {!error ? `$${hourlyCostPerInstance.toFixed(4)}` : "-"}
           </p>
         </Col>
@@ -303,7 +302,7 @@ const CostCalculations = ({
           </p>
         </Col>
         <Col size="2" className="u-align--right">
-          <p className="p-heading--4">
+          <p className="p-heading--4" id="total-savings">
             {!error ? formatter.format(totalSavings) : "-"}
           </p>
         </Col>
