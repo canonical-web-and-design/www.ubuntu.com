@@ -97,6 +97,7 @@ def cube_microcerts():
             certified_badge["image"] = assertion["image"]
             certified_badge["share_url"] = assertion["openBadgeId"]
 
+    study_labs = CUBE_CONTENT["study-labs"]
     courses = copy.deepcopy(CUBE_CONTENT["courses"])
     for course in courses:
         attempts = []
@@ -119,16 +120,18 @@ def cube_microcerts():
         elif course["id"] in enrollments:
             course["status"] = "enrolled"
 
-        take_path = quote_plus(
-            f"/courses/{course['id']}/courseware/2020/start/?child=first"
-        )
-        course["take_url"] = f"{edx_url}{take_path}"
+        course_id = course["id"]
+        courseware_name = course_id.split("+")[1]
 
-    prepare_material_path = quote_plus(
-        f"/courses/{CUBE_CONTENT['prepare-course']}/course/"
-    )
-    prepare_material_url = f"{edx_url}{prepare_material_path}"
-    has_prepare_material = CUBE_CONTENT["prepare-course"] in enrollments
+        course["take_url"] = edx_url + quote_plus(
+            f"/courses/{course_id}/courseware/2020/start/?child=first"
+        )
+
+        course["study_lab"] = edx_url + quote_plus(
+            f"/courses/{study_labs}/courseware/{courseware_name}/?child=first"
+        )
+
+    study_labs_url = edx_url + quote_plus(f"/courses/{study_labs}/course/")
 
     return flask.render_template(
         "cube/microcerts.html",
@@ -140,8 +143,8 @@ def cube_microcerts():
             "modules": courses,
             "passed_courses": passed_courses,
             "has_enrollments": len(enrollments) > 0,
-            "has_prepare_material": has_prepare_material,
-            "prepare_material_url": prepare_material_url,
+            "has_study_labs": study_labs in enrollments,
+            "study_labs_url": study_labs_url,
         },
     )
 

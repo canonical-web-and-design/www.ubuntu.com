@@ -4,7 +4,7 @@
 
 badgr-issuer: "eTedPNzMTuqy1SMWJ05UbA"
 certified-badge: "hs8gVorCRgyO2mNUfeXaLw"
-prepare-course: "course-v1:CUBE+study_labs_2020+alpha"
+study-labs: "course-v1:CUBE+study_labs+2020"
 
 courses:
   -

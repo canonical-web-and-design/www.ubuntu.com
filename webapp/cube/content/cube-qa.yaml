@@ -4,7 +4,7 @@
 
 badgr-issuer: "36ZEJnXdTjqobw93BJElog"
 certified-badge: "x9kzmcNhSSyqYhZcQGz0qg"
-prepare-course: "course-v1:ubuntu+cubereview+coursecommandsdev"
+study-labs: "course-v1:ubuntu+cubereview+coursecommandsdev"
 
 courses:
   -

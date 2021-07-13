@@ -11,28 +11,19 @@
   <div class="row u-equal-height u-vertically-center">
     <div class="col-6 js-hero-content">
       {% if certified_badge %}
-
         <h1>CUBE 2020 complete</h1>
         <p class="p-heading--4">You have completed all {{ modules|length }} microcerts, proving your Ubuntu expertise. You are now a Certified Ubuntu Engineer.</p>
-
       {% elif has_enrollments %}
-
-      <h1>Your road to CUBE</h1>
+        <h1>Your road to CUBE</h1>
         {% if passed_courses > 0 %}
         <p class="p-heading--4">You have completed {{ passed_courses }} microcerts.</br>Complete {{ (modules|length - passed_courses) }} more microcerts to attain CUBE.</p>
         {% else %}
         <p class="p-heading--4">Complete {{ modules|length }} microcerts to attain CUBE.</p>
         {% endif %}
-
       {% else %}
-
         <h1>The road to CUBE</h1>
         <p class="p-heading--4">The path to certification is clear and convenient. Complete 15 microcerts to attain CUBE.</p>
-          <a href="/cube/contact-us" class="p-button--positive js-invoke-modal">Apply for access</a></br>
-          {% if not user %}
-          <a href="/login" class="p-link--inverted">Sign in&nbsp;&rsaquo;</a>
-          {% endif %}
-
+        <a href="/cube/contact-us" class="p-button--positive js-invoke-modal">Apply for access</a></br>
       {% endif %}
     </div>
     <div class="col-6 p-cube-progression u-hide--medium u-hide--small">
@@ -115,8 +106,8 @@
       <h2>Refresh your knowledge</h2>
       <p><strong>Be prepared for every microcert</strong></p>
       <p class="u-sv2">Check your baseline understanding of Ubuntu fundamentals and preview the exam experience in a practice environment.</p>
-      {% if has_prepare_material %}
-      <a href="{{ prepare_material_url }}" class="p-button--positive">Prepare</a>
+      {% if has_study_labs %}
+      <a href="{{ study_labs_url }}" class="p-button--positive">Prepare</a>
       {% else %}
       <a href="/cube/contact-us" class="p-button--positive cube-access js-invoke-modal">Apply for access</a>
       {% endif %}
@@ -280,8 +271,8 @@
           {% elif module.status == "enrolled" %}
           <td>
             <div class="p-table--cube__contents u-align--right">
-              {% if has_prepare_material %}
-              <a class="p-button--neutral u-no-margin--right" href="{{ prepare_material_url }}">Prepare</a>
+              {% if has_study_labs %}
+              <a class="p-button--neutral u-no-margin--right" href="{{ module.study_lab }}">Prepare</a>
               {% endif %}
               <a style = "margin-left: 1rem;" class="p-button--positive" href="{{ module.take_url }}">Take</a>
             </div>
