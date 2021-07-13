@@ -27,9 +27,7 @@ This charm delivers the EasyRSA application to act as a Certificate Authority
 To deploy EasyRSA:
 
 ```
-juju deploy easyrsa
-juju deploy tls-client
-juju add-relation easyrsa tls-client
+juju deploy cs:~containers/easyrsa
 ```
 
 ## Using the EasyRSA charm

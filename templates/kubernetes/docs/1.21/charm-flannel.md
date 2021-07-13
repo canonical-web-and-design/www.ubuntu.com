@@ -34,10 +34,10 @@ This charm will require a principal charm that implements the `kubernetes-cni`
 interface in order to properly deploy.
 
 ```
-juju deploy flannel
-juju deploy etcd
-juju deploy kubernetes-master
-juju deploy kubernetes-worker
+juju deploy cs:~containers/flannel
+juju deploy cs:~containers/etcd
+juju deploy cs:~containers/kubernetes-master
+juju deploy cs:~containers/kubernetes-worker
 juju add-relation flannel etcd
 juju add-relation flannel kubernetes-master
 juju add-relation flannel kubernetes-worker

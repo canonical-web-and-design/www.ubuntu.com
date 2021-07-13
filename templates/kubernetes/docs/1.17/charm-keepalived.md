@@ -47,7 +47,7 @@ point of failure.
 # juju deploy charmed-kubernetes
 
 # deploy the keepalived charm
-juju deploy keepalived
+juju deploy cs:~containers/keepalived
 
 # add new keepalived relations
 juju relate keepalived:juju-info kubeapi-load-balancer:juju-info
@@ -81,7 +81,7 @@ This changes kubelet and kubectl to use the VIP to reach the Kubernetes API serv
 
 ### Using with HA Proxy
 ```
-juju deploy keepalived
+juju deploy cs:~containers/keepalived
 juju add-relation haproxy keepalived
 
 ```
