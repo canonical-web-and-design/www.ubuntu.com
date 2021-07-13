@@ -25,8 +25,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
+    requireConfigFile: false,
     babelOptions: {
-      plugins: ["@babel/plugin-syntax-jsx"],
+      plugins: ["@babel/plugin-syntax-jsx", "@babel/preset-react"],
     },
   },
   rules: {

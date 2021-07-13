@@ -1,0 +1,237 @@
+<div class="p-modal" id="contact-modal">
+  <div class="p-modal__dialog" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <header class="p-modal__header" style="border-bottom: 0; display: block;">
+      <button class="p-modal__close" aria-label="Close active modal" style="margin-left: -1rem">Close</button>
+      <h2 class="p-modal__title u-sv1" id="modal-title">Tell us about your requirements</h2>
+    </header>
+    <div class="js-pagination js-pagination--1">
+      <p>Tell us more about your needs here and we will send you a detailed report including the required number of nodes for your private cloud and estimated private cloud pricing, including initial CapEx and recurring OpEx costs. We will also help you find the cloud architecture that best suits your requirements.</p>
+      <div class="row u-no-padding">
+        <div class="js-formfield">
+          <h3 class="p-heading--five">Instance type</h3>
+          <div class="row u-no-padding">
+            <div class="col-4 u-sv3">
+            <label for="instance-type-vcpus">vCPUs</label>
+              <input type="number" id="instance-type-vcpus" min="1" max="116" value="2">
+              <label for="instance-type-ram">RAM [GB]</label>
+              <input type="number" id="instance-type-ram" min="1" max="1824" value="8">
+            </div>
+            <div class="col-4 u-sv3">
+              <label for="instance-type-emepheral-storage">Emepheral storage [GB]</label>
+              <input type="number" id="instance-type-emepheral-storage" min="4" max="144" value="8">
+              <label for="instance-type-persistent-storage">Persistent storage [GB]</label>
+              <input type="number" id="instance-type-persistent-storage" min="0" max="221" value="80">
+            </div>
+            <div class="col-4 u-sv3">
+              <label for="instance-type-number-of-instances">Number of instances</label>
+              <input type="number" id="instance-type-number-of-instances" min="1" max="1000000" value="1000">
+            </div>
+            <div class="row u-no-padding">
+              <div class="col-6">
+                <h3 class="p-heading--five">Add another instance type?</h3>
+              </div>
+            </div>
+            <div class="row u-no-padding">
+              <div class="col-4 u-sv3">
+                <input type="radio" id="add-another-instance-type" name="add-instance-type" value="Yes">
+                <label for="add-another-instance-type">Yes</label>
+              </div>
+              <div class="col-4 u-sv3">
+                <input type="radio" id="add-another-instance-type" name="add-instance-type" value="No">
+                <label for="add-another-instance-type">No</label>
+              </div>
+              <div class="pagination">
+                <a class="p-button--positive pagination__link--next" href="">Next</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--2 u-hide">
+      <div class="row u-no-padding">
+        <div class="js-formfield">
+          <h3 class="p-heading--five">Support level</h3>
+          <div class="row u-no-padding">
+            <div class="col-4 u-sv3">
+              <input type="radio" id="support-level-fully-managed" name="support-level" value="fully-managed" checked>
+              <label for="support-level-fully-managed">Fully managed</label>
+            </div>
+            <div class="col-4 u-sv3">
+              <input type="radio" id="support-level-supported" name="support-level" value="supported">
+              <label for="support-level-supported">Supported</label>
+            </div>
+          </div>
+          <div class="row u-no-padding">
+            <div class="col-4 u-sv3">
+              <h3 class="p-heading--five">Operations team</h3>
+              <label for="operations-team-size">Size [FTEs]</label>
+              <input type="number" id="operations-team-size" min="0" max="1000" value="12">
+              <label for="operations-team-annual-staff-salary">Average annual staff salary [USD]</label>
+              <input type="number" id="operations-team-annual-staff-salary" min="0" max="1000000" value="125000">
+            </div>
+            <div class="col-4 u-sv3">
+              <h3 class="p-heading--five">Overcommitment ratios</h3>
+              <label for="overcommitment-ratio-cpu">CPU</label>
+              <input type="number" id="overcommitment-ratio-cpu" min="1" max="16" value="2">
+              <label for="overcommitment-ratio-ram">RAM</label>
+              <input type="number" id="overcommitment-ratio-ram" min="1" max="1.5" value="1">
+            </div>
+            <div class="col-4 u-sv3">
+              <h3 class="p-heading--five">Other</h3>
+              <label for="storage-replication-factor">Storage replication factor</label>
+              <input type="number" id="storage-replication-factor" min="1" max="5" value="3">
+              <label for="desired-cloud-utilised-ratio">Desired cloud utilisation ratio [%]</label>
+              <input type="number" id="desired-cloud-utilised-ratio" min="1" max="100" value="75">
+            </div>
+          </div>
+          <h3 class="p-heading--five">Cloud architecture</h3>
+          <div class="row u-no-padding">
+            <div class="col-4 u-sv3">
+              <input type="radio" id="cloud-architecture-reference" name="cloud-achitecture" value="reference" checked>
+              <label for="cloud-architecture-reference">Reference</label>
+            </div>
+            <div class="col-4 u-sv3">
+              <input type="radio" id="cloud-achitecture-custom" name="cloud-achitecture" value="custom">
+              <label for="cloud-achitecture-custom">Custom</label>
+            </div>
+            <div class="pagination">
+              <a class="pagination__link--previous p-button--neutral" href="">Previous</a>
+              <a class="p-button--positive pagination__link--next" href="">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--3 u-hide">
+      <div class="row u-no-padding">
+        <div class="js-formfield">
+          <h3 class="p-heading--five">Other</h3>
+          <div class="row u-no-padding">
+            <div class="col-4 u-sv3">
+              <label for="hardware-renewal-period">Hardware renewal period [years]</label>
+              <input type="number" id="hardware-renewal-period" min="1" max="5" value="3">
+              <label for="annual-per-node-hosting-rent-and-electricity-cost">Annual per-node hosting rent and electricity cost [USD]</label>
+              <input type="number" id="annual-per-node-hosting-rent-and-electricity-cost" min="0" max="1000000" value="4500">
+              <label for="annual-per-node-hardware-installation-and-maintencance-cost">Annual per-node hardware installation and maintenance cost [USD]</label>
+              <input type="number" id="annual-per-node-hardware-installation-and-maintencance-cost" min="1" max="1000000" value="1000">
+            </div>
+            <div class="col-4 u-sv3">
+              <label for="external-network-bandwidth">External network bandwidth</label>
+              <input type="number" id="external-network-bandwidth" min="0" max="1000000" value="125000">
+              <label for="annual-per-gbps-hosting-external-network-cost">Annual per-Gbps hosting external network cost</label>
+              <input type="number" id="annual-per-gbps-hosting-external-network-cost" min="0" max="1000000" value="6000">
+            </div>
+            <div class="pagination">
+              <a class="pagination__link--previous p-button--neutral" href="">Previous</a>
+              <a class="p-button--positive pagination__link--next" href="">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--4 u-hide">
+      <h3 class="p-heading--5">Get cost estimates for your private cloud</h3>
+      <div class="row u-no-padding">
+        <div class="col-6">
+          <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_%% formid %%" class="modal-form marketo-form">
+            <ul class="p-list">
+              <li class="mktFormReq mktField p-list__item">
+                <label for="FirstName" class="mktoLabel">First name:</label>
+                <input required id="FirstName" name="FirstName" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="LastName" class="mktoLabel">Last name:</label>
+                <input required id="LastName" name="LastName" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="CompanyName" class="mktoLabel">Company name:</label>
+                <input required id="CompanyName" name="CompanyName" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="JobTitle" class="mktoLabel">Job title:</label>
+                <input required id="JobTitle" name="JobTitle" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="Email" class="mktoLabel">Work email:</label>
+                <input required id="Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="Phone" class="mktoLabel ">Mobile/cell phone number:</label>
+                <input required id="Phone" name="Phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired" required="required" />
+              </li>
+              <li class="mktField p-list__item u-sv2">
+                <input class="mktoField" value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox" />
+                <label class="mktoLabel mktoHasWidth" for="canonicalUpdatesOptIn">I would like to receive occasional news from Canonical by email.</label>
+              </li>
+              <li class="p-list__item">All information provided will be handled in accordance with the Canonical<a href="/legal/data-privacy/contact">Privacy Notice</a> and <a href="/legal/data-privacy">Privacy Policy</a>.</li>
+              <li class="p-list__item">
+                <div class="g-recaptcha" data-sitekey="{{ CAPTCHA_TESTING_API_KEY }}" style="margin: 2rem 0;"></div>
+              </li>
+            </ul>
+
+            <div class="u-hide">
+              <h3>Your comments</h3>
+              <ul class="p-list">
+                <li class="mktFormReq mktField p-list__item">
+                  <label for="Comments_from_lead__c" class="mktoLabel">What would you like to talk to us about?</label>
+                  <textarea id="Comments_from_lead__c" name="Comments_from_lead__c" rows="5" class="mktoField" maxlength="2000"></textarea>
+                </li>
+              </ul>
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formValidation" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formid" class="mktoField" value="%% formid %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formVid" class="mktoField" value="%% formid %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="lpId" class="mktoField" value="%% lpId %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="subId" class="mktoField" value="30" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="munchkinId" class="mktoField" value="066-EOV-335" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="lpurl" class="mktoField" value="%% lpurl %%?cr={creative}&amp;kw={keyword}" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="cr" class="mktoField" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="kw" class="mktoField" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="q" class="mktoField" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="returnURL" value="%% returnURL %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="retURL" value="%% returnURL %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="Consent_to_Processing__c" value="yes" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="productContext" id="product-context" value="{{ product }}" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
+            </div>
+
+            <div class="pagination">
+              <a class="pagination__link--previous p-button--neutral" href="">Previous</a>
+              <button type="submit" class="pagination__link--next p-button--positive mktoButton" aria-label="Submit">Get cost estimates</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--5 u-hide">
+      <div class="row u-no-padding">
+        <div class="u-equal-height">
+          <div class="col-7">
+            <h3 class="p-heading--two">Thank you!</h3>
+            <p class="p-heading--four">Your request has been recorded. Our consultants will send you the report soon.</p>
+          </div>
+          <div class="col-5 u-vertically-center u-align--center u-hide--small">
+            {{
+              image(
+              url="https://assets.ubuntu.com/v1/cbae9a60-thank_you_orange_cmyk.svg",
+              alt="smile",
+              width="200",
+              height="200",
+              hi_def=True,
+              loading="auto",
+              ) | safe
+            }}
+          </div>
+        </div>
+      </div>
+      <a class="js-close p-button--neutral" href="">Close</a>
+    </div>
+  </div>
+</div>
