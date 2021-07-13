@@ -1634,6 +1634,14 @@ telco:
   children:
     - title: Overview
       path: /telco
+    - title: VNF
+      path: /telco/vnf
+    - title: CNF
+      path: /telco/cnf
+    - title: OpenRAN
+      path: /telco/openran
+    - title: Magma
+      path: /telco/magma
     - title: Onboarding Network Functions
       path: /telco/osm/onboarding-network-functions
 

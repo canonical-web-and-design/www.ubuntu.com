@@ -1,0 +1,10 @@
+{% extends "templates/base.html" %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1oZV1VdLUPl8zt3fTgX-B3j9ksY8Esq4PWnEAI_cwOmg/edit#{% endblock meta_copydoc %}
+
+{% block outer_content %}
+  {% block content %}{% endblock %}
+  <!-- Set default Marketo information for contact form below-->
+  <div class="u-hide" id="contact-form-container" data-form-location="/shared/forms/interactive/telco-networks" data-form-id="4048" data-lp-id="" data-return-url="" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
+  </div>
+{% endblock %}

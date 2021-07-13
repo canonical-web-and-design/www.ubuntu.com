@@ -1,0 +1,492 @@
+
+{% extends "telco/_base_telco.html" %}
+
+{% block title %}Magma{% endblock %}
+
+{% block meta_description %}Magma core - open source EPC, supported and automated{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1xDoW7wsw62lYYiMB5a6i4vJBzdUFjGiyXjRcnyplDGU/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+
+<section class="p-strip is-bordered u-no-padding--top u-no-padding--bottom">
+  <div class="p-strip--suru-topped">
+    <div class="row u-equal-height u-vertically-center">
+      <div class="col-7">
+        <h1>
+          Open source core network
+        </h1>
+        <p class="p-heading--3">
+          Connecting the world
+        </p>
+        <p>
+          Magma is an open-source software platform that gives network operators an open, flexible and extendable mobile core network solution. Magma is designed to be 3GPP generation and access network (cellular or WiFi) agnostic.  Running on Ubuntu, deployed with Juju Charms and on-boarded with OSM is how we like it.
+        </p>
+        <p>
+          <a href="/telco/contact-us" class="p-button--positive js-invoke-modal">Contact us</a>
+        </p>
+      </div>
+      <div class="col-5 u-align--center u-hide--small">
+        {{ image (
+          url="https://assets.ubuntu.com/v1/aea988c6-2018-logo-telecom-infra-project.svg",
+          alt="",
+          width="435",
+          height="435",
+          hi_def=True,
+          loading="auto"
+          ) | safe
+        }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered no-padding--bottom">
+  <div class="row">
+    <div class="col-6">
+      <h2>Better connectivity</h2>
+      <h4>Enabled by Magma Core</h4>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">Cellular service without vendor lock-in with a modern, open source core network</li>
+          <li class="p-list__item is-ticked">Efficient network management with automation, less downtime and more agility to add new services and applications</li>
+          <li class="p-list__item is-ticked">Federation between MNOs and new infrastructure providers</li>
+          <li class="p-list__item is-ticked">Add capacity and reach by using Wi-Fi and CBRS</li>
+        </ul>
+      <p>
+        <a class="p-link--external" href="https://www.magmacore.org/">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/df155ef0-magma.png",
+        alt="",
+        width="396",
+        height="127",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/5f1c006f-magma+architecture.png",
+        alt="",
+        width="400",
+        height="274",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>All components included</h2>
+      <p>Access Gateway for network services and policy enforcement deploys an evolved packet core (EPC), and a combination of an AAA and a PGW.</p>
+      <p>Orchestrator is a cloud service that provides a simple and consistent way to configure and monitor wireless networks securely.</p>
+      <p>Federation Gateway integrates the MNO core network with Magma by using standard 3GPP interfaces to existing MNO components.</p>
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Deploy anywhere</h2>
+      <p>Juju is designed to model hybrid and multi-cloud environments, as well as provide native support for containers (KVM, LXD), container management (Kubernetes), networking/firewalls, and storage.</p>
+      <p>Juju allows you to deploy, configure, manage, maintain, and scale cloud applications on all of these substrates.</p>
+      <p>
+        <a class="p-link--external" href="https://juju.is/">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/78c1ad70-deploy-logos-2x.png",
+        alt="",
+        width="400",
+        height="288",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/2c7e3fab-juju-header-illustration.svg",
+        alt="",
+        width="350",
+        height="319",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>Clean, composable operators</h2>
+      <p>Juju transforms your ability to integrate fast-moving open source components into large, complex deployments. Charmed operators solve two key problems - application operations domain knowledge is encapsulated in reusable packages, and dynamic model discovery allows reuse of those packages in widely different settings.</p>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Multi-cloud operations</li>
+        <li class="p-list__item is-ticked">Reduced complexity</li>
+        <li class="p-list__item is-ticked">Simplify day two and beyond</li>
+        <li class="p-list__item is-ticked">Optimisation</li>
+      </ul>
+      <p>
+        <a class="p-link--external" href="https://juju.is/">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Open source security</h2>
+      <h4>More than Linux. <a href="/security/certifications">Security and compliance</a> for the full stack.</h4>
+      <p>Secure your open source apps. Patch the full stack, from kernel to library and applications, for CVE compliance. Governments and auditors certify Ubuntu for FedRAMP, FISMA and HITECH.</p>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">10 year security maintenance and CVE Patching</li>
+        <li class="p-list__item is-ticked"><a href="/livepatch">Kernel Livepatch</a> for 24/7 patching with no downtime</li>
+        <li class="p-list__item is-ticked"><a href="/esm">Extended security</a> for infrastructure and applications </li>
+        <li class="p-list__item is-ticked"><a href="/security/certifications#fips">FIPS 140-2</a> cryptographic modules certified by NIST</li>
+        <li class="p-list__item is-ticked"><a href="/security/certifications#common-criteria">Common Criteria EAL2</a>: ISO/IEC IS 15408 validated by CSEC</li>
+        <li class="p-list__item is-ticked"><a href="/security/certifications#stig">DISA/STIG</a> hardening for DoD compliance</li>
+        <li class="p-list__item is-ticked"><a href="/security/certifications#cis">CIS profiles</a> for cyber defence and malware prevention </li>
+      </ul>
+      <p>
+        <a href="/security">Secure all your open source with us&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/10484692-sec.png",
+        alt="",
+        width="450",
+        height="275",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <h2>Full stack, one price</h2>
+    <div class="col-6">
+      <h4>Security, support and managed open source for enterprises with Ubuntu Advantage</h4>
+    </div>
+    <div class="col-6">
+      <p>Ubuntu Advantage is a single, per-node package of the most comprehensive enterprise security and support for open source infrastructure and applications, with managed service offerings available.</p>
+      <p>
+        <a href="/support">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-10 col-start-large-2">
+      <div class="p-logo-section u-hide--small">
+        <div class="p-logo-section__items">
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/df155ef0-magma.png",
+              alt="",
+              width="396",
+              height="127",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/6c534a44-oran.png",
+              alt="",
+              width="1500",
+              height="643",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/176a11dd-opensource-MANO.svg",
+              alt="",
+              width="300",
+              height="108",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/f253ee6e-telecom-infra-project-vector-logo.svg",
+              alt="",
+              width="150",
+              height="150",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/314085ad-openstack.svg",
+              alt="",
+              width="300",
+              height="78",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/9f8a8273-2018-logo-kubernetes+%282%29.svg",
+              alt="",
+              width="356",
+              height="60",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/04115a7e-ubuntu_black-orange_hex.svg",
+              alt="",
+              width="300",
+              height="67",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/038514e8-MAAS_black-orange_rgb.svg",
+              alt="",
+              width="300",
+              height="79",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image (
+              url="https://assets.ubuntu.com/v1/48a8eddf-juju_black-orange_hex.svg",
+              alt="",
+              width="407",
+              height="147",
+              hi_def=True,
+              loading="lazy"
+              ) | safe
+            }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered u-hide--small">
+  <div class="u-fixed-width">
+    <div class="p-logo-section">
+      <h3 class="p-logo-section__title p-muted-heading u-align--center">
+        Trusted by leading service providers, globally
+      </h3>
+      <div class="p-logo-section__items">
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/d8f890fb-logo-at%26t.svg",
+            alt="AT&T",
+            height="120",
+            width="120",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/eaf98009-Bell_Blue_large_transparent.png",
+            alt="Bell Canada",
+            height="55",
+            width="83",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/ac2000c4-Charter+Communications.svg",
+            alt="Charter Communications",
+            height="33",
+            width="97",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/5a9dfd45-Liberty-Global-Logo.png",
+            alt="Liberty Global",
+            height="160",
+            width="160",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/03a06060-logo-deutschetelekom.svg",
+            alt="Deutshe Telekom",
+            height="29",
+            width="130",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/7c97efb0-BT_logo.svg",
+            alt="BT",
+            height="64",
+            width="64",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/88730cec-Telefonica.png",
+            alt="Telefonica",
+            height="75",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/25de1877-Tele2.svg",
+            alt="Tele2",
+            height="30",
+            width="80",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/73135672-ntt-logo.svg",
+            alt="NTT",
+            height="40",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/481063cd-pccw.svg",
+            alt="PCCW",
+            height="50",
+            width="144",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/57eb4484-NTT_DoCoMo_logo.svg",
+            alt="Docomo",
+            height="28",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/3218bf54-Verizon_2015_logo_-vector.svg",
+            alt="Verizon",
+            height="27",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image (
+            url="https://assets.ubuntu.com/v1/d2bfbb2b-MTS_logo_%282016%29.svg",
+            alt="MTS",
+            width="114",
+            height="42",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image (
+            url="https://assets.ubuntu.com/v1/1459d379-tmn_logo.png",
+            alt="tmn",
+            width="159",
+            height="70",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip">
+  <div class="row u-vertically-aligned">
+    <div class="col-7">
+    <h3>Innovate in telecommunications with Canonical</h3>
+    <p>The experts in open source operations, from cloud to devices are waiting to help you on your journey.</p>
+    <p>
+      <a href="/telco/contact-us" class="p-button--positive js-invoke-modal">let's talk</a>
+    </p>
+    </div>
+    <div class="col-5 u-hide--small u-align--center">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/c4b290c8-Contact+us.svg",
+        alt="",
+        width="211",
+        height="150",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

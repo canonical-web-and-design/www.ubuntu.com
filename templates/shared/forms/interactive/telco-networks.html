@@ -1,0 +1,194 @@
+<div class="p-modal" id="contact-modal">
+  <div class="p-modal__dialog" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <header class="p-modal__header" style="display: block; border-bottom: 0;">
+      <button class="p-modal__close" aria-label="Close active modal" style="margin-left: -1rem">Close</button>
+      <h2 class="p-modal__title u-sv1" id="modal-title">Open source in telecom networks</h2>
+    </header>
+    <div class="js-pagination js-pagination--1">
+      <p id="modal-description" class="u-no-max-width"></p>
+
+      <div class="js-formfield">
+        <h3 class="p-heading--five">What is your main business?</h3>
+        <div class="row u-no-padding">
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="telecomOperator" name="main-business" value="Telecom operator">
+            <label for="telecomOperator">Telecom operator</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="networkEquipmentProvider" name="main-business" value="Network equipment provider">
+            <label for="networkEquipmentProvider">Network equipment provider</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="softwareProvider" name="main-business" value="Telecom specific software provider">
+            <label for="softwareProvider">Telecom specific software provider</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="servicesProvider" name="main-business" value="Telecom specific services provider">
+            <label for="servicesProvider">Telecom specific services provider</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="systemIntegrator" name="main-business" value="System integrator">
+            <label for="systemIntegrator">System integrator</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="cloudProvider" name="main-business" value="Public cloud provider">
+            <label for="cloudProvider">Public cloud provider</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="other" name="main-business" value="Other">
+            <label for="other">Other</label>
+          </div>
+        </div>
+      </div>
+      <div class="js-formfield">
+        <h3 class="p-heading--five">What are the priority use cases you want to talk about?</h3>
+        <div class="row u-no-padding">
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="kubernetesInfrastructure" name="priority-cases" value="Kubernetes infrastructure">
+            <label for="kubernetesInfrastructure">Kubernetes infrastructure</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="edgeMEC" name="priority-cases" value="Edge / MEC">
+            <label for="edgeMEC">Edge / MEC</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="5G" name="priority-cases" value="5G">
+            <label for="5G">5G</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="RAN-ORAN" name="priority-cases" value="RAN / ORAN">
+            <label for="RAN-ORAN">RAN / ORAN</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="5Gnetwork" name="priority-cases" value="Private LTE / 5G network">
+            <label for="5Gnetwork">Private LTE / 5G network</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="IMS" name="priority-cases" value="IMS">
+            <label for="IMS">IMS</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="packetCore" name="priority-cases" value="Packet core">
+            <label for="packetCore">Packet core</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="subscriberData" name="priority-cases" value="Subscriber data management">
+            <label for="subscriberData">Subscriber data management</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="OSS-BSS" name="priority-cases" value="OSS/BSS">
+            <label for="OSS-BSS">OSS/BSS</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="ITUseCase" name="priority-cases" value="General IT use case">
+            <label for="ITUseCase">General IT use case</label>
+          </div>
+          <div class="col-4 u-sv3">
+            <input type="checkbox" id="other" name="priority-cases" value="Other">
+            <label for="other">Other</label>
+          </div>
+        </div>
+      </div>
+      <div class="u-sv3">
+        <h3 class="p-heading--five">Tell us about you and your team (Optional)</h3>
+        <textarea id="tellUsMore" aria-label="Tell us more about you and your team?" rows="3" placeholder="What are you working on right now? What is your underlying infrastructure? How advanced are you with cloud native network functions? Do you use Ubuntu?"></textarea>
+      </div>
+      <div class="pagination">
+        <a class="pagination__link--next p-button--positive" href="">Next</a>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--2 u-hide">
+      <h3 class="p-heading--five">How should we get in touch?</h3>
+      <div class="row u-no-padding">
+        <div class="col-6">
+          <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_%% formid %%" class="modal-form marketo-form">
+            <ul class="p-list">
+              <li class="mktFormReq mktField p-list__item">
+                <label for="FirstName" class="mktoLabel">First name:</label>
+                <input required id="FirstName" name="FirstName" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="LastName" class="mktoLabel">Last name:</label>
+                <input required id="LastName" name="LastName" maxlength="255" type="text" class="mktoField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="Email" class="mktoLabel">Email:</label>
+                <input required id="Email" name="Email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" required="required" />
+              </li>
+              <li class="mktFormReq mktField p-list__item">
+                <label for="Phone" class="mktoLabel ">Mobile/cell phone number:</label>
+                <input required id="Phone" name="Phone" maxlength="255" type="tel" class="mktoField mktoTelField  mktoRequired" required="required" />
+              </li>
+              <li class="mktField p-list__item">
+                <input class="mktoField" value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox" />
+                <label class="mktoLabel mktoHasWidth" for="canonicalUpdatesOptIn">I agree to receive information about Canonical's products and services.</label>
+              </li>
+              <li class="p-list__item">In submitting this form, I confirm that I have read and agree to <a href="/legal/data-privacy/contact">Canonical's Privacy Notice</a> and <a href="/legal/data-privacy">Privacy Policy</a>.</li>
+              <li class="p-list__item">
+                <div class="g-recaptcha" data-sitekey="{{ CAPTCHA_TESTING_API_KEY }}" style="margin: 2rem 0;"></div>
+              </li>
+            </ul>
+
+            <div class="u-hide">
+              <h3>Your comments</h3>
+              <ul class="p-list">
+                <li class="mktFormReq mktField p-list__item">
+                  <label for="Comments_from_lead__c" class="mktoLabel">What would you like to talk to us about?</label>
+                  <textarea id="Comments_from_lead__c" name="Comments_from_lead__c" rows="5" class="mktoField" maxlength="2000"></textarea>
+                </li>
+              </ul>
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formValidation" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formid" class="mktoField" value="%% formid %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formVid" class="mktoField" value="%% formid %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="lpId" class="mktoField" value="%% lpId %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="subId" class="mktoField" value="30" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="munchkinId" class="mktoField" value="066-EOV-335" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="lpurl" class="mktoField" value="%% lpurl %%?cr={creative}&amp;kw={keyword}" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="cr" class="mktoField" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="kw" class="mktoField" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="q" class="mktoField" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="returnURL" value="%% returnURL %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="retURL" value="%% returnURL %%" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="Consent_to_Processing__c" value="yes" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="productContext" id="product-context" value="{{ product }}" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_campaign" class="mktoField" id="utm_campaign" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_medium" class="mktoField" id="utm_medium" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="utm_source" class="mktoField" id="utm_source" value="" />
+              <input type="hidden" aria-hidden="true" aria-label="hidden field" name="gclid" class="mktoField" id="gclid" value="" />
+            </div>
+
+            <div class="pagination">
+              <a class="pagination__link--previous p-button--neutral" href="">Previous</a>
+              <button type="submit" class="pagination__link--next p-button--positive mktoButton" aria-label="Submit">Let's discuss</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-pagination js-pagination--3 u-hide">
+      <div class="row u-no-padding">
+        <div class="u-equal-height">
+          <div class="col-7">
+            <h3 class="p-heading--two">Thank you for enquiring about Telco</h3>
+            <p class="p-heading--four">A member of our team will be in touch within one working day.</p>
+          </div>
+          <div class="col-5 u-vertically-center u-align--center u-hide--small">
+            {{
+              image(
+              url="https://assets.ubuntu.com/v1/cbae9a60-thank_you_orange_cmyk.svg",
+              alt="smile",
+              width="200",
+              height="200",
+              hi_def=True,
+              loading="auto",
+              ) | safe
+            }}
+          </div>
+        </div>
+      </div>
+      <a class="js-close p-button--neutral" href="">Close</a>
+    </div>
+  </div>
+</div>

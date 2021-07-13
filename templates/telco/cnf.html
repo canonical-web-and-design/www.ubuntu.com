@@ -1,0 +1,464 @@
+{% extends "telco/_base_telco.html" %}
+
+{% block title %}CNF | Kubernetes{% endblock %}
+
+{% block meta_description %}Cloud Native Network Functions infrastructure with Charmed Kubernetes{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1IpOPiWidozQ7w1hyM52yQn1gSwHODsItn1ZnMQ0retw/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+
+<section class="p-strip is-bordered u-no-padding--top u-no-padding--bottom">
+  <div class="p-strip--suru-topped">
+    <div class="row u-equal-height u-vertically-center">
+      <div class="col-7">
+        <h1>
+          Kubernetes for CNF
+        </h1>
+        <p class="p-heading--3">
+          Cloud native network functions
+        </p>
+        <p>
+          CNF is a network function designed and implemented to run inside containers. CNFs follow cloud native architectural and operational principles including K8s lifecycle management, model driven operations, agility, resilience, and observability.
+        </p>
+        <p>
+          <a href="/telco/contact-us" class="p-button--positive js-invoke-modal">Contact us about Kubernetes</a>
+        </p>
+      </div>
+      <div class="col-5 u-align--center u-hide--small">
+        {{ image (
+          url="https://assets.ubuntu.com/v1/990738e2-kubernetes-cloud.svg",
+          alt="",
+          width="300",
+          height="171",
+          hi_def=True,
+          loading="auto"
+          ) | safe
+        }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered no-padding--bottom">
+  <div class="row">
+    <div class="col-6">
+      <h2>Charmed Kubernetes</h2>
+      <h4>Architectural freedom. Fully automated operations. Extensible Kubernetes for all.</h4>
+      <p>Kubernetes on Ubuntu gives you perfect portability of workloads across all infrastructures, from the data centre to the public cloud. With a strong focus on AI/ML and providing a cloud-native platform for the enterprise, Ubuntu is the platform of choice for K8s.</p>
+      <p>
+        <a href="/kubernetes/features">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/90155bc0-Multi-node_K8s_installation-02.svg",
+        alt="",
+        width="340",
+        height="300",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/b8a85a31-MicroK8s_SnapStore_icon.png",
+        alt="",
+        width="256",
+        height="256",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>MicroK8s</h2>
+      <h4>Lightweight upstream Kubernetes</h4>
+      <p>MicroK8s is a small pure-upstream Kubernetes, with sensible defaults that ‘just work’. A quick install, easy upgrades and great security make it perfect for micro clouds and edge computing.</p>
+      <p>
+        <a href="/kubernetes/features">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Kubernetes for telecoms</h2>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">High availability</li>
+        <li class="p-list__item is-ticked">Pluggable CNI, CSI, CRI</li>
+        <li class="p-list__item is-ticked">DPDK, CPU pinning, SR-IOV, Hugepages</li>
+        <li class="p-list__item is-ticked">Fine-grained service placement</li>
+        <li class="p-list__item is-ticked">GPU acceleration</li>
+        <li class="p-list__item is-ticked">SDN integration</li>
+        <li class="p-list__item is-ticked">IPv6 support</li>
+      </ul>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/5e8c836c-charmed-kubernetes-partners.svg",
+        alt="",
+        width="452",
+        height="182",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/52579016-JAAS+diagram-update.svg",
+        alt="",
+        width="300",
+        height="280",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>CNF lifecycle management</h2>
+      <h4>Using Juju and charms, we achieve best in class automation</h4>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">Better control of capacity and scale</li>
+          <li class="p-list__item is-ticked">Composition and integration of operators</li>
+          <li class="p-list__item is-ticked">Standardised UX / CLI and configuration</li>
+          <li class="p-list__item is-ticked">Parameterised async Day 2 operations</li>
+          <li class="p-list__item is-ticked">Fine-grained control</li>
+          <li class="p-list__item is-ticked">Much, much less YAML</li>
+        </ul>
+      <p>
+        <a class="p-link--external" href="https://jaas.ai/">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Secure and compliant</h2>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Kubernetes RBAC</li>
+        <li class="p-list__item is-ticked">LDAP</li>
+        <li class="p-list__item is-ticked">Certificate Authority (CA)</li>
+        <li class="p-list__item is-ticked">Encryption at rest</li>
+        <li class="p-list__item is-ticked">TLS</li>
+        <li class="p-list__item is-ticked">CIS harderning/compliance by default</li>
+        <li class="p-list__item is-ticked">FIPS compliant worker nodes</li>
+        <li class="p-list__item is-ticked">FIPS compliant container images</li>
+      </ul>
+    </div>
+    <div class="col-6 u-align--center u-vertically-center">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/10484692-sec.png",
+        alt="",
+        width="639",
+        height="391",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-6 u-align--center u-vertically-center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/91b86713-Enterprise_support.svg",
+        alt="",
+        width="200",
+        height="231",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h2>Enterprise support</h2>
+        <p>Enterprise support for Kubernetes on Ubuntu is provided by Canonical as part of an Ubuntu Advantage for Infrastructure (UA-I) support subscription on a large range of substrates. UA-I also includes long-term security maintenance, kernel live patching and mission-critical infrastructure support for the full stack, from kernel to container. Canonical supports K8s on Ubuntu on public clouds, VMware, OpenStack and bare metal.</p>
+      <p>
+        <a href="/support">Read more&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered is-deep">
+  <div class="u-fixed-width">
+    <h2>Interesting Kubernetes Resources</h2>
+    <div class="row p-divider">
+      <div class="col-4 p-divider__block">
+        <div class="p-heading-icon--muted">
+          <div class="p-heading-icon__header">
+            {{
+              image(
+                url="https://assets.ubuntu.com/v1/6e184942-Webinar.svg",
+                alt="",
+                height="28",
+                width="32",
+                hi_def=True,
+                attrs={"class": "p-heading-icon__img p-heading-icon__img--small"},
+                loading="lazy",
+              ) | safe
+            }}
+            <div class="p-heading-icon__title">WEBINAR</div>
+          </div>
+          <h3 class="p-heading--four">
+            <a class="p-link--external" href="https://www.brighttalk.com/webcast/6793/383698">A decision maker's guide to Kubernetes deployment in your data centre</a>
+          </h3>
+        </div>
+      </div>
+      <div class="col-4 p-divider__block">
+        <div class="p-heading-icon--muted">
+          <div class="p-heading-icon__header">
+            {{
+              image(
+                url="https://assets.ubuntu.com/v1/6e184942-Webinar.svg",
+                alt="",
+                height="28",
+                width="32",
+                hi_def=True,
+                attrs={"class": "p-heading-icon__img p-heading-icon__img--small"},
+                loading="lazy",
+              ) | safe
+            }}
+            <div class="p-heading-icon__title">WEBINAR</div>
+          </div>
+          <h3 class="p-heading--four">
+            <a href="https://www.brighttalk.com/webcast/6793/347227" class="p-link--external">Moving to Production-Ready, Fast, Affordable Kubernetes</a>
+          </h3>
+        </div>
+      </div>
+      <div class="col-4 p-divider__block">
+        <div class="p-heading-icon--muted">
+          <div class="p-heading-icon__header">
+            {{
+              image(
+                url="https://assets.ubuntu.com/v1/75902002-news-feed-strip-stock_ebook.svg",
+                alt="",
+                height="28",
+                width="32",
+                hi_def=True,
+                attrs={"class": "p-heading-icon__img p-heading-icon__img--small"},
+                loading="lazy",
+              ) | safe
+            }}
+            <div class="p-heading-icon__title">WHITEPAPER</div>
+          </div>
+          <h3 class="p-heading--four">
+            <a class="p-link--external" href="https://ubuntu.com/engage/kubernetes-deployment-enterprise-whitepaper">Five strategies to accelerate Kubernetes deployment in the enterprise</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered u-hide--small">
+  <div class="u-fixed-width">
+    <div class="p-logo-section">
+      <h3 class="p-logo-section__title p-muted-heading u-align--center">
+        Trusted by leading service providers, globally
+      </h3>
+      <div class="p-logo-section__items">
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/d8f890fb-logo-at%26t.svg",
+            alt="AT&T",
+            height="120",
+            width="120",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/eaf98009-Bell_Blue_large_transparent.png",
+            alt="Bell Canada",
+            height="55",
+            width="83",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/ac2000c4-Charter+Communications.svg",
+            alt="Charter Communications",
+            height="33",
+            width="97",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/5a9dfd45-Liberty-Global-Logo.png",
+            alt="Liberty Global",
+            height="160",
+            width="160",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/03a06060-logo-deutschetelekom.svg",
+            alt="Deutshe Telekom",
+            height="29",
+            width="130",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/7c97efb0-BT_logo.svg",
+            alt="BT",
+            height="64",
+            width="64",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/88730cec-Telefonica.png",
+            alt="Telefonica",
+            height="75",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/25de1877-Tele2.svg",
+            alt="Tele2",
+            height="30",
+            width="80",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/73135672-ntt-logo.svg",
+            alt="NTT",
+            height="40",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/481063cd-pccw.svg",
+            alt="PCCW",
+            height="50",
+            width="144",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/57eb4484-NTT_DoCoMo_logo.svg",
+            alt="Docomo",
+            height="28",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{
+            image(
+            url="https://assets.ubuntu.com/v1/3218bf54-Verizon_2015_logo_-vector.svg",
+            alt="Verizon",
+            height="27",
+            width="100",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image (
+            url="https://assets.ubuntu.com/v1/d2bfbb2b-MTS_logo_%282016%29.svg",
+            alt="MTS",
+            width="114",
+            height="42",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image (
+            url="https://assets.ubuntu.com/v1/1459d379-tmn_logo.png",
+            alt="tmn",
+            width="159",
+            height="70",
+            hi_def=True,
+            loading="lazy",
+            ) | safe
+          }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip">
+  <div class="row u-vertically-aligned">
+    <div class="col-7">
+    <h3>Innovate in telecommunications with Canonical</h3>
+    <p>The experts in open source operations, from cloud to devices are waiting to help you on your journey.</p>
+    <p>
+      <a href="/telco/contact-us" class="p-button--positive js-invoke-modal">Contact us about Kubernetes</a>
+    </p>
+    </div>
+    <div class="col-5 u-hide--small u-align--center">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/c4b290c8-Contact+us.svg",
+        alt="",
+        width="211",
+        height="150",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
