@@ -737,6 +737,16 @@ def accept_renewal(renewal_id, **kwargs):
     return advantage.accept_renewal(renewal_id)
 
 
+@advantage_checks(check_list=["is_maintenance", "view_need_user"])
+def account_view(**kwargs):
+    email = flask.session["openid"]["email"]
+
+    return flask.render_template(
+        "account/index.html",
+        email=email,
+    )
+
+
 def _prepare_monthly_info(monthly_info, subscription, advantage):
     purchased_products = subscription.get("purchasedProductListings")
     subscription_info = subscription.get("subscription")

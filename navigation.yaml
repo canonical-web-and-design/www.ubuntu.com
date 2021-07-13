@@ -1158,6 +1158,16 @@ support:
           path: /support/thank-you
           hidden: True
 
+account:
+  title: Account
+  path: /account
+
+  children:
+    - title: Overview
+      path: /account
+    - title: Payment methods
+      path: /account/payment-methods
+
 download:
   title: Downloads
   path: /download

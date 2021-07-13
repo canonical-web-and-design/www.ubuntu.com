@@ -1,0 +1,24 @@
+{% extends "templates/base.html" %}
+
+{% block title %}Your account{% endblock %}
+
+{% block head_extra %}
+  <meta name="robots" content="noindex, nofollow">
+{% endblock %}
+
+{% block outer_content %}
+
+  <section class="p-strip--suru-topped">
+    <div class="row">
+      <div class="col-12">
+        <h1>Ubuntu Advantage for&nbsp;Infrastructure</h1>
+
+        <p>You are signed in as {{email}}&emsp;
+          <span class="u-hide--large u-hide--medium"><br/></br/></span>
+          <a href="/logout?return_to={{ request.host_url }}" class="p-button--neutral is-inline is-dense u-no-margin--bottom u-no-margin--left">Sign out</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

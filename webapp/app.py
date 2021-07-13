@@ -89,6 +89,7 @@ from webapp.advantage.views import (
     post_customer_info,
     post_stripe_invoice_id,
     cancel_advantage_subscriptions,
+    account_view,
 )
 
 from webapp.login import login_handler, logout, user_info, empty_session
@@ -351,6 +352,8 @@ app.add_url_rule(
     view_func=accept_renewal,
     methods=["POST"],
 )
+
+app.add_url_rule("/account", view_func=account_view)
 
 app.add_url_rule(
     (
