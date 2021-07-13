@@ -7,339 +7,275 @@
 {% block content %}
 <section class="p-strip--suru-topped">
   <div class="row u-vertically-center">
-    <div class="col-7">
-      <h1>Ubuntu 16.04 LTS <br class="u-hide--small">(Xenial Xerus)</h1>
-      <p>Ubuntu 16.04 LTS (Xenial Xerus) was released on 21 April 2016 and introduced us to snaps, a more secure app format, with faster and simpler updates, as well as LXD, the pure-container hypervisor and OpenStack Mitaka. </p>
-      <h2 class="p-heading--4">Is Ubuntu 16.04 LTS still supported?</h2>
-      <p class="u-sv2">Yes, Ubuntu 16.04 LTS is supported until 2024 through Canonical’s Extended Security Maintenance (ESM) product. Xenial enters the ESM period in April 2021, with security patches provided for an additional three years beyond the traditional five-year standard support.</p>
-      <p>
-        <a href="/advantage" class="p-button--positive">Get started with ESM for Ubuntu 16.04 LTS</a>
-      </p>
-      <p>
-        <a href="#esm-public-cloud">Learn more about ESM on public clouds&nbsp;&rsaquo;</a>
-      </p>
-    </div>
-    <div class="col-5 u-hide--small u-align--center">
-      {{ image (
-        url="https://assets.ubuntu.com/v1/41cb88c9-xerus_orange_hex.svg",
-        alt="",
-        width="200",
-        height="203",
-        hi_def=True,
-        loading="auto"
-        ) | safe
-      }}
-      <div style="margin: auto; width: 70%;">
-        <hr class="p-separator u-no-margin--bottom"/>
-        <p class="p-muted-heading hero-muted-heading">out of standard support, <br> upgrade to esm support</p>
+    <div id="rad-poc" class="col-12" style="margin: 250px 0">
+      <div style="background-color: #ffff0061" class="rad-dropdowns-element p-code-snippet">
+         <div class="p-code-snippet__header">
+            <h5 class="p-code-snippet__title"></h5>
+            <div class="p-code-snippet__dropdowns">
+               <select name="version" class="rad-dropdown-version p-code-snippet__dropdown">
+                  <option value="snap-2.9">snap 2.9</option>
+                  <option value="deb-2.9">deb 2.9</option>
+               </select>
+               <select name="view" class="rad-dropdown-view p-code-snippet__dropdown">
+                  <option value="UI">UI</option>
+                  <option value="CLI">CLI</option>
+               </select>
+            </div>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-UI">
+            <p>Snap 2.9 UI</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-CLI">
+            <p>Snap 2.9 CLI</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-UI">
+            <h2>Deb 2.9 UI</h2>
+            <p><a href="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png"><img src="https://assets.ubuntu.com/v1/20aa36b2-nodes-add__2.5_add-node-manually.png" alt=""></a></p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-CLI">
+            <p>Deb 2.9 CLI</p>
+            <h2>Adding machine via CLI</h2>
+            <pre><code class="hljs lua">
+      maas admin machines <span class="hljs-built_in">create</span> ...
+
+      </code></pre>
+         </div>
+      </div>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <div style="background-color: #ffff0061" class="rad-dropdowns-element p-code-snippet">
+         <div class="p-code-snippet__header">
+            <h5 class="p-code-snippet__title">Title</h5>
+            <div class="p-code-snippet__dropdowns">
+               <select name="version" class="rad-dropdown-version p-code-snippet__dropdown">
+                  <option value="snap-2.9">snap 2.9</option>
+                  <option value="deb-2.9">deb 2.9</option>
+               </select>
+               <select name="view" class="rad-dropdown-view p-code-snippet__dropdown">
+                  <option value="UI">UI</option>
+                  <option value="CLI">CLI</option>
+               </select>
+            </div>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-UI">
+            <p>Snap 2.9 UI v2</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-CLI">
+            <p>Snap 2.9 CLI v2</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-UI">
+            <p>Deb 2.9 UI v2</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-CLI">
+            <p>Deb 2.9 CLI v2</p>
+         </div>
+      </div>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+      <div style="background-color: #ffff0061" class="rad-dropdowns-element p-code-snippet">
+         <div class="p-code-snippet__header">
+            <h5 class="p-code-snippet__title"></h5>
+            <div class="p-code-snippet__dropdowns">
+               <select name="version" class="rad-dropdown-version p-code-snippet__dropdown">
+                  <option value="snap-2.9">snap 2.9</option>
+                  <option value="deb-2.9">deb 2.9</option>
+               </select>
+               <select name="view" class="rad-dropdown-view p-code-snippet__dropdown">
+                  <option value="UI">UI</option>
+                  <option value="CLI">CLI</option>
+               </select>
+               <select name="status" class="rad-dropdown-status p-code-snippet__dropdown">
+                  <option value="Good">Good</option>
+                  <option value="Bad">Bad</option>
+               </select>
+            </div>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-UI-Good">
+            <p>Snap 2.9 UI v3 Good</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-CLI-Good">
+            <p>Snap 2.9 CLI v3 Good</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-UI-Good">
+            <p>Deb 2.9 UI v3 Good</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-CLI-Good">
+            <p>Deb 2.9 CLI v3 Good</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-UI-Bad">
+            <p>Snap 2.9 UI v3 Bad</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block snap-2.9-CLI-Bad">
+            <p>Snap 2.9 CLI v3 Bad</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-UI-Bad">
+            <p>Deb 2.9 UI v3 Bad</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block deb-2.9-CLI-Bad">
+            <p>Deb 2.9 CLI v3 Bad</p>
+         </div>
+      </div>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+      <div style="background-color: #ffff0061" class="rad-element snap-2.9-UI multiple snap-2.9-UI-Bad">
+        <p>Normal Element showing only for <b>multiple</b> or <b>snap-2.9-UI</b> or <b>snap-2.9-UI-Bad</b></p>
+      </div>
+      <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      <div style="background-color: #ffff0061" class="rad-dropdowns-element p-code-snippet">
+         <div class="p-code-snippet__header">
+            <h5 class="p-code-snippet__title">Title</h5>
+            <div class="p-code-snippet__dropdowns">
+               <select name="view" class="rad-dropdown-view p-code-snippet__dropdown">
+                  <option value="UI">UI</option>
+                  <option value="CLI">CLI</option>
+               </select>
+            </div>
+         </div>
+         <div class="rad-option-element p-code-snippet__block UI">
+            <p>UI</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block CLI">
+            <p>CLI</p>
+         </div>
+      </div>
+      <div style="background-color: #ffff0061" class="rad-dropdowns-element p-code-snippet">
+         <div class="p-code-snippet__header">
+            <h5 class="p-code-snippet__title">Title</h5>
+            <div class="p-code-snippet__dropdowns">
+               <select name="one" class="rad-dropdown-one p-code-snippet__dropdown">
+                  <option value="single">single</option>
+                  <option value="multiple">multiple</option>
+               </select>
+            </div>
+         </div>
+         <div class="rad-option-element p-code-snippet__block single">
+            <p>Single</p>
+         </div>
+         <div class="rad-option-element p-code-snippet__block multiple">
+            <p>Multiple</p>
+         </div>
       </div>
     </div>
   </div>
-
-  <div class="u-fixed-width">
-    <hr class="p-separator"/>
-  </div>
-  {% include "16-04/_release-chart-1604.html" %}
 </section>
 
-<section class="p-strip--light">
-  <div class="row u-vertically-center">
-    <div class="col-12">
-      <h2>Ubuntu 16.04 LTS security updates</h2>
-      <p>The Ubuntu Security Team continues its dedication to providing security updates for Ubuntu 16.04 LTS beyond the five-year standard support with Extended Security Maintenance (ESM).</p>
-    </div>
-  </div>
-  <div class="row" style="margin-top: 1rem">
-    <div class="col-4">
-      <span style="font-size: 3rem; line-height: 4rem">{{ total_patches_applied }}</span>
-      <hr>
-      <span class="p-muted-heading">16.04 LTS ESM <br>PATCHES APPLIED</span>
-    </div>
-    <div class="col-4">
-      <span style="font-size: 3rem; line-height: 4rem">{{ total_notices_issued }}</span>
-      <hr>
-      <span class="p-muted-heading">USNS ISSUED</span>
-    </div>
-    <div class="col-4">
-      <span style="font-size: 3rem; line-height: 4rem">{{ total_cves_issued }}</span>
-      <hr>
-      <span class="p-muted-heading">CVES ADDRESSED</span>
-    </div>
-  </div>
-  <div class="row" id="notice-feed" style="margin-top: 3rem">
-    {% for notice in latest_notices %}
-    <hr>
-    <div class="col-6">
-      <strong><span><a href="/security/notices/{{ notice.id }}">{{ notice.title }}</a></span></strong><br>
-      <span class="p-muted-heading">{{ notice.date }}</span><br><br>
-    </div>
-    <div class="col-6">
-      <p>{{ notice.summary }}</p>
-    </div>
-    {% endfor %}
-  </div>
-  <div class="row" style="margin-top: 2rem">
-    <a href="/security/notices?release=xenial">View the full list&nbsp;&rsaquo;</a>
-  </div>
-</section>
+<script>
+const radActiveClasses = []
 
-<section class="p-strip">
-  <div class="row">
-    <div class="col-6">
-      <h2>Ubuntu 16.04 LTS Extended Security Maintenance (ESM)</h2>
-      <h3>What is Ubuntu ESM?</h3>
-      <p><a href="/security/esm">Extended Security Maintenance</a> (ESM) provides extended Linux kernel and open source security updates for the Ubuntu base OS, key infrastructure components, like Ceph, OpenStack and Kubernetes, as well as open source applications, like PostgreSQL and NGINX.</p>
-      <p>ESM is available for free on up to three machines and for broader enterprise use through an Ubuntu Advantage subscription. The subscription includes additional services such FIPS-compliant modules and the Canonical Livepatch Service to apply critical kernel patches without unplanned downtime.</p>
-      <p>
-        <a href="/security/livepatch">Learn more about Canonical Livepatch&nbsp;&rsaquo;</a>
-      </p>
-    </div>
-    <div class="col-6 u-hide--small u-align--center u-vertically-center">
-      {{ image (
-        url="https://assets.ubuntu.com/v1/69d31769-updates-security-maintenance.svg",
-        alt="",
-        width="190",
-        height="190",
-        hi_def=True,
-        loading="lazy"
-        ) | safe
-      }}
-    </div>
-  </div>
+function refreshActiveClass() {
+  for(let i=0; i<radActiveClasses.length; i++) {
+    const elements = radActiveClasses[i].elements;
 
-  <div class="u-fixed-width">
-    <hr class="p-separator"/>
-  </div>
+    let newActiveClassValues = [];
+    for(let j=0; j<elements.length; j++) {
+      newActiveClassValues.push(localStorage.getItem(elements[j]));
+    }
 
-  <div class="row">
-    <div class="col-8">
-      <h3>
-        What is covered by Ubuntu 16.04 ESM?
-      </h3>
-      <p>
-        Standard Security Maintenance of an Ubuntu LTS release covers binary packages that reside in the 'main' Ubuntu repository for a period of five years. For continued security beyond the standard five-year maintenance period, Canonical provides security maintenance to a wide range of binary packages that are commonly used in cloud and server workloads on 64-bit x86 AMD/Intel architectures for a period of three years beyond the normal end of life.
-      </p>
-      <h4>
-        Supported kernels
-      </h4>
-      <p>
-        For continued Linux kernel security, ESM for Ubuntu 16.04 LTS includes support for the below versions:
-      </p>
-      <table class="p-table--mobile-card" aria-label="Supported kernels table">
-        <thead>
-          <tr>
-            <th>Ubuntu release</th>
-            <th>Architecture</th>
-            <th>Kernel Version</th>
-            <th>Kernel Variants</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td aria-label="Ubuntu release">Ubuntu 16.04 LTS</td>
-            <td aria-label="Architecture">arm64, amd64 (AMD/Intel) and s390x</td>
-            <td aria-label="Kernel Version">4.15 (HWE)</td>
-            <td aria-label="Kernel Variants">generic, low-latency, linux-aws-hwe, linux-azure, linux-gcp, linux-oracle</td>
-          </tr>
-          <tr>
-            <td aria-label="Ubuntu release">Ubuntu 16.04 LTS</td>
-            <td aria-label="Architecture">arm64, amd64 (AMD/Intel) and s390x</td>
-            <td aria-label="Kernel Version">4.4 (GA)</td>
-            <td aria-label="Kernel Variants">generic, low-latency, generic-fips, linux-aws</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-8">
-      <h4>
-        Application packages
-      </h4>
-      <p>
-        Canonical will provide application extended security maintenance to the binary packages that reside in main. A few commonly-used packages include:
-      </p>
+    radActiveClasses[i].class = newActiveClassValues.join('-');
+  }
+}
 
-      <table class="p-table--mobile-card" aria-label="Application packages table">
-        <thead>
-          <tr>
-            <th>Application</th>
-            <th class="u-align--right">16.04 LTS version</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td aria-label="Application">MySQL</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">5.7</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">Python</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">2.7</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">PostgreSQL</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">9.5</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">Ruby</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">2.3</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">nodejs</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">4.2.6</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">Elasticsearch</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">1.7</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">PHP</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">7.0</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">NGINX</td>
-            <td aria-label="16.04 LTS version" class="u-align--right">1.10</td>
-          </tr>
-          <tr>
-            <td aria-label="Application">ROS</td>
-            <td aria-label="ROS version" class="u-align--right">Kinetic</td>
-          </tr>
-        </tbody>
-      </table>
+function toggleElements() {
+  const elements = document.querySelectorAll('.rad-option-element, .rad-element');
 
-      <h4>
-        Infrastructure packages
-      </h4>
-      <p>
-        Canonical will provide extended security maintenance to all binary packages that reside in Ubuntu Main Repository.
-      </p>
-      <p>
-        OpenStack Mitaka packages will be supported in Ubuntu 16.04 ESM for those with an Ubuntu Advantage for Infrastructure subscription.
-      </p>
-    </div>
-  </div>
-
-  <div class="u-fixed-width">
-    <hr class="p-separator" />
-  </div>
-
-  <div id="esm-public-cloud" class="row">
-    <div class="col-4">
-      <h3 class="p-heading--4">How can I get ESM for Ubuntu 16.04 LTS on a Public Cloud?</h3>
-      <p>ESM for Ubuntu 16.04 LTS will be available April 2021 for free for personal use on up to three machines, or through paid subscriptions on the public cloud with Ubuntu Pro premium images.</p>
-      <p>
-        Ubuntu Pro on <a href="/16-04/azure">Azure</a> | <a href="/aws/pro">AWS</a> | <a href="/gcp/pro">GCP</a>
-      </p>
-    </div>
-    <div class="col-4">
-      <h3 class="p-heading--4">How can I get ESM for Ubuntu 16.04 LTS on premises?</h3>
-      <p>ESM for Ubuntu 16.04 LTS will be available from April 2021,  free for personal use (you need to set up an UbuntuOne account) on up to three machines or through an <a href="/advantage">Ubuntu Advantage subscription</a>.</p>
-    </div>
-    <div class="col-4">
-      <h3 class="p-heading--4">I have a UA subscription, how do I activate ESM?</h3>
-      <p>If you have an Ubuntu Advantage subscription, log into <a href="https://ubuntu.com/advantage">ubuntu.com/advantage</a> to get your activation token and activate ESM on your machines directly.</p>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip--suru-accent">
-  <div class="u-fixed-width">
-    <h2>Download Ubuntu 16.04 LTS</h2>
-    <p>Download options:</p>
-  </div>
-  <div class="row p-divider">
-    <div class="col-4 p-divider__block">
-      <p class="p-heading--4"><a href="https://cloud-images.ubuntu.com/locator/" class="p-link--inverted p-link--external">Ubuntu cloud image finder</a></p>
-    </div>
-    <div class="col-4 p-divider__block">
-      <p class="p-heading--4"><a href="https://releases.ubuntu.com/xenial/" class="p-link--inverted p-link--external">releases.ubuntu</a></p>
-    </div>
-    <div class="col-4 p-divider__block">
-      <p class="p-heading--4"><a href="#" class="p-link--inverted">Install journeys&nbsp;&rsaquo;</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-6">
-      <h3 class="p-heading--4">Upgrading to Ubuntu 18.04 LTS, Ubuntu 20.04 LTS</h3>
-      <p>You might want to consider upgrading to a new LTS release, you can either upgrade to Ubuntu 18.04 LTS or freshly install Ubuntu 20.04 LTS.  There is no direct upgrade path from 16.04 LTS to Ubuntu 20.04 LTS, so you can either move to Ubuntu 18.04 LTS and then to Ubuntu 20.04 LTS, or directly install Ubuntu 20.04 LTS.</p>
-      <p><a href="/server/docs/upgrade-introduction">Ubuntu Server upgrade guide&nbsp;&rsaquo;</a></p>
-      <p><a href="/tutorials/upgrading-ubuntu-desktop#1-before-you-start">Ubuntu Desktop upgrade guide&nbsp;&rsaquo;</a></p>
-    </div>
-    <div class="col-6">
-      <h3 class="p-heading--4">Upgrading Ubuntu 16.04 LTS on Azure, AWS</h3>
-      <p>If you are looking to upgrade your Ubuntu 16.04 LTS public cloud instance, it is recommended to launch new, Ubuntu Pro images. Ubuntu Pro for <a href="/azure/pro">Azure</a> and <a href="/aws/pro">AWS</a> are premium images with security and compliance features built in, and optimised for the public cloud.</p>
-      <p>Ubuntu Pro includes security coverage for the entire collection of software packages shipped with Ubuntu, tracking high and critical CVEs. Ideal for companies that have embraced open source for their new products.</p>
-      <p><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/canonical.0001-com-ubuntu-pro-xenial?tab=Overview" class="p-link--external">Launch Ubuntu Pro 16.04 LTS on Azure</a></p>
-      <p><a href="https://aws.amazon.com/marketplace/pp/B0821WW873" class="p-link--external">Launch Ubuntu Pro 16.04 LTS on AWS</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-6">
-      <h2>Watch the 20.04 migration webinar</h2>
-      <p>This webinar explores all of the factors that should be taken into account to deliver successful migration at the right pace, covering most popular infrastructure components such as OpenStack, Kubernetes and Ceph.</p>
-      <p>
-        <a href="/engage/migrating-to-20.04" class="p-button--positive">Watch the webinar</a>
-      </p>
-    </div>
-    <div class="col-6 u-hide--small u-align--center u-vertically-center">
-      {{ image (
-        url="https://assets.ubuntu.com/v1/5dd8cd3b-migrating-infrastructure-ubuntu-20.png",
-        alt="",
-        width="1275",
-        height="569",
-        hi_def=True,
-        loading="lazy"
-        ) | safe
-      }}
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-6">
-      <h2>Ubuntu 16.04 LTS kernel lifecycle and enablement stack</h2>
-      <p>The Ubuntu LTS enablement, or Hardware Enablement (HWE), stacks provide the newer kernel and X.Org support for existing Ubuntu LTS releases. These stacks can be installed manually, but are also installed with an Ubuntu LTS point release.</p>
-      <p>The 16.04.2 and newer point releases ship with an updated kernel and X.Org stack by default for the desktop. Server installations default to the General Availability (GA) kernel and provide the enablement kernel as optional.</p>
-      <p>Ubuntu 16.04 ESM includes support for v4.4 and v4.15 based generic, lowlatency, hwe-16.04, aws and azure Linux kernel flavours.</p>
-    </div>
-    <div class="col-6 u-vertically-center">
-      <div class="p-code-snippet">
-        <h3 class="p-heading--5">Installing the Ubuntu 16.04 LTS HWE stack:</h3>
-        <div class="p-code-snippet__header">
-          <h5 class="p-code-snippet__title">Desktop:</h5>
-        </div>
-
-        <pre class="p-code-snippet__block"><code>sudo apt-get install --install-recommends linux-generic-
-          hwe-16.04 xserver-xorg-hwe-16.04</code></pre>
-
-          <div class="p-code-snippet__header">
-            <h5 class="p-code-snippet__title">Server:</h5>
-          </div>
-
-          <pre class="p-code-snippet__block"><code>sudo apt-get install --install-recommends linux-generic-
-            hwe-16.04</code></pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {% with section_classes='p-strip is-bordered', heading_topic='Ubuntu 16.04 LTS', tag_name='ubuntu-16-04', tag_id='2563', limit='4' %}
-    {% include "shared/_latest_news_strip.html" %}
-    {% endwith %}
-
-    <style>
-      .hero-muted-heading {
-        line-height: 1.5;
-        padding-top: 0.5rem;
-        text-align: left;
+  elements.forEach(function (element) {
+    let hide = true;
+    for (let i=0; i<radActiveClasses.length; i++) {
+      if (element.classList.contains(radActiveClasses[i].class)) {
+        hide = false;
+        break;
       }
-    </style>
+    }
 
-    {% endblock content %}
+    if (hide) {
+      element.classList.add('u-hide');
+      element.setAttribute('aria-hidden', true);
+    } else {
+      element.classList.remove('u-hide');
+      element.setAttribute('aria-hidden', false);
+    }
+  })
+}
+
+function attachDropdownEvents(dropdown) {
+  dropdown.addEventListener('change', function (e) {
+    const newValue = e.target.value;
+    const dropdownName = dropdown.name;
+
+    localStorage.setItem(dropdownName, newValue);
+
+    const dropdowns = document.querySelectorAll(`.rad-dropdown-${dropdownName}`);
+    dropdowns.forEach(function (element) {
+      element.value = newValue;
+    });
+
+    refreshActiveClass();
+    toggleElements();
+  });
+}
+
+function setupDropdowns(radDropdownsElement) {
+  const dropdowns = radDropdownsElement.querySelectorAll('select');
+
+  dropdowns.forEach(function (dropdown) {
+    attachDropdownEvents(dropdown);
+  });
+}
+
+function initRAD() {
+  const radDropdownsElements = document.querySelectorAll('.rad-dropdowns-element');
+
+  radDropdownsElements.forEach((radDropdownsElement) => {
+    const dropdowns = radDropdownsElement.querySelectorAll('select');
+    let radDropdownsNames = [];
+    let dropdownsActiveOptions = [];
+
+    dropdowns.forEach((dropdown) => {
+      const name = dropdown.name;
+      radDropdownsNames.push(name);
+
+      const options = dropdown.querySelectorAll('option');
+      let defaultWasSet = false;
+      options.forEach((option) => {
+        if (localStorage.getItem(name) === option.value) {
+          defaultWasSet = true;
+          option.setAttribute('selected', 'selected');
+          dropdownsActiveOptions.push(option.value);
+        }
+      });
+
+      if (!defaultWasSet) {
+        const firstOption = dropdown.firstElementChild;
+        firstOption.setAttribute('selected', 'selected');
+        dropdownsActiveOptions.push(firstOption.value);
+
+        if (localStorage.getItem(name) === null) {
+          localStorage.setItem(name, firstOption.value);
+        }
+      }
+    });
+
+    const radActiveClassesItem = [];
+    radActiveClassesItem['elements'] = radDropdownsNames;
+    radActiveClassesItem['class'] = dropdownsActiveOptions.join('-');
+    radActiveClassesItem['id'] = radDropdownsNames.join('-');
+
+    let exists = false;
+    for (let i=0; i<radActiveClasses.length; i++) {
+      if (radActiveClassesItem.id === radActiveClasses[i].id) {
+        exists = true;
+      }
+    }
+
+    if (!exists) {
+      radActiveClasses.push(radActiveClassesItem);
+    }
+
+    setupDropdowns(radDropdownsElement);
+  });
+
+  toggleElements();
+}
+
+initRAD()
+
+</script>
+
+{% endblock content %}
