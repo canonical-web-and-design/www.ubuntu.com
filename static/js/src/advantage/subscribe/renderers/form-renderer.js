@@ -161,6 +161,9 @@ function renderSummary(state) {
     // if the selection matches a product we populate the 'cart' section and show it
     const image = summarySection.querySelector("#summary-plan-image");
     const title = summarySection.querySelector("#summary-plan-name");
+    const freeTrialLabel = summarySection.querySelector(
+      "#summary-free-trial-label"
+    );
     const costElement = summarySection.querySelector(".js-summary-cost");
     const quantityElement = summarySection.querySelector(
       "#summary-plan-quantity"
@@ -171,6 +174,11 @@ function renderSummary(state) {
     quantityElement.innerHTML = `${quantity}x`;
     image.setAttribute("src", imgUrl[type]);
     title.innerHTML = state.product.name;
+    if (state.product.canBeTrialled) {
+      freeTrialLabel.classList.remove("u-hide");
+    } else {
+      freeTrialLabel.classList.add("u-hide");
+    }
     costElement.innerHTML = `${formatter.format((price / 100) * quantity)} / ${
       billing === "monthly" ? "month" : "year"
     }`;
