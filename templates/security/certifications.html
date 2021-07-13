@@ -3,202 +3,202 @@
 
 {% block title %}Canonical security certifications | Security{% endblock %}
 {% block meta_description %}Technical details on all of the security certifications for Ubuntu Advantage subscribers.{% endblock %}
-{% block meta_copydoc %}https://docs.google.com/document/d/1CiF-dPqG1Y--h4FWfgKB1ft4G3nC2Boa8NT_JG7D6dQ/edit#{% endblock meta_copydoc %}
+{% block meta_copydoc %}https://docs.google.com/document/d/13RcVvHBAoywfk3o5Dy-16F3KrMytL9-2v6wWbW444Ko/edit{% endblock meta_copydoc %}
 
 {% block content %}
 
 <section class="p-strip--suru-topped">
-  <div class="row u-equal-height">
-    <div class="col-8 u-vertically-center">
-      <h1>Security Certifications</h1>
-      <p>Canonical has achieved FIPS 140-2 Level 1 certification and Common Criteria EAL2. Defense Information System Agency (DISA) has also published Ubuntu Security Technical Implementation Guides (STIGs) which allow Ubuntu to be used by federal agencies. Further more, the Center for Internet Security (CIS) published benchmarks for hardening the configuration of Ubuntu systems.</p>
-      <p><a class="p-button--neutral js-invoke-modal" href="/support/contact-us?product=support-overview">Contact us with your security certification and compliance questions</a></p>
-    </div>
-    <div class="col-4 u-hide--small u-align--center">
-      {{
-        image(
-          url="https://assets.ubuntu.com/v1/7953a068-security-1.svg",
-          alt="",
-          height="300",
-          width="250",
-          hi_def=True,
-          loading="lazy",
-          attrs={"class": "u-hide--small u-hide--medium"}
-        ) | safe
-      }}
-    </div>
-  </div>
-</section>
-<section class="p-strip is-bordered u-no-padding--top">
-  <div class="row u-equal-height">
-    <div class="col-8">
-      <p>Canonical's security certification offerings are now available to all Ubuntu Advantage for Infrastructure and Ubuntu Pro customers on AWS and Microsoft Azure.</p>
-      <p>Launch Ubuntu Pro 18.04 LTS on <a class="p-link--external" href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic?tab=Overview">Azure</a> and <a class="p-link--external" href="https://aws.amazon.com/marketplace/pp/B0821T9RL2">AWS</a></p>
-      <p><a href="/support">Learn more about Ubuntu Advantage&nbsp;&rsaquo;</a></p>
-    </div>
-    <div class="col-4 u-hide--small u-align--center u-vertically-center">
-      {{
-        image(
-          url="https://assets.ubuntu.com/v1/da9a1344-Microsoft-Azure-logo_stacked_transparent.png",
-          alt="",
-          height="51",
-          width="180",
-          hi_def=True,
-          loading="lazy",
-          attrs={"class": ""}
-        ) | safe
-      }}
-      {{
-        image(
-          url="https://assets.ubuntu.com/v1/a82add58-profile-aws.svg",
-          alt="",
-          height="60",
-          width="100",
-          hi_def=True,
-          loading="lazy",
-          attrs={"class": ""}
-        ) | safe
-      }}
-    </div>
-  </div>
+ <div class="row u-equal-height u-vertically-center">
+   <div class="col-8">
+     <h1>Security Certifications</h1>
+     <h2 class="p-heading--3">Deploy regulated and high security workloads</h2>
+     <p>Regulated and high security environments have complex requirements as they are designed to tackle many threats, known and unknown. Whatever path you have chosen in navigating compliance with a cybersecurity framework, such as the ones defined by ISO 27000, NIST, PCI or CIS Controls, Canonical provides you with a secure and easy to use operating system, that enables your compliance and reduces operational risk, whether on-premise or on a public cloud. We, at Canonical, are transparent on the security features we enable, provide access and automation to Industry accepted hardening and compliance profiles, such as CIS and DISA-STIG as well as present 3rd party attestation and certifications like FIPS 140-2 and Common Criteria.</p>
+     <p><a class="p-button--positive js-invoke-modal" href="/support/contact-us">Contact us</a></p>
+   </div>
+   <div class="col-4 u-hide--small u-align--center">
+     {{
+       image(
+         url="https://assets.ubuntu.com/v1/7953a068-security-1.svg",
+         alt="",
+         height="300",
+         width="250",
+         hi_def=True,
+         loading="auto",
+         attrs={"class": "u-hide--small u-hide--medium"}
+       ) | safe
+     }}
+   </div>
+ </div>
 </section>
 
-<section class="p-strip--light" id="fips">
-  <div class="row u-equal-height">
-    <div class="col-6 u-hide--small u-align--center">
-    {{
-      image(
-        url="https://assets.ubuntu.com/v1/e0835e48-facebook_and_linkedin_banner+%282%29.jpeg",
-        alt="",
-        height="250",
-        width="450",
-        hi_def=True,
-        loading="lazy",
-        attrs={"class": ""}
-        ) | safe
-      }}
-    </div>
-    <div class="col-6">
-      <h3 class="p-card__title">FIPS certification and CIS compliance with Ubuntu</h3>
-      <p class="p-card__content u-sv3">Learn about Ubuntu CIS and FIPS certified components to enable operating under compliance regimes like FedRAMP, HIPAA, PCI and ISO. Get all of your compliance questions answered in our upcoming webinar to ensure you and your team are, and remain, compliant.</p>
-      <p><a class="p-link--external" href="https://www.brighttalk.com/webcast/6793/432536">Watch the webinar</a></p>
-    </div>
-  </div>
+<section class="p-strip--light">
+ <div class="row p-divider">
+   <div class="col-4 p-divider__block">
+     <h3>Comply with established security baselines</h3>
+     <p>The default configuration of Ubuntu balances between usability and security. However, systems carrying dedicated workloads can be further hardened to reduce their attack surface. We work with DISA to ensure STIG guides available for Ubuntu, and we provide OpenSCAP tooling and automation for the Industry accepted CIS benchmark. Available with <a href="/advantage">Ubuntu Advantage</a> and <a href="/public-cloud">Ubuntu Pro</a>.</p>
+     <a class="p-button--neutral" href="#compliance-profiles">See our compliance profiles</a>
+   </div>
+   <div class="col-4 p-divider__block">
+     <h3>Transparency</h3>
+     <p>Canonical is transparent on the Security Features we enable on Ubuntu. We have a <a href="/security/notices">public vulnerability disclosure policy</a> and known vulnerabilities are disclosed in <a href="/security/oval">Machine readable OVAL</a> CVE output to be used by OpenSCAP and other 3rd party tools.</p>
+     <a class="p-button--neutral p-link--external" href="https://wiki.ubuntu.com/Security/Features">See our security features</a>
+   </div>
+   <div class="col-4 p-divider__block">
+     <h3>Security certification and 3rd party attestation</h3>
+     <p>Access to certification artifacts as well as the necessary tooling for regulated and high security environments. <a href="/advantage">Ubuntu Advantage</a> and <a href="/public-cloud">Ubuntu Pro</a> provide access to FIPS 140-2 certified cryptographic packages, allowing you to deploy workloads that need to operate under compliance regimes like FedRAMP, HIPAA, and PCI-DSS. Additionally, Ubuntu versions have been certified under Common Criteria, providing 3rd party attestation of the security mechanisms in the operating system.</p>
+     <a class="p-button--neutral" href="#security-certifications">See our certifications</a>
+   </div>
+ </div>
 </section>
+
+<section class="p-strip" id="compliance-profiles">
+ <div class="u-fixed-width">
+   <h2>Ubuntu compliance profiles</h2>
+   <p class="u-sv2">The default configuration of Ubuntu LTS releases, as provided by Canonical, balances between usability, performance and security. However, non general purpose systems can be further hardened to reduce their attack surface. Reducing the attack surface is often part of the compliance with the organization’s cybersecurity framework, but is also a widely accepted security best practice. We recommend using the industry accepted benchmarks below. Click on each benchmark for more detailed information.</p>
+   <table class="p-table--compliance-profiles">
+     <thead>
+       <th class="u-hide--small"></th>
+       <th></th>
+       <th class="u-align--center">Ubuntu 16.04</th>
+       <th class="u-align--center">Ubuntu 18.04</th>
+       <th class="u-align--center">Ubuntu 20.04</th>
+     </thead>
+     <tbody>
+       <tr>
+         <td class="u-hide--small">
+         {{ image (
+           url="https://assets.ubuntu.com/v1/f98af83d-cis-logo-removebg-preview.png",
+           alt="CIS logo",
+           width="50",
+           height="50",
+           hi_def=True,
+           loading="lazy"
+           ) | safe
+         }}
+         </td>
+         <td>
+           <a href="/security/cis">Center for Internet Security (CIS) certified benchmarks for Ubuntu systems</a>
+         </td>
+         <td class="u-align--center">{{ image(url="https://assets.ubuntu.com/v1/aeec264b-green-tick.svg", alt="Yes: Tooling and automation", width="14", height="14", hi_def=True, loading="lazy",) | safe }}</td>
+         <td class="u-align--center">{{ image(url="https://assets.ubuntu.com/v1/aeec264b-green-tick.svg", alt="Yes: Tooling and automation", width="14", height="14", hi_def=True, loading="lazy",) | safe }}</td>
+         <td class="u-align--center">{{ image(url="https://assets.ubuntu.com/v1/aeec264b-green-tick.svg", alt="Yes: Tooling and automation", width="14", height="14", hi_def=True, loading="lazy",) | safe }}</td>
+       </tr>
+       <tr>
+         <td class="u-hide--small">
+         {{ image (
+           url="https://assets.ubuntu.com/v1/ef01809f-DISA-logo-transparent.png",
+           alt="DISA logo",
+           width="136",
+           height="50",
+           hi_def=True,
+           attrs={"style": "vertical-align: middle;"},
+           loading="lazy"
+           ) | safe
+         }}
+         </td>
+         <td>
+           <a href="/security/disa-stig">Defence Information System Agency (DISA) Security Technical Implementation Guides (STIGs)</a>
+         </td>
+         <td class="u-align--center">{{ image(url="https://assets.ubuntu.com/v1/2ccda8d7-tick-orange.svg", alt="Yes: STIG content", width="14", height="14", hi_def=True, loading="lazy",) | safe }}</td>
+         <td class="u-align--center">{{ image(url="https://assets.ubuntu.com/v1/2ccda8d7-tick-orange.svg", alt="Yes: STIG content", width="14", height="14", hi_def=True, loading="lazy",) | safe }}</td>
+         <td class="u-align--center">{{ image(url="https://assets.ubuntu.com/v1/2ccda8d7-tick-orange.svg", alt="Yes: Tooling and automation", width="14", height="14", hi_def=True, loading="lazy",) | safe }}</td>
+       </tr>
+     </tbody>
+   </table>
+   <ul class="p-inline-list" aria-label="key">
+     <li class="p-inline-list__item">
+      <img src="https://assets.ubuntu.com/v1/aeec264b-green-tick.svg" alt="Yes: Tooling and automation" style="height: 14px; vertical-align: middle; width: 14px;">
+       <small>Tooling & automation</small>
+     </li>
+     <li class="p-inline-list__item">
+       <img src="https://assets.ubuntu.com/v1/2ccda8d7-tick-orange.svg" alt="Yes: STIG content" style="height: 14px; vertical-align: middle; width: 14px;">
+       <small> STIG content</small>
+     </li>
+   </ul>
+   <a href="/support/contact-us" class="p-button--positive js-invoke-modal">Contact us</a>
+ </div>
+</section>
+
+<section class="p-strip--light" id="security-certifications">
+ <div class="u-fixed-width">
+   <h2>Ubuntu security certifications</h2>
+   <p class="u-sv2">We strive to make Ubuntu the platform of choice in regulated and high security environments. Ubuntu Advantage enables access to the certification artifacts as well as the necessary tooling for such environments. The following is a list of the certifications available with <a href="/advantage">Ubuntu Advantage</a> and <a href="/public-cloud">Ubuntu Pro</a> on public clouds. Click on each for more detailed information.</p>
+   <table class="p-table--security-certifications">
+     <thead>
+       <th></th>
+       <th class="u-align--center">16.04</th>
+       <th class="u-align--center">18.04</th>
+       <th class="u-align--center">20.04</th>
+     </thead>
+     <tbody>
+       <tr>
+         <td>
+           <a class="/security/fips">FIPS 140-2 Level 1 certification</a>: A US and Canada government cryptographic module certification of compliance with the FIPS140-2 data protection standard. US agencies, their service providers or other institutions that comply with similar requirements (e.g., HIPAA, PCI-DSS) are required to comply with FIPS 140-2.
+         </td>
+         <td class="u-align--center">
+           <div class="u-sv2">
+             <i class="p-icon--success u-sv2">Yes: Tooling and automation</i>
+           </div>
+           <div class="u-sv2">
+             <img src="https://assets.ubuntu.com/v1/8e5cc412-AWS.svg" style="height: 32px; width: 53px;" alt="AWS logo">
+           </div>
+           <div class="u-sv2">
+             <img src="https://assets.ubuntu.com/v1/22fd6473-MicrosoftAzure_logo.svg" style="height: 30px; width: 104px;" alt="Microsoft Azure logo">
+           </div>
+         </td>
+         <td class="u-align--center">
+           <div class="u-sv2">
+             <i class="p-icon--success">Yes: Tooling and automation</i>
+           </div>
+           <div class="u-sv2">
+             <img src="https://assets.ubuntu.com/v1/8e5cc412-AWS.svg" style="height: 32px; width: 53px;" alt="AWS logo">
+           </div>
+           <div class="u-sv2">
+             <img src="https://assets.ubuntu.com/v1/22fd6473-MicrosoftAzure_logo.svg" style="height: 30px; width: 104px;" alt="Microsoft Azure logo">
+           </div>
+         </td>
+         <td class="u-align--center">
+           <small><em>Under<br>validation</em></small>
+         </td>
+       </tr>
+       <tr>
+         <td>
+           <a href="/security/cc">Common Criteria, EAL2, an internationally accepted security certification</a>: A 3rd party attestation of the security mechanisms in the operating system. Ubuntu has a Common Criteria EAL2 certification recognized by CCRA and EU SOGIS members.
+         </td>
+         <td class="u-align--center"><i class="p-icon--success">Yes</i></td>
+         <td class="u-align--center"><i class="p-icon--success">Yes</i></td>
+         <td class="u-align--center">
+         </td>
+       </tr>
+     </tbody>
+   </table>
+   <ul class="p-inline-list" aria-label="key">
+     <li class="p-inline-list__item">
+       <i class="p-icon--success">Yes</i>
+       <small>Tooling & automation</small>
+     </li>
+   </ul>
+   <a href="/support/contact-us" class="p-button--positive js-invoke-modal">Contact us</a>
+ </div>
+</section>
+
 <section class="p-strip">
-  <div class="row u-equal-height">
-    <h2>FIPS 140-2</h2>
-    <div class="col-8">
-      <p>
-        FIPS 140-2 is a U.S. Government computer security standard. It defines security requirements related to the design and implementation of a cryptographic module. It is a requirement for U.S. Federal agencies to use FIPS 140-2 validated cryptography to protect sensitive information.
-      </p>
-      <p>
-        The standard puts stringent requirements on testing and ensuring that the cryptographic implementations meet the standards and work as expected. The testing and validation must be performed by a laboratory, which is accredited under the Cryptographic and Security Testing (CST) Laboratory Accreditation Program (LAP) and is part of NIST's <a class="p-link--external" href="https://www.nist.gov/nvlap/">National Voluntary Laboratory Accreditation Program (NVLAP)</a> in the US and <a class="p-link--external"
- href="https://csrc.nist.gov/projects/cryptographic-module-validation-program">CCCS's Cryptographic Module Validation Program (CMVP)</a> in Canada. The validation testing for Ubuntu 18.04 LTS and 16.04 LTS was performed by atsec Information Security, a U.S. Government and BSI accredited laboratory.
-      </p>
-      <p>
-        Anyone deploying systems and cloud services for Federal government agency use, whether directly or through contractors and vendors, is required to use FIPS 140-2 compliant systems. FIPS 140-2 has also been adopted outside of the public sector in industries where data security is heavily regulated, such as financial services, healthcare, legal and manufacturing.
-      </p>
-      <p>
-        Canonical has validated the following cryptographic modules for Ubuntu 18.04 LTS (the modules are certified on Intel x86_64 and IBM Z hardware platforms):
-      </p>
-      <ul>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/Projects/Cryptographic-Module-Validation-Program/Certificate/3633">OpenSSH-Client validated level 1 March 2020 (#3633)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3632">OpenSSH-Server validated level 1 March 2020 (#3632)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3622">OpenSSL validated level 1 Feb. 2020 (#3622)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3647">Kernel Crypto API validated level 1 April 2020 (#3647)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/3683">Azure Kernel Crypto API validated level 1 July 2020 (#3683)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/3664">AWS Kernel Crypto API validated level 1 June 2020 (#3664)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/Projects/Cryptographic-Module-Validation-Program/Certificate/3648">Strongswan validated level 1 April 2020 (#3648)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/Projects/Cryptographic-Module-Validation-Program/Certificate/3748">Libgcrypt validated level 24 Nov 2020 (#3748)</a></li>
-      </ul>
-      <p>
-        Canonical has validated the following cryptographic modules for Ubuntu 16.04 LTS (the modules are certified on Intel x86_64, IBM Power8 and IBM Z hardware platforms):
-      </p>
-      <ul>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/2907">OpenSSH-Client validated level 1 May 2017 (#2907)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/2906">OpenSSH-Server validated level 1 May 2017 (#2906)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/2888">OpenSSL validated level 09 Oct 2020 (#3725)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/2962">Kernel Crypto API validated level 07 Oct 2020 (#3724)</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/2978">Strongswan validated level 1 July 2017 (#2978)</a></li>
-      </ul>
-    </div>
-    <div class="col-4 u-hide--small u-align--center">
-      {{
-        image(
-          url="https://assets.ubuntu.com/v1/9f048bd7-NIST_logo.svg",
-          alt="",
-          height="58",
-          width="220",
-          hi_def=True,
-          loading="lazy",
-          attrs={"class": ""}
-        ) | safe
-      }}
-    </div>
-  </div>
+ <div class="u-fixed-width">
+   <h2>Frequently asked questions about security certifications</h2>
+   <h3>How do I harden my Ubuntu system?</h3>
+   <p>Hardening always involves a tradeoff with usability and performance. The default configuration of Ubuntu LTS releases, as provided by Canonical, balances between usability, performance and security. However, systems with a dedicated workload are well positioned to benefit from hardening. You can reduce your workload’s attack surface by applying an Industry accepted baseline. At Canonical we recommend applying <a href="/security/cis">the Center for Internet Security (CIS) benchmarks</a> for hardening the configuration of Ubuntu.</p>
+   <h3>How do I comply with PCI-DSS?</h3>
+   <p>PCI-DSS is a payment industry standard and any company that stores, processes or transmits payment card or cardholder information is required to comply with it. The standard is defined by the Payment Card Industry council and defines measures and processes to secure online financial transactions. The standard is about making business as usual processes like monitoring of security controls, timely response, review of environmental and organizational changes, as well as review of hardware and software being under support by its vendors. For companies with large volumes of transactions compliance with the standard is enforced by an audit of a Qualified Security Assessor (QSA).</p>
+   <p>Achieving and maintaining compliance is a complex and costly process that involves business processes in addition to software requirements. Ubuntu by Canonical contains software and security controls, such as disk encryption, password settings configuration, <a href="/security/fips">cryptographic compliance with FIPS140-2</a>, CIS hardening as well as <a href="/advantage">a comprehensive Enterprise software maintenance program</a>, to achieve and maintain compliance with the standard.</p>
+   <a href="/support/contact-us" class="p-button--positive js-invoke-modal">Contact us</a>
+ </div>
 </section>
 
-<section class="p-strip--light" id="common-criteria">
-  <div class="row u-equal-height">
-    <h2>Common Criteria</h2>
-    <div class="col-8">
-      <p>
-        Common Criteria (CC) for Information Technology Security Evaluation is an international standard (ISO/IEC IS 15408) for computer security certification, used by Federal agencies, financial institutions and many other organizations dealing with sensitive data. It validates that a product satisfies a defined set of security requirements.
-      </p>
-      <p>
-        Ubuntu 18.04 LTS and 16.04 LTS have both been evaluated to assurance level EAL2 through <a href="http://www.fmv.se/en/Our-activities/CSEC---The-Swedish-Certification-Body-for-IT-Security/" class="p-link--external">CSEC – The Swedish Certification Body for IT Security</a>. The consulting and evaluation testing was performed by atsec Information Security. The CSEC certification reports for <a href="https://www.commoncriteriaportal.org/files/epfiles/Certification%20Report%20Ubuntu%20LTS%2016.04.4.pdf" class="p-link--external">Ubuntu 16.04 LTS</a> and <a href="https://www.commoncriteriaportal.org/files/epfiles/Certification%20Report%20-%20Canonical%20Ubuntu%20Server%2018.04%20LTS.pdf" class="p-link--external">Ubuntu 18.04 LTS</a> are available on the CSEC website for more information.  The evaluation was performed on Intel x86_64, IBM Power8 (16.04 LTS only) and IBM Z hardware platforms.
-      </p>
-    </div>
-    <div class="col-4 u-align--center u-hide--small">
-      <img src="https://assets.ubuntu.com/v1/961a1ad1-csec-logo-removebg-preview.png?w=150" width="150" alt="">
-    </div>
-  </div>
-</section>
-
-<section class="p-strip" id="stig">
-  <div class="row u-equal-height">
-    <h2>STIG</h2>
-    <div class="col-8">
-      <p>
-        Security Technical Implementation Guides (STIG) are developed by the Defense Information System Agency (DISA) for the U.S. Department of Defense (DoD). They are configuration guidelines for hardening systems to improve security. They contain technical guidance which when implemented, locks down software and systems to mitigate malicious attacks.
-      </p>
-      <p>
-        DISA has, in conjunction with Canonical, developed STIGs for Ubuntu 16.04 LTS and Ubuntu 18.04 LTS.
-      </p>
-      <ul class="p-list">
-        <li class="p-list__item"><a class="p-link--external" href="https://public.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cunix-linux">STIG checklist for Ubuntu 16.04 LTS, 18.04 LTS and 20.04 LTS</a></li>
-        <li class="p-list__item"><a class="p-link--external" href="https://public.cyber.mil/stigs/scap/">SCAP content for Ubuntu 16.04 LTS and 18.04 LTS</a></li>
-      </ul>
-    </div>
-    <div class="col-4 u-align--center u-hide--small">
-      <img src="https://assets.ubuntu.com/v1/ff9e7377-disa-logo.svg" width="150" alt="">
-    </div>
-  </div>
-</section>
-
-<section class="p-strip--light" id="cis">
-  <div class="row u-equal-height">
-    <h2>CIS Benchmark</h2>
-    <div class="col-8">
-      <p>Center for Internet Security (CIS) is a non-profit organization that uses a consensus process to release benchmarks to safeguard organizations against cyber attacks. The benchmark contains configuration checklists to harden a system making it less vulnerable to malicious attacks. The consensus review process consists of subject matter experts who provide perspective on different backgrounds like audit and compliance, security research, consulting and software development.</p>
-      <p>Each benchmark undergoes two phases of consensus review. In the first phase, a benchmark is drafted with the help of subject matter experts and an initial version of the benchmark is published. In the second phase, feedback from the wider internet community is reviewed and incorporated into the benchmark. Canonical has actively participated in the drafting benchmarks of Ubuntu 16.04,Ubuntu 18.04 and <a href="https://www.cisecurity.org/benchmark/ubuntu_linux/" class="p=link--external">Ubuntu 20.04</a>. CIS has also published benchmarks for Ubuntu 12.04 and 14.04 releases.</p>
-      <p>
-        <a href="/blog/cis-hardened-ubuntu-cyber-attack-and-malware-prevention-for-mission-critical-systems">Read more about Ubuntu CIS&nbsp;&rsaquo;</a>
-      </p>
-    </div>
-    <div class="col-4 u-align--center u-hide--small">
-      <img src="https://assets.ubuntu.com/v1/f98af83d-cis-logo-removebg-preview.png?w=150" width="150" alt="">
-    </div>
-  </div>
-</section>
 
 {% with first_item="_security_discussion", second_item="_security_esm", third_item="_security_further_reading" %}{% include "shared/contextual_footers/_contextual_footer.html" %}{% endwith %}
 
 <!-- Set default Marketo information for contact form below-->
-<div class="u-hide" id="contact-form-container" data-form-location="/shared/forms/interactive/general" data-form-id="1257" data-lp-id="2154" data-return-url="https://www.ubuntu.com/contact-us/form/thank-you" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
+<div class="u-hide" id="contact-form-container" data-form-location="/shared/forms/interactive/support" data-form-id="1257" data-lp-id="2154" data-return-url="https://www.ubuntu.com/contact-us/form/thank-you" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
 </div>
-
-
 
 {% endblock content %}

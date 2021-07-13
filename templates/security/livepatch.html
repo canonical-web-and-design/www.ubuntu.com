@@ -30,7 +30,7 @@
 
 <section class="p-strip--light is-deep">
   <div class="row u-equal-height">
-    <div class="col-10">
+    <div class="col-10 col-start-large-2">
       <blockquote class="p-pull-quote">
         <p class="p-pull-quote__quote u-no-max-width">
             Livepatch is a perfect fit for our needs. There’s no other solution like it, and it’s highly cost-effective. Manually migrating virtual machines, applying kernel updates, and rebooting took an average of 32 hours per server. Multiplied by 80 servers, that was more than 2,500 hours of work.
@@ -86,7 +86,7 @@
           </div>
           <h2 class="p-heading--4">GMO Pepabo cuts OPEX costs with live kernel patching</h2>
           <p>As a leading provider of consumer-facing internet services, GMO Pepabo cannot afford downtime to its mission-critical workloads. To minimise OPEX costs, it needed a way to apply kernel updates without rebooting servers.</p>
-          <p><a href="https://ubuntu.com/engage/case-study-gmo-pepabo" class="p-button--neutral">Read more in the case study</a></p>
+          <p><a href="https://pages.ubuntu.com/rs/066-EOV-335/images/GMO%20Pepabo%20Case%20study%208.pdf" class="p-button--neutral">Read more in the case study</a></p>
         </div>
       </div>
     </div>
@@ -190,15 +190,15 @@
         }}
       </span>
       <span class="p-logo-image p-fluid-grid__item--small u-align--center">
-
-        {{ image (
-          url="https://assets.ubuntu.com/v1/53305bd8-best+buy.svg",
-          alt="BestBuy",
+        {{
+          image(
+          url="https://assets.ubuntu.com/v1/dcde7628-2018-logo-best-buy.svg",
+          alt="Best Buy",
           width="145",
           height="145",
           hi_def=True,
           loading="lazy",
-          attrs={"class": "p-logo-image p-fluid-grid__item--small u-align--center"}
+          attrs={"class": "p-logo-image p-fluid-grid__item--small u-align--center"},
           ) | safe
         }}
       </span>
@@ -231,13 +231,13 @@
       <ol class="p-stepped-list">
         <li class="p-stepped-list__item">
           <h3 class="p-stepped-list__title">
-            Attach your subscription
+            Generate your credentials
           </h3>
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" value="sudo ua attach [TOKEN]" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
-          <p>Via the <a href="/advantage">Ubuntu Advantage portal</a>. This step is not necessary on Ubuntu Pro.</p>
+          <p>Via the <a class="p-link--external" href="https://auth.livepatch.canonical.com/">Ubuntu Advantage portal</a>.</p>
         </li>
         <li class="p-stepped-list__item">
           <h3 class="p-stepped-list__title">

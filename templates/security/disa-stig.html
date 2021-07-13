@@ -1,0 +1,85 @@
+{% extends "security/base_security.html" %}
+
+
+{% block title %}Canonical DISA-STIG certifications | Security{% endblock %}
+{% block meta_description %}Technical details on the DISA-STIG guide.{% endblock %}
+{% block meta_copydoc %}https://docs.google.com/document/d/1zJwZzc-cERj9YKNXFtmrXwynJptyT7-D3qCNzBctRfo/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+
+<section class="p-strip--suru-topped">
+ <div class="row u-equal-height u-vertically-center">
+   <div class="col-8">
+     <h1>DISA-STIG on Ubuntu</h1>
+     <h2 class="p-heading--4">Comply with the Security Technical Implementation Guide</h2>
+     <p>Security Technical Implementation Guides (STIG) are developed by the Defense Information System Agency (DISA) for the U.S. Department of Defense (DoD). They are configuration guidelines for hardening systems to improve a system’s security posture. They contain technical guidance which when implemented, locks down software and systems to mitigate malicious attacks. <a href="/public-cloud">Ubuntu Pro</a> and <a href="/advantage">Ubuntu Advantage</a> have the necessary <a href="/security/fips">certifications</a> and controls to comply with DISA-STIG guidelines.</p>
+     <a class="p-button--positive js-invoke-modal" href="/support/contact-us">Get Ubuntu Advantage to comply with the DISA-STIG guidelines</a>
+   </div>
+   <div class="col-4 u-hide--small u-align--center">
+    {{ image (
+      url="https://assets.ubuntu.com/v1/ef01809f-DISA-logo-transparent.png",
+      alt="DISA-STIG logo",
+      width="720",
+      height="264",
+      hi_def=True,
+      loading="auto"
+      ) | safe
+    }}
+   </div>
+ </div>
+</section>
+
+<section class="p-strip--light">
+  <div class="u-fixed-width">
+    <h2>What is DISA-STIG?</h2>
+    <p>The Defense Information System Agency (DISA) is a US Department of Defense combat support agency.  It provides and operates information infrastructure to support military operations and national-level leadership. The Security Technical Implementation Guide (STIG) is a configuration standard consisting of cybersecurity requirements for a product such as Ubuntu. It can be seen as a checklist for securing protocols, services, or servers to improve the overall security by reducing the attack surface.</p>
+  </div>
+
+  <div class="u-fixed-width">
+    <hr class="p-separator">
+  </div>
+
+  <div class="u-fixed-width">
+    <h2>The DISA-STIG guides for Ubuntu</h2>
+    <p class="u-sv3">DISA has, in conjunction with Canonical, developed STIGs for Ubuntu. The U.S. DoD provides the <a class="p-link--external" href="https://public.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cunix-linux">STIG checklist</a>, which can be viewed using <a class="p-link--external" href="https://public.cyber.mil/stigs/stig-viewing-tools/">STIG viewer</a>, and <a class="p-link--external" href="https://public.cyber.mil/stigs/scap/">SCAP content for auditing</a>. The versions of Ubuntu that have STIGs available by DISA are marked on the table below.</p>
+    <table class="p-table--compliance-profiles">
+     <thead>
+       <th class="u-hide--small"></th>
+       <th></th>
+       <th class="u-align--center">Ubuntu 16.04</th>
+       <th class="u-align--center">Ubuntu 18.04</th>
+       <th class="u-align--center">Ubuntu 20.04</th>
+     </thead>
+     <tbody>
+       <tr>
+         <td class="u-hide--small">
+          {{ image (
+            url="https://assets.ubuntu.com/v1/ef01809f-DISA-logo-transparent.png",
+            alt="DISA logo",
+            width="136",
+            height="50",
+            hi_def=True,
+            attrs={"style": "vertical-align: middle;"},
+            loading="lazy"
+            ) | safe
+          }}
+         </td>
+         <td>
+           Defense Information System Agency <a class="p-link--external" href="https://public.cyber.mil/stigs/downloads/?_dl_facet_stigs=operating-systems%2Cunix-linux">Security Technical Implementation Guides (STIGs)</a> for Ubuntu
+         </td>
+         <td class="u-align--center"><i class="p-icon--success">Yes: Tooling and automation</i></td>
+         <td class="u-align--center"><i class="p-icon--success">Yes: Tooling and automation</i></td>
+         <td class="u-align--center"><i class="p-icon--success">Yes: Tooling and automation</i></td>
+       </tr>
+     </tbody>
+   </table>
+  </div>
+</section>
+
+{% with first_item="_security_discussion", second_item="_security_esm", third_item="_security_further_reading" %}{% include "shared/contextual_footers/_contextual_footer.html" %}{% endwith %}
+
+<!-- Set default Marketo information for contact form below-->
+<div class="u-hide" id="contact-form-container" data-form-location="/shared/forms/interactive/support" data-form-id="1257" data-lp-id="2154" data-return-url="https://www.ubuntu.com/contact-us/form/thank-you" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
+</div>
+
+{% endblock content %}

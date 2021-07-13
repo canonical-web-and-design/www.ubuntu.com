@@ -1,0 +1,113 @@
+{% extends "security/base_security.html" %}
+
+{% block title %}Common Criteria{% endblock %}
+
+{% block meta_description %}Technical details on the Common Criteria security certification for Ubuntu Advantage subscribers.{% endblock meta_description %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1JLnHR9Xuuc1t6ojrnBuMWir5XABgf1L7WVpGGtlLaBo/edit#{% endblock meta_copydoc %}
+
+{% block content %}
+
+<section class="p-strip--suru-topped">
+  <div class="row u-equal-height">
+    <div class="col-8">
+      <h1 class="u-sv3">Common Criteria</h1>
+      <p class="p-heading--four u-sv3">Deploy regulated and high security workloads on Ubuntu</p>
+      <p>Developing and deploying open source workloads on regulated and high security environments can be challenging. There is a plethora of open source software following diverse development methods, and standards, but not always targeting a particular data protection standard. Canonical ensures that <a href="/public-cloud">Ubuntu Pro</a> and <a href="/advantage">Ubuntu Advantage</a> provide access to the necessary artifacts to comply with Common Criteria, an international (ISO/IEC 15408) computer security certification.</p>
+      <p>
+        <a href="/support/contact-us" class="p-button--positive js-invoke-modal">Get the Common Criteria certified Ubuntu</a>
+      </p>
+    </div>
+    <div class="col-4 u-vertically-center u-align--center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/7953a068-security-1.svg",
+        alt="",
+        width="224",
+        height="300",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--light is-bordered">
+  <div class="row">
+    <div class="col-8">
+      <h2>What is Common Criteria?</h2>
+      <p>Common Criteria (CC) for Information Technology Security Evaluation is an international standard (ISO/IEC IS 15408) for computer security certification, used by Governments, U.S. Federal agencies, financial institutions and many other organizations dealing with sensitive data. It ensures that products are evaluated by licensed laboratories to verify their security properties and that a common methodology is applied in certification.</p>
+      <p>In brief, it is a common methodology to evaluate products' security controls against a set of security claims. The set of security claims is grouped per product and is called a protection profile. There are different protection profiles that apply to different products. The profile Ubuntu derives its security requirements is the Operating System Protection Profile (OSPP).</p>
+    </div>
+  </div>
+  <div class="u-fixed-width">
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <h2>Where is Common Criteria accepted?</h2>
+      <p>Internationally a Common Criteria certification is accepted by members of the <a href="https://www.commoncriteriaportal.org/ccra/members/" class="p-link--external">CCRA</a> agreement and the EU <a href="https://www.sogis.eu/" class="p-link--external">SOGIS</a> members.</p>
+    </div>
+  </div>
+  <div class="u-fixed-width">
+    <hr class="p-separator" />
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <h2>What gets certified in Ubuntu under Common Criteria?</h2>
+      <p>Ubuntu 18.04 LTS and 16.04 LTS have both been evaluated to assurance level EAL2 through <a href="http://www.fmv.se/en/Our-activities/CSEC---The-Swedish-Certification-Body-for-IT-Security/" class="p-link--external">CSEC – The Swedish Certification Body for IT Security</a>. The evaluation testing was performed by atsec Information Security.  The following table provides a summary of the releases and platforms that have been certified.</p>
+    </div>
+    <div class="col-4">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/961a1ad1-csec-logo-removebg-preview.png",
+        alt="",
+        width="180",
+        height="205",
+        hi_def=True,
+        loading="auto|lazy"
+        ) | safe
+      }}
+    </div>
+  </div>
+  <div class="u-fixed-width">
+    <hr class="p-separator" />
+  </div>
+  <div class="u-fixed-width">
+    <table>
+      <thead>
+        <tr>
+          <th>Ubuntu version</th>
+          <th>Platform</th>
+          <th>Certification report</th>
+          <th>Additional information</th>
+        </tr>
+      </thead>
+      <t-body>
+        <tr>
+          <td>Ubuntu 16.04 LTS</td>
+          <td>x86_64, IBM Power8 and IBM Z</td>
+          <td><a class="p-link--external" href="https://www.commoncriteriaportal.org/files/epfiles/Certification%20Report%20Ubuntu%20LTS%2016.04.4.pdf">16.04.4</a></td>
+          <td><a class="p-link--external" href="https://security-certs.docs.ubuntu.com/en/cc">Installation instructions</a></td>
+        </tr>
+      </t-body>
+      <t-body>
+        <tr>
+          <td>Ubuntu 18.04 LTS</td>
+          <td>x86_64 and IBM Z</td>
+          <td><a class="p-link--external" href="https://www.commoncriteriaportal.org/files/epfiles/Certification%20Report%20-%20Canonical%20Ubuntu%20Server%2018.04%20LTS.pdf">18.04.4</a></td>
+          <td><a class="p-link--external" href="https://security-certs.docs.ubuntu.com/en/cc">Installation instructions</a></td>
+        </tr>
+      </t-body>
+    </table>
+    <p>
+      <a class="p-button--positive js-invoke-modal" href="/support/get-in-touch">Contact us</a>
+    </p>
+  </div>
+</section>
+
+<!-- Set default Marketo information for contact form below-->
+<div class="u-hide" id="contact-form-container" data-form-location="/shared/forms/interactive/support" data-form-id="1257" data-lp-id="2154" data-return-url="https://www.ubuntu.com/contact-us/form/thank-you" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
+</div>
+
+{% endblock content %}
+{% block footer_extra %}{{ marketo }}{% endblock footer_extra %}

@@ -5,7 +5,7 @@
   }
 
   .p-button--tag {
-    @extend %p-button-light;
+    @extend %p-button-light !optional;
 
     border-radius: 3px;
     color: $color-mid-dark;

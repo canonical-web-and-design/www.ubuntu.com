@@ -1437,15 +1437,19 @@ security:
       path: /security/esm
     - title: Livepatch
       path: /security/livepatch
-    - title: FIPS
-      path: /security/certifications#fips
-    - title: Hardening
-      path: /security/certifications#cis
-    - title: Certifications
+    - title: Certifications & Hardening
       path: /security/certifications
       persist: True
 
       children:
+        - title: FIPS
+          path: /security/fips
+        - title: Common Criteria
+          path: /security/cc
+        - title: DISA-STIG
+          path: /security/disa-stig
+        - title: CIS
+          path: /security/cis
         - title: Docs
           path: /security/certifications/docs
 

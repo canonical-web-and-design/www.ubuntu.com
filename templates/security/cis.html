@@ -1,0 +1,121 @@
+{% extends "security/base_security.html" %}
+
+
+{% block title %}CIS{% endblock %}
+{% block meta_description %}Technical details on all of the CIS profile security certifications for Ubuntu Advantage subscribers.{% endblock %}
+{% block meta_copydoc %}https://docs.google.com/document/d/1bSv8lV9BJoBYh5yog2eYKtvNMitKZetSSBQ3k2Cu5Cw/edit#heading=h.335zx3wyom0b{% endblock meta_copydoc %}
+
+{% block content %}
+
+<section class="p-strip--suru-topped is-bordered">
+  <div class="row u-equal-height">
+    <div class="col-8">
+      <h1>CIS Benchmark on Ubuntu</h1>
+      <h4>Comply with the most widely accepted baseline</h4>
+      <p>The CIS benchmark has hundreds of configuration recommendations, so hardening and auditing a system manually can be very tedious. To drastically improve this process for enterprises, Canonical provides certified tooling for audit and automated compliance with the CIS benchmarks with <a href="/advantage">Ubuntu Advantage</a> and <a href="/public-cloud">Ubuntu Pro</a>.</p>
+      <a href="/security/certifications#get-in-touch" class="p-button--positive js-invoke-modal">Access the tooling for audit and automated CIS compliance</a>
+    </div>
+    <div class="col-4 u-vertically-center u-align--center u-hide--small">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/f98af83d-cis-logo-removebg-preview.png",
+        alt="",
+        width="300",
+        height="300",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--light is-deep">
+  <div class="row p-divider">
+    <div class="col-4 p-divider__block">
+      <h3>Harden your workloads</h3>
+      <p>Hardening involves a tradeoff between security and usability. The default configuration of Ubuntu LTS releases, as provided by Canonical, balances between usability, performance and security. However, systems with a dedicated workload are well-positioned to benefit from hardening. Reduce your workload’s attack surface with CIS hardened Ubuntu.</p>
+      <a href="/blog/cis-hardened-ubuntu-cyber-attack-and-malware-prevention-for-mission-critical-systems" class="p-button--neutral">Read more about Ubuntu CIS</a>
+    </div>
+    <div class="col-4 p-divider__block">
+      <h3>Automate your compliance</h3>
+      <p>Applying a baseline with a large set of instructions manually is not only time consuming but also error-prone. According to <a class="p-link--external" href="https://enterprise.verizon.com/resources/reports/dbir/">Verizon data breach investigations</a> report for 2020, misconfigurations were among the top five reasons for data breaches. Apply more than 250 rules in less than 15 minutes while avoiding misconfigurations using tooling provided by Canonical that automates your CIS compliance.</p>
+      <a href="/security/certifications/docs/cis" class="p-button--neutral">Read more about Ubuntu’s tooling</a>
+    </div>
+    <div class="col-4 p-divider__block">
+      <h3>Audit with OpenSCAP</h3>
+      <p>An important aspect of secure asset configuration for compliance is monitoring. You need to verify that systems comply with the selected baseline and contain operating system software supported by the vendor. Ubuntu Pro and Ubuntu Advantage makes content available to audit and monitor systems with the OpenSCAP tool.</p>
+      <a href="/security/certifications/docs/cis" class="p-button--neutral">Read more about Ubuntu’s audit tooling</a>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip">
+  <div class="row">
+    <div class="col-6 u-vertically-center">
+      {{ image (
+        url="https://assets.ubuntu.com/v1/1d5f293c-compliance.svg",
+        alt="",
+        width="386",
+        height="220",
+        hi_def=True,
+        loading="lazy"
+        ) | safe
+      }}
+    </div>
+    <div class="col-6">
+      <h3>Configure and apply CIS hardening rules in minutes</h3>
+      <p>The compliance tooling has two objectives: it lets our customers harden their Ubuntu systems effortlessly and then quickly audit those systems against the published CIS Ubuntu benchmarks. The SCAP content for audit tooling that scans the system for compliance is CIS certified.</p>
+      <a href="https://www.youtube.com/watch?v=wyEX0eyoK88" class="p-button--neutral p-link--external">Watch the video</a>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--light is-bordered">
+  <div class="u-fixed-width">
+    <h2>Which versions of Ubuntu have CIS tooling?</h2>
+    <p>Canonical provides OpenSCAP content for auditing systems for CIS benchmark compliance, as well as tooling to automate compliance.</p>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="u-align--center">Ubuntu 16.04 LTS</th>
+          <th class="u-align--center">Ubuntu 18.04 LTS</th>
+          <th class="u-align--center">Ubuntu 20.04 LTS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><a href="/security/certifications/docs/cis">Center for Internet Security (CIS) benchmarks</a></th>
+          <td class="u-align--center">
+            <i class="p-icon--success"></i>
+          </td>
+          <td class="u-align--center">
+            <i class="p-icon--success"></i>
+          </td>
+          <td class="u-align--center">
+            <i class="p-icon--success"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <a href="/security/certifications#get-in-touch" class="p-button--positive js-invoke-modal">Access the Ubuntu CIS benchmark tooling</a>
+      <a href="/security/certifications/docs/cis" class="p-button--neutral">Learn more about our tools</a>
+    </p>
+    <h3>What is CIS?</h3>
+    <p>The Center for Internet Security (CIS) is a non-profit organisation with a mission to “make the connected world a safer place by developing, validating, and promoting timely best practice solutions against pervasive cyber threats”. CIS uses a consensus process to release benchmarks to safeguard organisations against cyber attacks. The consensus review process consists of subject matter experts who provide perspective on different backgrounds like audit and compliance, security research, consulting and software development. The benchmarks are considered a necessary complement in the implementation of a cybersecurity framework, and are the most widely accepted Industry benchmarks to harden a system today. Canonical actively participates in the drafting benchmarks of Ubuntu including Ubuntu 16.04, 18.04 and 20.04. CIS has also published benchmarks for Ubuntu 12.04 and 14.04 releases.
+    </p>
+    <h3>What are the CIS Controls?</h3>
+    <p><a class="p-link--external" href="https://www.cisecurity.org/controls/">CIS controls</a>, is a framework of security best practices, that harness the collective experience of the CIS subject matter experts from actual attacks and effective defenses. CIS controls are referenced by International and National frameworks such ETSI’s critical security controls, NIST Cybersecurity framework, and others.</p>
+    <h3>How do benchmarks relate with CIS Controls?</h3>
+    <p>The benchmarks map to <a class="p-link--external" href="https://www.cisecurity.org/controls/">CIS controls</a> and are designed to  additionally reduce the system’s attack surface to mitigate the most common attacks. For that reason, they are considered a necessary complement in the implementation of a cybersecurity framework, and are the most widely accepted Industry benchmark to harden a system today.</p>
+    <a href="/security/certifications#get-in-touch" class="p-button--positive js-invoke-modal">Contact us</a>
+  </div>
+</section>
+
+
+<!-- Set default Marketo information for contact form below-->
+<div class="u-hide" id="contact-form-container" data-form-location="/shared/forms/interactive/support" data-form-id="1257" data-lp-id="2154" data-return-url="https://www.ubuntu.com/contact-us/form/thank-you" data-lp-url="https://pages.ubuntu.com/things-contact-us.html">
+</div>
+
+{% endblock content %}
